@@ -1,0 +1,101 @@
+/* ===================================================================
+ *
+ *  Kassandra Resume v1.0 ABOUT Section Stylesheet
+    20221222
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  # about
+        ## section + responsive needs
+  ===================================================================*/
+
+/* ===================================================================
+ * # about - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+.s-about {
+    /*padding-top: 10rem;*/
+    padding-bottom: 1rem;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.about-content {
+    padding: 1rem;
+}
+
+.about-content .left {
+    padding-right: 40px;
+}
+
+.about-content .right {
+    padding-left: 40px;
+}
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * about
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1000px) {
+    .about-content .left {
+        padding-right: 30px;
+    }
+    .about-content .right {
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .about-content .left {
+        padding-right: 20px;
+    }
+    .about-content .right {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .about-content {
+        max-width: 600px;
+    }
+    .about-content .left {
+        padding-right: 15px;
+    }
+    .about-content .right {
+        padding-left: 15px;
+    }
+    .about-content .right .timeline {
+        margin-top: 0;
+    }
+    .about-content .left > h3, .about-content .right > h3 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-content .left {
+        padding-right: 10px;
+    }
+    .about-content .right {
+        padding-left: 10px;
+    }
+    .s-about p.lead { /* .lead is in bootstrap */
+        padding: 0px;
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .about-content .left {
+        padding-right: 0;
+    }
+    .about-content .right {
+        padding-left: 0;
+    }
+}

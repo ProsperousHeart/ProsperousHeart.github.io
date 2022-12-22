@@ -1,0 +1,81 @@
+/* -------------------------------------------------------------------
+ * ## section intro - (_common-styles.scss)
+ * ------------------------------------------------------------------- */
+
+.section-intro {
+    text-align: center;
+    position: relative;
+    padding-top: 10rem;
+}
+
+.section-intro h1 {
+    /*font-family: "librebaskerville-bold", serif;*/
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700; /* bold */
+    font-size: 4.8rem;
+    line-height: 1.375;
+    margin-top: 0;
+}
+
+.section-intro h3 {
+    /*font-family: "montserrat-semibold", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; /* semibold */
+    font-size: 2rem;
+    color: #862121; /* MAROON */
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-intro.has-bottom-sep {
+    padding-bottom: 1.5rem;
+    position: relative;
+    justify-content: center;
+}
+
+.section-intro.has-bottom-sep::after {
+    display: inline-block;
+    height: 1px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * section-intro
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+    .section-intro h1 {
+        font-size: 4.2rem;
+    }
+    .section-intro h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section-intro h1 {
+        font-size: 3.6rem;
+    }
+    .section-intro h3 {
+        font-size: 1.7rem;
+    }
+    .s-contact {
+        background-size: auto auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .section-intro h1 {
+        font-size: 3.3rem;
+    }
+    .section-intro h3 {
+        font-size: 1.6rem;
+    }
+}

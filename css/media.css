@@ -1,0 +1,324 @@
+/* ===================================================================
+ *
+ *  Kassandra Keeton Resume v1.0 Base Stylesheet
+ *  20221221
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  # Basic/base setup styles
+ *      ## responsive video container
+ *      ## Media
+ *  # Responsive Changes
+ *      ## medium size devices
+ *      ## tablets
+ *      ## mobile devices
+ *      ## small mobile devices
+ *
+ * =================================================================== */
+
+ /* -------------------------------------------------------------------
+ * ## responsive video container - (_document-setup)
+ * ------------------------------------------------------------------- */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ /* -------------------------------------------------------------------
+ * ## responsive containers --- from BASE.CSS
+ * ------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------
+ * ## medium size devices - (_grid.scss)
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1200px) {
+    /* grid needs */
+    .row .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    [class*="col-"] {
+        padding: 0 15px;
+    }
+    .md-two, .md-1-6 {
+        width: 16.66667%;
+    }
+    .md-one {
+        width: 8.33333%;
+    }
+    .md-three, .md-1-4 {
+        width: 25%;
+    }
+    .md-four, .md-1-3 {
+        width: 33.33333%;
+    }
+    .md-five {
+        width: 41.66667%;
+    }
+    .md-six, .md-1-2 {
+        width: 50%;
+    }
+    .md-seven {
+        width: 58.33333%;
+    }
+    .md-eight, .md-2-3 {
+        width: 66.66667%;
+    }
+    .md-nine, .md-3-4 {
+        width: 75%;
+    }
+    .md-ten, .md-5-6 {
+        width: 83.33333%;
+    }
+    .md-eleven {
+        width: 91.66667%;
+    }
+    .md-twelve, .md-full {
+        width: 100%;
+    }
+
+    /* block grid needs */
+    .block-m-1-6 .col-block {
+        width: 16.66667%;
+    }
+    .block-m-1-5 .col-block {
+        width: 20%;
+    }
+    .block-m-1-4 .col-block {
+        width: 25%;
+    }
+    .block-m-1-3 .col-block {
+        width: 33.33333%;
+    }
+    .block-m-1-2 .col-block {
+        width: 50%;
+    }
+    .block-m-full .col-block {
+        width: 100%;
+        clear: both;
+    }
+    [class*="block-m-"] .bgrid:nth-child(n) {
+        clear: none;
+    }
+    .block-m-1-6 .col-block:nth-child(6n+1),
+    .block-m-1-5 .col-block:nth-child(5n+1),
+    .block-m-1-4 .col-block:nth-child(4n+1),
+    .block-m-1-3 .col-block:nth-child(3n+1),
+    .block-m-1-2 .col-block:nth-child(2n+1) {
+        clear: both;
+    }
+
+}
+
+
+/* -------------------------------------------------------------------
+ * ## tablets - (_grid.scss)
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+    /* grid needs */
+    .row {
+        width: 90%;
+    }
+    .tab-1-4 {
+        width: 25%;
+    }
+    .tab-1-3 {
+        width: 33.33333%;
+    }
+    .tab-1-2 {
+        width: 50%;
+    }
+    .tab-2-3 {
+        width: 66.66667%;
+    }
+    .tab-3-4 {
+        width: 75%;
+    }
+    .tab-full {
+        width: 100%;
+    }
+
+    /* block grid needs */
+    .block-tab-1-6 .col-block {
+        width: 16.66667%;
+    }
+    .block-tab-1-5 .col-block {
+        width: 20%;
+    }
+    .block-tab-1-4 .col-block {
+        width: 25%;
+    }
+    .block-tab-1-3 .col-block {
+        width: 33.33333%;
+    }
+    .block-tab-1-2 .col-block {
+        width: 50%;
+    }
+    .block-tab-full .col-block {
+        width: 100%;
+        clear: both;
+    }
+    [class*="block-tab-"] .bgrid:nth-child(n) {
+        clear: none;
+    }
+    .block-tab-1-6 .col-block:nth-child(6n+1),
+    .block-tab-1-6 .col-block:nth-child(5n+1),
+    .block-tab-1-4 .col-block:nth-child(4n+1),
+    .block-tab-1-3 .col-block:nth-child(3n+1),
+    .block-tab-1-2 .col-block:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+ * ## mobile devices - (_grid.scss)
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+    /* typography */
+    h1, .h01, h2, .h02, h3, .h03, h4, .h04 {
+        margin-top: 5.1rem;
+    }
+    h5, .h05, h6, .h06 {
+        margin-top: 3.6rem;
+        margin-bottom: 0.9rem;
+    }
+    h1, .h01 {
+        font-size: 3.3rem;
+        letter-spacing: -.07rem;
+    }
+
+    /* grid needs */
+    .row {
+        width: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .row .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    [class*="col-"] {
+        padding: 0 10px;
+    }
+    .mob-1-4 {
+        width: 25%;
+    }
+    .mob-1-3 {
+        width: 33.33333%;
+    }
+    .mob-1-2 {
+        width: 50%;
+    }
+    .mob-2-3 {
+        width: 66.66667%;
+    }
+    .mob-3-4 {
+        width: 75%;
+    }
+    .mob-full {
+        width: 100%;
+    }
+
+    /* block grid needs */
+    .block-mob-1-6 .col-block {
+        width: 16.66667%;
+    }
+    .block-mob-1-5 .col-block {
+        width: 20%;
+    }
+    .block-mob-1-4 .col-block {
+        width: 25%;
+    }
+    .block-mob-1-3 .col-block {
+        width: 33.33333%;
+    }
+    .block-mob-1-2 .col-block {
+        width: 50%;
+    }
+    .block-mob-full .col-block {
+        width: 100%;
+        clear: both;
+    }
+    [class*="block-mob-"] .bgrid:nth-child(n) {
+        clear: none;
+    }
+    .block-mob-1-6 .col-block:nth-child(6n+1),
+    .block-mob-1-5 .col-block:nth-child(5n+1),
+    .block-mob-1-4 .col-block:nth-child(4n+1),
+    .block-mob-1-3 .col-block:nth-child(3n+1),
+    .block-mob-1-2 .col-block:nth-child(2n+1) {
+        clear: both;
+    }
+
+    /* On screens that are 600px wide or less,
+    make the columns stack on top of each other
+    instead of next to each other */
+    .flex-row {
+        flex-direction: column;
+    }
+    #home .home-content .row h2 {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+ * ## small mobile devices - (_grid.scss)
+ * ------------------------------------------------------------------- */
+
+
+/* stack columns on small mobile devices
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 400px) {
+    /* typography */
+    html {
+        font-size: 9.375px;
+    }
+
+    /* grid needs */
+    .row .row {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    [class*="col-"] {
+        width: 100% !important;
+        float: none !important;
+        clear: both !important;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    [class*="col-"] + [class*="col-"].end {
+        float: none;
+    }
+
+    /* block grid needs */
+    .stack .col-block {
+        width: 100% !important;
+        float: none !important;
+        clear: both !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
