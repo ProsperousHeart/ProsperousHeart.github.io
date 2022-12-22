@@ -1,0 +1,143 @@
+/*===========================================================================*
+    Resume site for Kassandra Keeton
+    - Style Sheet For Personal Resume:  HEADER -
+    20221212
+    -----------------------------------------
+
+    TOC TBD
+
+ *===========================================================================*/
+
+/* outer DIV for main header */
+/* to be changed to:  hdr-style */
+.s-header {
+    width: 100%;
+    height: 72px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 500;
+}
+
+.s-header.offset {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.s-header.scrolling {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* https://www.w3schools.com/howto/howto_css_sticky_element.asp */
+.s-header.sticky {
+    position: fixed;
+    top: 0;
+    background-color: #000000 !important;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 600;
+}
+
+/* hdr-logo from header-logo */
+.s-header.sticky .header-logo a {
+    margin: 0;
+}
+
+/*.s-header.sticky .hdr-nav-wrap {*/
+.s-header.sticky .header-nav-wrap {
+    top: 0;
+}
+
+.s-header.sticky.scrolling {
+    opacity: 1;
+    visibility: visible;
+}
+
+.s-header.sticky .header-menu-toggle {
+    top: 12px;
+}
+
+/* ------------------------------------------------ */
+
+/* DIV for logo - in top nav bar */
+.header-logo {
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 501;
+}
+
+/* link CSS for .hdr-logo */
+.header-logo a {
+    display: block;
+    margin: 9px 0 0 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    width: 80px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* TODO:  need to include in @media only screens for responsive header */
+
+/* ------------------------------------------------ */
+/* NAVIGATION
+/* ------------------------------------------------ */
+/*.hdr-nav-wrap {*/
+.header-nav-wrap {
+    /*font-family: "montserrat-bold", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700; /* bold */
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    position: absolute;
+    top: 9px;
+    right: 50px;
+}
+
+/* TODO:  need to include in @media only screens for responsive header */
+
+/*.hdr-nav {*/
+.header-nav {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    height: 72px;
+}
+
+/*.hdr-nav li {*/
+.header-nav li {
+    display: inline-block;
+    padding-left: 0;
+    margin-right: 2rem;
+}
+
+/*.hdr-nav li a {*/
+.header-nav li a {
+    display: block;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+
+/*.hdr-nav li.live a {*/
+.header-nav li.live a {
+    /*font-family: "montserrat-extrabold", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800; /* extrabold */
+    color: #af2b2b;
+}
+
+/* TODO:  need to include in @media only screens for responsive header */

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <!--  BASICS PAGE NEEDS -->
+    <meta charset="UTF-8">
+    <title>Resume - Kassandra The Prosperous Heart</title>
+
+    <!-- meta tags -->
+    <meta name="description" content="Page to highlight Kassandra Keeton's skills for finding a job or beginning discussions with clients.">
+    <meta name="author" content="Kassandra Keeton - the Prosperous Heart">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- https://web.dev/responsive-web-design-basics/#:~:text=A%20meta%20viewport%20tag%20gives%20the%20browser%20instructions,better%20by%20increasing%20font%20sizes%20and%20scaling%20 -->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
+    <!-- pace:  https://codebyzach.github.io/pace/ -->
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+    <link rel="stylesheet" href="css/pace-flash.css">           <!-- 3rd party:  pace-flash -->
+
+
+    <!-- WayPoints:  http://imakewebthings.com/waypoints/
+        Downloaded from:  http://imakewebthings.com/waypoints/
+        https://github.com/imakewebthings/waypoints
+    -->
+    <script src="js/3rd-pty/jquery.waypoints.min.js"></script>
+    <script src="js/3rd-pty/sticky.min.js"></script>
+
+    <!--  CSS Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/">
+
+    <link rel="stylesheet" href="css/base.css">                 <!-- main CSS -->
+    <link rel="stylesheet" href="css/mobile.css">               <!-- mobile -->
+    <link rel="stylesheet" href="css/sections.css">             <!-- all sections -->
+    <link rel="stylesheet" href="css/animations.css">           <!-- animations -->
+    <link rel="stylesheet" href="css/btns.css">                 <!-- buttons -->
+    <link rel="stylesheet" href="css/photoswipe.css">           <!-- 3rd party: photoswipe -->
+    <link rel="stylesheet" href="css/sec1-header.css">          <!-- section: header -->
+    <link rel="stylesheet" href="css/sec2-home.css">            <!-- section: home -->
+    <link rel="stylesheet" href="css/sec3-about.css">           <!-- section: about -->
+    <link rel="stylesheet" href="css/sec4-xp.css">              <!-- section: experience -->
+    <link rel="stylesheet" href="css/sec5-testimonials.css">     <!-- section: testimonials -->
+    <link rel="stylesheet" href="css/sec6-contact.css">     <!-- section: testimonials -->
+    <link rel="stylesheet" href="css/sec-footer.css">           <!-- section: footer -->
+    <link rel="stylesheet" href="css/JS-plugins.css">           <!-- JS plugins -->
+
+    <!-- iconmonstr css -->
+    <link rel="stylesheet" href="css/iconmonster/iconmonstr-iconic-font.css">
+
+    <!-- favicon TODO: create icon file  -->
+    <!--
+    <link href="imgs/favicon.png" rel="icon">
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    -->
+
+    <script src="js/modernizr.js"></script>
+
+    <!-- general BootStrap needs -->
+
+</head>
+<body id="top">
+
+    <!-- HEADER -->
+    <!-- change to:  hdr-style -->
+    <header class="s-header">
+
+        <!-- TODO:  create logo for header & update name to hdr-logo -->
+        <div class="header-logo">
+            <!-- TODO:  may be missing class site-logo -->
+            <a class="site-logo" href="index-ORIGINAL.html"><img src="imgs/white.png" alt="Homepage"></a>
+        </div>
+
+        <!--<nav class="hdr-nav-wrap">-->
+        <nav class="header-nav-wrap"> <!-- see ssMobileMenu in main.js -->
+            <!--<ul class="hdr-nav">-->
+            <ul class="header-nav"> <!-- see ssWaypoints in main.js -->
+                <!--<li class="live"><a class="smoothscroll" href="#Home" title="Home">Home</a></li>-->
+                <li class="current"><a class="smoothscroll"  href="#Home" title="Home">Home</a></li>
+                <li><a class="smoothscroll"  href="#About" title="About">About</a></li> <!-- to include education -->
+                <!--<li><a class="smoothscroll"  href="#works" title="works">Works</a></li>-->
+                <li><a class="smoothscroll" href="#Projects" title="Projects">Projects</a></li><!-- originally works -->
+                <!--<li><a class="smoothscroll"  href="#blog" title="blog">Blog</a></li>-->
+                <li><a class="smoothscroll" href="#Contact" title="Contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- mobile menu toggle -->
+        <!--<a class="hdr-menu-tgl" href="#Menu"><span>Menu</span></a>-->
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+    </header>
+
+    <!-- HOME Section -->
+   <!--<section id="Home" class="sec-home page-hero trgt-section" data-parallax="scroll" data-image-src="imgs/20180108.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>-->
+    <section id="Home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="imgs/20180108.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+        <!--<div class="content">-->
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Welcome</h3>
+
+                <h1>
+                    I am Kassandra Keeton.<br>
+                    I am a full stack developer ...
+                </h1>
+
+                <!--<div class="btns">-->
+                <div class="home-content__buttons">
+                    <!--<a href="#Projects" class="smoothscroll btn btn-stroke">-->
+                    <a href="#Projects" class="smoothscroll btn btn--stroke">
+                        Projects
+                    </a>
+
+                    <!--<a href="#works" class="smoothscroll btn btn--stroke">
+                        Latest Projects
+                    </a>-->
+                    <!--<a href="#About" class="smoothscroll btn btn-stroke">-->
+                    <a href="#About" class="smoothscroll btn btn--stroke">
+                        About Me
+                    </a>
+                </div> <!-- end home content buttons -->
+
+                <!--<div class="scroll">-->
+                <div class="home-content__scroll">
+                    <!--<a href="#About" class="smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>-->
+                    <a href="#About" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div> <!-- end scroll "button" -->
+
+            </div>
+
+        </div> <!-- end of home section content -->
+
+        <!-- start of home section social @ .sec-home .social -->
+        <!-- <div class="social">-->
+        <ul class="home-social">
+            <!-- do not have im im-facebook classes -->
+            <li>
+                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="https://github.com/ProsperousHeart"><i class="im" aria-hidden="true"></i><span>GitHub</span></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/kkeeton"><i class="im" aria-hidden="true"></i><span>LinkedIn</span></a>
+            </li>
+        </ul>
+
+    </section> <!-- end home section -->
+
+    <!-- About Section -->
+    <section id="About" class="s-about target-section">
+        <!-- tried taking this out but might be causing an issue -->
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h3>About</h3>
+                <h1>More about me ...</h1>
+                <p class="lead">Some words with class "lead" in paragraph ...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="Education" class="target-section section-intro has-bottom-sep">
+        <div class="row narrow text-center">
+            <h1>Education Timeline Here</h1>
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects">Projects</section>
+
+    <!-- Contact Section -->
+    <section id="Contact" class="s-contact target-section text-center">
+        <!--<div class="overlay"></div>-->
+        <!--<div class="shadow-overlay"></div>-->
+
+        <div class="row narrow section-intro">
+            <div class="col-full">
+                <div>
+                    <h3>Contact</h3>
+                    <h1>Say Hello.</h1>
+                </div>
+
+                <!--<div class="row text-center about-content">-->
+                <div class="row text-center">
+                    <div class="col-six tab-full left">
+                        <p class="lead">If you are looking to have a discussion about hiring me? Download my resume below.</p>
+                        <div class="btn btn--primary full-width">
+                            <a href="#0">Download My CV</a>
+                        </div>
+                    </div>
+                    <div class="col-six tab-full right">
+                        <p class="lead">Looking to see my latest training content? Check out my blog below!</p>
+                        <div class="btn full-width">
+                            <a href="https://prosperousheart.com">Access Blog</a>
+                        </div>
+                    </div>
+
+                    <!--<div class="col-six tab-full">
+                        <div class="left">
+                            <p class="lead">If you are looking to have a discussion about hiring me? Download my resume below.</p>
+                        </div>
+                        <div class="right">
+                            <p class="lead">Looking to see my latest training content? Check out my blog below!</p>
+                        </div>
+                    </div>
+                    <div class="col-six tab-full">
+                        <div class="left">
+                            <!--<div class="btn btn--primary full-width">--
+                            <div class="smoothscroll btn btn--stroke">
+                                <a href="#0">Download My CV</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <!--<div class="btn full-width">--
+                            <div class="smoothscroll btn btn--stroke">
+                                <a href="https://prosperousheart.com/">Access Blog</a>
+                            </div>
+                        </div>
+                    </div>-->
+
+                </div> <!-- end about-content buttons -->
+            </div>
+        </div>
+
+        <!--<div class="row contact__main">
+            <div class="col-eight tab-full contact__form">
+                <form name="contactForm" id="contactForm" method="post" action="">
+                    <fieldset>
+
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning --
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div>
+
+                <!-- contact-success --
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div>
+            <div class="col-four tab-full contact__infos">
+                <h4 class="h06">Phone</h4>
+                <p>Phone: (+63) 555 1212<br>
+                Mobile: (+63) 555 0100<br>
+                Fax: (+63) 555 0101
+                </p>
+
+                <h4 class="h06">Email</h4>
+                <p>someone@holawebsite.com<br>
+                info@holawebsite.com
+                </p>
+
+                <h4 class="h06">Address</h4>
+                <p>
+                1600 Amphitheatre Parkway<br>
+                Mountain View, CA<br>
+                94043 US
+                </p>
+            </div>
+
+        </div> -->
+
+    </section>
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+
+                <div class="footer-logo">
+                    <a class="footer-site-logo" href="#0"><img src="imgs/white.png" alt="Homepage"></a>
+                </div>
+
+                <ul class="footer-social">
+                    <li><a href="#0">
+                        <i class="im im-facebook" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                    </a></li>
+                    <li><a href="#0">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright 2022</span>
+                    <span>Design inspired by <a href="https://www.styleshout.com/">styleshout</a></span>
+                </div>
+
+                <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- JAvaScript -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- plugins -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> <!-- https://github.com/googlearchive/code-prettify -->
+    <script src="js/main.js"></script>
+
+    <!-- jquery validation plugin: https://jqueryvalidation.org
+         used for email form - see validate() function in main.js:
+         https://github.com/jquery-validation/jquery-validation
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <!--
+        HTML5 Placeholder jQuery Plugin
+    -->
+    <script src="js/3rd-pty/jquery.placeholder.min.js"></script>
+
+    <!-- parallax JS plugin:  https://pixelcog.github.io/parallax.js/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+    <!--
+    imagesLoaded - uses imagesLoaded() function
+    PURPOSE:  portfolio (masonryfolio)
+    PLUGINS with function:  imagesLoaded, possibly slick.js
+        https://github.com/desandro/imagesloaded
+    -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+</body>
+</html>
