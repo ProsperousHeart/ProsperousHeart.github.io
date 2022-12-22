@@ -1,0 +1,36 @@
+/*===========================================================================*
+    Resume site for Kassandra Keeton
+    - Style Sheet For Personal Resume:  BLOG -
+    20221213
+    -----------------------------------------
+
+    TOC TBD
+
+ *===========================================================================*/
+
+ /* ===================================================================
+ * # cta - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+.s-cta {
+    margin-top: -9rem;
+    padding-top: 0;
+    padding-bottom: 9rem;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+}
+
+.cta__content {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cta__content h2 a {
+    color: #0D0A0B;
+}
+
+.cta__content span {
+    color: #191A3F;
+}

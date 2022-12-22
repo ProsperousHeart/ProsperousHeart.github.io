@@ -1,0 +1,137 @@
+/*===========================================================================*
+    Resume site for Kassandra Keeton
+    - Style Sheet For:  SECTIONS -
+    20221212
+    -----------------------------------------
+
+    TOC TBD
+
+ *===========================================================================*/
+
+ /* -----------------------------------------------------------
+    HOME
+ /* -----------------------------------------------------------*/
+
+ .sec-home {
+    width: 100%;
+    height: 100%;
+    min-height: 786px;
+    background-color: transparent;
+    position: relative;
+    display: table;
+}
+
+.sec-home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-color: #111111;
+}
+
+.sec-home .shadow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+}
+
+/* TODO:  determine if page-hero, target-section needed for home */
+
+/*.no-js .sec-home {
+    background: #0D0A0B;
+}*/
+
+/*-----------------------------------
+/* Section HOME - Content DIV (TODO:  remove .home-content)
+ ------------------------------------*/
+
+.sec-home .content {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+    padding-bottom: 19.2rem;
+    position: relative;
+}
+
+/*.home-content h3 {*/
+.sec-home .content h3{
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1.8rem;
+    color: #862121;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    position: relative;
+    padding-left: 80px;
+    margin-left: -30px;
+    margin-bottom: .6rem;
+}
+
+/* .home-content h3::before {*/
+.sec-home .content h3::before {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: #862121;
+    margin-top: -1.5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+/*.home-content h1 {*/
+.sec-home .content h1 {
+    font-family: "librebaskerville-bold", serif;
+    color: #FFFFFF;
+    font-size: 6rem;
+    line-height: 1.35;
+    margin-top: 0;
+}
+
+/* .home-content__main { */
+.sec-home .content .main {
+
+}
+
+/*===============================
+    Home Content Buttons
+    (top section)
+ ===============================*/
+
+/* .home-content__buttons { */
+.sec-home .content .btns {
+    position: absolute;
+    right: 0;
+    bottom: 2.1rem;
+    text-align: center;
+}
+
+/*.home-content__buttons .btn {*/
+.sec-home .content .btns .btn {
+    display: block;
+    width: 210px;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    margin: 1.5rem 0 0 0;
+    letter-spacing: .25rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.sec-home .content .btns .btn:hover,
+.sec-home .content .btns .btn:focus {
+    background: #FFFFFF !important;
+    color: #000000;
+}
+
+/* TODO:  get media items */

@@ -1,0 +1,273 @@
+/*===========================================================================*
+    Resume site for Kassandra Keeton
+    - Style Sheet For Personal Resume:  CONTACT -
+    20221213
+    -----------------------------------------
+
+    TOC TBD
+
+ *===========================================================================*/
+
+/* ===================================================================
+ * # contact - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+.s-contact {
+    background-color: #151515;
+    background-image: url("../images/contact-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center, center;
+    padding-top: 13.2rem;
+    padding-bottom: 12rem;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.s-contact .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .75;
+    background-color: #070606;
+}
+
+.s-contact .section-intro h1 {
+    color: #FFFFFF;
+}
+
+.s-contact .section-intro p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.s-contact .section-intro.has-bottom-sep::after {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.s-contact .form-field {
+    position: relative;
+}
+
+.s-contact .form-field:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.s-contact .form-field label {
+    /*font-family: "montserrat-semibold", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    font-style: "semibold";
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    position: absolute;
+    bottom: -0.3rem;
+    right: .6rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: 0 2rem;
+    margin: 0;
+    color: #FFFFFF;
+    background: #862121;
+}
+
+.s-contact .form-field label::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    margin-top: -6px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #862121;
+}
+
+.contact__main {
+    max-width: 900px;
+    position: relative;
+}
+
+.contact__main h4 {
+    color: #FFFFFF;
+}
+
+.contact__infos {
+    font-size: 1.5rem;
+}
+
+.contact__form {
+    padding-right: 40px;
+}
+
+.contact__form input[type="email"],
+.contact__form input[type="number"],
+.contact__form input[type="text"],
+.contact__form input[type="tel"],
+.contact__form input[type="url"],
+.contact__form textarea {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: .9rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.contact__form input[type="email"]:focus,
+.contact__form input[type="number"]:focus,
+.contact__form input[type="text"]:focus,
+.contact__form input[type="tel"]:focus,
+.contact__form input[type="url"]:focus,
+.contact__form textarea:focus {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.contact__form button {
+    margin-top: 4.2rem;
+    background-color: #862121;
+    border-color: #862121;
+}
+
+.message-warning, .message-success {
+    display: none;
+    background: #0D0A0B;
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 3rem;
+    margin-bottom: 3.6rem;
+    width: 100%;
+}
+
+.message-warning {
+    color: #ff6163;
+}
+
+.message-success {
+    color: #008C2C;
+}
+
+.message-warning i, .message-success i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+
+/* form loader */
+
+.submit-loader {
+    display: none;
+    position: relative;
+    left: 0;
+    top: 1.8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4.2rem;
+}
+
+.submit-loader .text-loader {
+    display: none;
+    /*font-family: "montserrat-bold", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    font-style: "bold";
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.oldie .submit-loader .s-loader {
+    display: none;
+}
+
+.oldie .submit-loader .text-loader {
+    display: block;
+}
+
+
+/* ---------------------------------------------------------------
+ * loader animation - (_site-layout.scss)
+ * --------------------------------------------------------------- */
+
+.s-loader {
+    margin: 1.2rem auto 3rem;
+    width: 70px;
+    text-align: center;
+    -webkit-transform: translateX(0.45rem);
+    -ms-transform: translateX(0.45rem);
+    transform: translateX(0.45rem);
+}
+
+.s-loader > div {
+    width: 9px;
+    height: 9px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: .9rem;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
+    animation: bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.s-loader .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.s-loader .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * contact
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+    .contact__form {
+        padding-right: 15px;
+    }
+    .contact__infos {
+        padding-top: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contact__form {
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .contact__form {
+        padding-right: 0;
+    }
+}
