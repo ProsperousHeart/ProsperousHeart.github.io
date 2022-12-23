@@ -295,7 +295,6 @@ blockquote cite {
     font-family: "Montserrat", sans-serif;
     font-weight: 400; /* regular */
     font-size: 1.4rem;
-    font-style: normal;
     line-height: 1.5;
 }
 blockquote cite:before {
