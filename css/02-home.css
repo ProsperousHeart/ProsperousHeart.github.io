@@ -779,11 +779,11 @@ html.no-csstransitions .home-content__main {
     .s-home {
         min-height: 654px;
     }
-    .home-content h3 {
-        font-size: 1.5rem;
-    }
     .home-content h1 {
         font-size: 3.8rem;
+    }
+    .home-content h3 {
+        font-size: 1.5rem;
     }
     .home-content__main {
         max-width: none;
