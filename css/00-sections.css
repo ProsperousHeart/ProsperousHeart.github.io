@@ -72,7 +72,7 @@
 }
 
 /*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 481px) {
 /*@media only screen and (max-width: 6.2in) {*/
     #contact .section-intro {
         padding: 1.5rem;
@@ -80,7 +80,7 @@
 }
 
 /*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 481px) {
 /*@media only screen and (max-width: 6.2in) {*/
     .section-intro h1 {
         font-size: 3.3rem;
