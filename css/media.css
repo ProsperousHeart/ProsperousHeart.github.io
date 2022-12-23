@@ -290,7 +290,7 @@
     }
     #home .home-content .row h2 {
         font-size: 2rem;
-        width: 95%;
+        width: 80%;
     }
 
     #home .home-content .flex-row {
@@ -356,9 +356,14 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-    #about p.lead,
-    #XP p.lead {
+    #about .section-intro {
+        padding-bottom: 0px;
+    }
+    #about p.lead {
         font-size: 1.8rem;
+    }
+    #XP p.lead {
+        font-size: 1.815rem;
     }
     #about p {
         font-size: 1.65rem; /* less than p .ead */

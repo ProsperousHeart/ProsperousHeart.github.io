@@ -452,7 +452,7 @@
     position: absolute;
     left: .6rem;
     /*bottom: -13.2rem;*/
-    bottom: -8.2rem;
+    bottom: -3.8rem;
 }
 
 .home-content__scroll a {
@@ -765,7 +765,7 @@ html.no-csstransitions .home-content__main {
         padding: 0;
     }
     .home-content__scroll {
-        bottom: -9rem;
+        bottom: -3rem;
     }
     .home-social {
         padding-bottom: 10.8rem;
