@@ -91,7 +91,8 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 413px) {
     .about-content .left {
         padding-right: 0;
     }
