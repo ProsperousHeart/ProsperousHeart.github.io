@@ -168,10 +168,10 @@ h1, h2, h3, h4, h5, h6 {
 h1, .h01 {
     /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    line-height: 1.25;
     font-size: 3.6rem;
     font-weight: 700; /* bold */
     letter-spacing: -.1rem;
+    line-height: 1.25rem;
 }
 
 h2, .h02 {
