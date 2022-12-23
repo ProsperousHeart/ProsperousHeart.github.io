@@ -71,7 +71,14 @@
     }
 }
 
+@media only screen and (max-width: 413px) {
+    #contact .section-intro {
+        padding: 1.5rem;
+    }
+}
+
 @media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 413px) {*/
     .section-intro h1 {
         font-size: 3.3rem;
     }
