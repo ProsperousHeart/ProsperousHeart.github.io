@@ -279,8 +279,7 @@
     }
 }
 
-/*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 400px) {
 /*@media only screen and (max-width: 6.2in) {*/
     /* On screens that are 413px wide or less,
     make the columns stack on top of each other
@@ -289,12 +288,15 @@
         flex-direction: column;
     }
     #home .home-content .row h2 {
-        font-size: 2.63rem;
-        width: 90%;
+        font-size: 2rem;
+        width: 95%;
     }
 
     #home .home-content .flex-row {
-        padding-top: 35rem;
+        padding-top: 60%;
+    }
+    #home .home-content {
+        margin-bottom: 0px;
     }
 }
 
@@ -307,8 +309,7 @@
 /* stack columns on small mobile devices
  * ------------------------------------------------------------------- */
 
-/*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 400px) {
 /*@media only screen and (max-width: 6.2in) {*/
     /* typography */
     html {
@@ -341,5 +342,39 @@
         clear: both !important;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    #about h1,
+    #XP h1 {
+        font-size: 3.1rem;
+    }
+    #about .section-intro,
+    #XP .section-intro,
+    #XP .col-six {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #about p.lead,
+    #XP p.lead {
+        font-size: 1.8rem;
+    }
+    #about p {
+        font-size: 1.65rem; /* less than p .ead */
+        /*padding-bottom: 2.2rem;*/
+    }
+    #XP h3 {
+        font-size: 2.1rem;
+    }
+    #XP h5 {
+        font-size: 1.25rem;
+    }
+    #XP ul.lead {
+        font-size: 1.6rem;
+    }
+    #contact .section-intro {
+        padding: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 98%;
     }
 }

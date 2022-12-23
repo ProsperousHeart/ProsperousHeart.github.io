@@ -792,11 +792,20 @@ html.no-csstransitions .home-content__main {
     }
 }
 
-/*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 400px) {
 /*@media only screen and (max-width: 6.2in) {*/
     .home-content {
         vertical-align: middle;
+        /*width: 100%;
+        height: 100%;
+        vertical-align: bottom;*/
+        padding-bottom: 10rem;
+    }
+    .home-content__scroll {
+        /*position: absolute;
+        left: .6rem;
+        /*bottom: -13.2rem;*/
+        bottom: -2.2rem;
     }
     .home-content h1 {
         font-size: 3.5rem;

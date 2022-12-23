@@ -269,8 +269,7 @@
     }
 }
 
-/*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 400px) {
 /*@media only screen and (max-width: 6.2in) {*/
     .masonry-wrap {
         width: auto;

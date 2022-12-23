@@ -390,3 +390,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .narrow {
     max-width: 800px;
 }
+
+@media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 6.2in) {*/
+    .btn--primary {
+        font-size: 1rem;
+    }
+}

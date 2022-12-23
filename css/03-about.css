@@ -82,22 +82,24 @@
         padding-left: 10px;
     }
     .s-about p.lead { /* .lead is in bootstrap */
-        padding: 0px;
+        /*padding: 0px;*/
         font-size: 1.7rem;
-        margin-bottom: 2rem;
+        padding-bottom: 2rem;
     }
     p {
         font-size: 1.3rem;
     }
 }
 
-/*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 400px) {
 /*@media only screen and (max-width: 6.2in) {*/
     .about-content .left {
         padding-right: 0;
     }
     .about-content .right {
         padding-left: 0;
+    }
+    .about-content .btn-primary {
+        font-size: 1rem;
     }
 }
