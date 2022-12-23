@@ -355,6 +355,9 @@
     #XP h1 {
         font-size: 3.1rem;
     }
+    #XP h5 {
+        color: #15AD30;
+    }
     #about .section-intro,
     #XP .section-intro,
     #XP .col-six {
