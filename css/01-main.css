@@ -391,9 +391,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     max-width: 800px;
 }
 
-@media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
-    .btn--primary {
-        font-size: 1rem;
+    .btn {
+        font-size: 1.2rem;
     }
 }

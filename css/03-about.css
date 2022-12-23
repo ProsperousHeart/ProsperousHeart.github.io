@@ -91,7 +91,8 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
     .about-content .left {
         padding-right: 0;
@@ -99,7 +100,14 @@
     .about-content .right {
         padding-left: 0;
     }
-    .about-content .btn-primary {
+    .about-content .btn {
         font-size: 1rem;
+    }
+    .s-about p.lead { /* .lead is in bootstrap */
+        padding-bottom: 1rem;
+        margin-bottom: 0px;
+    }
+    p {
+        font-size: 1.4rem;
     }
 }

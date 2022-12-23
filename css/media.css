@@ -279,7 +279,8 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
     /* On screens that are 413px wide or less,
     make the columns stack on top of each other
@@ -293,7 +294,7 @@
     }
 
     #home .home-content .flex-row {
-        padding-top: 60%;
+        padding-top: 33%;
     }
     #home .home-content {
         margin-bottom: 0px;
@@ -309,7 +310,8 @@
 /* stack columns on small mobile devices
  * ------------------------------------------------------------------- */
 
-@media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
     /* typography */
     html {
@@ -366,15 +368,22 @@
         font-size: 2.1rem;
     }
     #XP h5 {
-        font-size: 1.25rem;
+        font-size: 1.45rem;
     }
     #XP ul.lead {
         font-size: 1.6rem;
+    }
+    #contact h3 {
+        padding-top: 2rem;
     }
     #contact .section-intro {
         padding: 0px;
         margin-left: 0px;
         margin-right: 0px;
         width: 98%;
+    }
+    #contact .section-intro .col-full {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
