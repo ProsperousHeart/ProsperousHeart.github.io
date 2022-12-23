@@ -279,6 +279,18 @@
     }
 }
 
+@media only screen and (max-width: 413px) {
+    /* On screens that are 413px wide or less,
+    make the columns stack on top of each other
+    instead of next to each other */
+    .flex-row {
+        flex-direction: column;
+    }
+    #home .home-content .row h2 {
+        font-size: 2.4rem;
+    }
+}
+
 
 /* -------------------------------------------------------------------
  * ## small mobile devices - (_grid.scss)
@@ -288,7 +300,8 @@
 /* stack columns on small mobile devices
  * ------------------------------------------------------------------- */
 
-@media only screen and (max-width: 400px) {
+/*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 413px) {
     /* typography */
     html {
         font-size: 9.375px;
