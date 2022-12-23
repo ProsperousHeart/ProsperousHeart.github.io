@@ -263,14 +263,14 @@ article.blog-single .blog-content {
 
 .page-header__title {
     color: #FFFFFF;
-    position: relative;
     /*font-family: "librebaskerville-bold", serif;*/
     font-family: "Libre Baskerville", serif;
-    font-weight: 700; /* bold */
     font-size: 6.6rem;
+    font-weight: 700; /* bold */
     line-height: 1.227;
-    margin-top: 0;
     margin-bottom: 3.6rem;
+    margin-top: 0;
+    position: relative;
 }
 
 .page-header__title a {

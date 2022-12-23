@@ -11,9 +11,9 @@
 .section-intro h1 {
     /*font-family: "librebaskerville-bold", serif;*/
     font-family: "Libre Baskerville", serif;
-    font-weight: 700; /* bold */
-    font-size: 4.8rem;
     line-height: 1.375;
+    font-size: 4.8rem;
+    font-weight: 700; /* bold */
     margin-top: 0;
 }
 
