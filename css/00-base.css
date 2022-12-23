@@ -655,7 +655,10 @@ form,
 }
 
 .hidden-txt {
-    /* https://moz.com/blog/guide-to-hidden-text */
+    /*
+        https://www.woorank.com/en/edu/seo-guides/html-header
+        https://moz.com/blog/guide-to-hidden-text
+    */
     visibility: hidden;
     text-size: 0px;
 }
