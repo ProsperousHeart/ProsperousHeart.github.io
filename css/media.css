@@ -279,8 +279,8 @@
     }
 }
 
-/*@media only screen and (max-width: 413px) {*/
-@media only screen and (max-width: 6.2in) {
+@media only screen and (max-width: 413px) {
+/*@media only screen and (max-width: 6.2in) {*/
     /* On screens that are 413px wide or less,
     make the columns stack on top of each other
     instead of next to each other */
@@ -289,7 +289,7 @@
     }
     #home .home-content .row h2 {
         font-size: 2rem;
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -303,8 +303,9 @@
  * ------------------------------------------------------------------- */
 
 /*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 481px) {
 /*@media only screen and (max-width: 413px) {*/
-@media only screen and (max-width: 6.2in) {
+/*@media only screen and (max-width: 6.2in) {*/
     /* typography */
     html {
         font-size: 9.375px;

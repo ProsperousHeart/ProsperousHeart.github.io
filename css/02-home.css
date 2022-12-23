@@ -793,7 +793,8 @@ html.no-csstransitions .home-content__main {
 }
 
 /*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 6.2in) {
+@media only screen and (max-width: 481px) {
+/*@media only screen and (max-width: 6.2in) {*/
     .home-content {
         vertical-align: middle;
     }

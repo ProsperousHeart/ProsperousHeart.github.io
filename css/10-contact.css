@@ -278,7 +278,8 @@
 }
 
 /*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 6.2in) {
+@media only screen and (max-width: 481px) {
+/*@media only screen and (max-width: 6.2in) {*/
     .contact__form {
         padding-right: 0;
     }
