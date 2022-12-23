@@ -132,17 +132,17 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 600; /* semibold */
     font-size: 1.4rem;
-    text-transform: uppercase;
     letter-spacing: .2rem;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .item-folio__cat {
     color: rgba(255, 255, 255, 0.5);
     /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
     font-size: 1.5rem;
+    font-weight: 400; /* regular */
     margin-bottom: 0;
 }
 

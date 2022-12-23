@@ -71,15 +71,15 @@
 }
 
 .timeline__header .timeline__timeframe {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    text-transform: uppercase;
-    letter-spacing: .15rem;
     color: rgba(0, 0, 0, 0.5);
-    margin-bottom: .9rem;
     /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
     font-weight: 700; /* bold */
+    letter-spacing: .15rem;
+    line-height: 1.5rem;
+    margin-bottom: .9rem;
+    text-transform: uppercase;
 }
 
 .timeline__header h3 {

@@ -68,20 +68,20 @@
 }
 
 .s-contact .form-field label {
+    color: #FFFFFF;
+    background: #862121; /* MAROON */
+    bottom: -0.3rem;
     /*font-family: "montserrat-semibold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 600; /* semibold */
     font-size: 1.1rem;
+    letter-spacing: .1rem;
     line-height: 2.4rem;
+    margin: 0;
+    padding: 0 2rem;
     position: absolute;
-    bottom: -0.3rem;
     right: .6rem;
     text-transform: uppercase;
-    letter-spacing: .1rem;
-    padding: 0 2rem;
-    margin: 0;
-    color: #FFFFFF;
-    background: #862121; /* MAROON */
 }
 
 .s-contact .form-field label::after {
@@ -177,12 +177,12 @@
 }
 
 .submit-loader .text-loader {
+    color: #FFFFFF;
     display: none;
     /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* bold */
     font-size: 1.4rem;
-    color: #FFFFFF;
+    font-weight: 700; /* bold */
     letter-spacing: .2rem;
     text-transform: uppercase;
 }
@@ -302,22 +302,22 @@ input[type="tel"],
 input[type="url"],
 input[type="password"],
 textarea, select {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    color: #333333;
     display: block;
     height: 6rem;
-    padding: 1.5rem 0;
-    border: 0;
     outline: none;
-    color: #333333;
+    padding: 1.5rem 0;
     /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
     font-size: 1.5rem;
+    font-weight: 400; /* regular */
     line-height: 3rem;
     max-width: 100%;
-    background: transparent;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 .ss-custom-select {
@@ -393,14 +393,14 @@ textarea:focus, select:focus {
 }
 
 label, legend {
-    /*font-family: "montserrat-bold", sans-serif;*/
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* bold */
-    font-size: 1.4rem;
-    margin-bottom: .9rem;
-    line-height: 1.714;
     color: #0D0A0B;
     display: block;
+    /*font-family: "montserrat-bold", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700; /* bold */
+    line-height: 1.714rem;
+    margin-bottom: .9rem;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -409,11 +409,11 @@ input[type="checkbox"], input[type="radio"] {
 
 label > .label-text {
     display: inline-block;
-    margin-left: 1rem;
     /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 400; /* regular */
     line-height: inherit;
+    margin-left: 1rem;
 }
 
 label > input[type="checkbox"], label > input[type="radio"] {

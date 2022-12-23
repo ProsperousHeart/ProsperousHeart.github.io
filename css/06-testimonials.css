@@ -187,14 +187,14 @@
 }
 
 .testimonials__author span {
+    color: rgba(95, 95, 95, 0.7);
     display: block;
     /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
     font-size: 1.3rem;
-    color: rgba(95, 95, 95, 0.7);
-    text-transform: none;
+    font-weight: 400; /* regular */
     letter-spacing: 0;
+    text-transform: none;
 }
 
 
