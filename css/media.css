@@ -279,7 +279,8 @@
     }
 }
 
-@media only screen and (max-width: 413px) {
+/*@media only screen and (max-width: 400px) {*/
+@media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
     /* On screens that are 413px wide or less,
     make the columns stack on top of each other
@@ -288,7 +289,7 @@
         flex-direction: column;
     }
     #home .home-content .row h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
         width: 90%;
     }
 }
@@ -303,8 +304,7 @@
  * ------------------------------------------------------------------- */
 
 /*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 481px) {
-/*@media only screen and (max-width: 413px) {*/
+@media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
     /* typography */
     html {

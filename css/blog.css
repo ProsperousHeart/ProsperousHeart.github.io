@@ -771,7 +771,7 @@ article.blog-single .blog-content {
 }
 
 /*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
     .page-header__content {
         font-size: 1.6rem;
