@@ -290,12 +290,17 @@
     }
     #home .home-content .row h2 {
         font-size: 2rem;
-        width: 80%;
+        width: 90%;
     }
 
     #home .home-content .flex-row {
         padding-top: 33%;
+        padding-left: 0px;
+        padding-right: 8rem;
     }
+    /*#home .home-content .flex-row .two-col {
+        width: 80%;
+    }*/
     #home .home-content {
         margin-bottom: 0px;
     }
