@@ -145,32 +145,32 @@ h5, .h05, h6, .h06 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: #0D0A0B;
+    /*font-family: "montserrat-medium", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500; /* medium */
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: auto;
     -webkit-font-smoothing: antialiased;
     -webkit-font-variant-ligatures: common-ligatures;
     -moz-font-variant-ligatures: common-ligatures;
-    font-variant-ligatures: common-ligatures;
-    /*font-family: "montserrat-medium", sans-serif;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500; /* medium */
-    color: #0D0A0B;
-    text-rendering: optimizeLegibility;
 }
 
 .h01, .h02, .h03, .h04, .h05, .h06 {
+    color: #0D0A0B;
     /*font-family: "montserrat-medium", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 500; /* medium */
-    color: #0D0A0B;
     text-rendering: optimizeLegibility;
 }
 
 h1, .h01 {
     /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* bold */
-    font-size: 3.6rem;
     line-height: 1.25;
+    font-size: 3.6rem;
+    font-weight: 700; /* bold */
     letter-spacing: -.1rem;
 }
 
@@ -197,11 +197,11 @@ h5, .h05 {
 h6, .h06 {
     /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* bold */
-    font-size: 1.4rem;
     line-height: 1.5;
-    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700; /* bold */
     letter-spacing: .16rem;
+    text-transform: uppercase;
 }
 
 p img {
@@ -209,13 +209,13 @@ p img {
 }
 
 p.lead { /* .lead is in bootstrap */
+    color: #0D0A0B;
     /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
-    font-size: 2rem;
     line-height: 1.8;
+    font-size: 2rem;
+    font-weight: 400; /* regular */
     margin-bottom: 3.6rem;
-    color: #0D0A0B;
 }
 
 em, i {
@@ -280,20 +280,20 @@ blockquote:before {
     left: 0;
 }
 blockquote p {
+    color: #0D0A0B;
     /*font-family: "montserrat-regular", sans-serif;*/
+    font-size: 2.1rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 400; /* regular */
-    padding: 0;
-    font-size: 2.1rem;
     line-height: 1.857;
-    color: #0D0A0B;
+    padding: 0;
 }
 blockquote cite {
     display: block;
     /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
     font-size: 1.4rem;
+    font-weight: 400; /* regular */
     line-height: 1.5;
 }
 blockquote cite:before {

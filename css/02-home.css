@@ -102,22 +102,22 @@
  * ------------------------------------------------------------------- */
 
 .header-menu-toggle {
+    color: rgba(255, 255, 255, 0.5);
     display: none;
+    /*font-family: "montserrat-regular", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400; /* regular */
+    height: 42px;
+    letter-spacing: .2rem;
+    line-height: 42px;
     position: absolute;
     right: 29px;
     top: 18px;
-    height: 42px;
     width: 42px;
-    line-height: 42px;
-    /*font-family: "montserrat-regular", sans-serif;*/
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
-    font-size: 1.4rem;
     text-transform: uppercase;
-    letter-spacing: .2rem;
-    color: rgba(255, 255, 255, 0.5);
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 .header-menu-toggle:hover, .header-menu-toggle:focus {
@@ -199,13 +199,13 @@
 .header-nav-wrap {
     /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* bold */
     font-size: 11px;
-    text-transform: uppercase;
+    font-weight: 700; /* bold */
     letter-spacing: .25rem;
     position: absolute;
-    top: 9px;
     right: 50px;
+    text-transform: uppercase;
+    top: 9px;
 }
 
 .header-nav {
@@ -228,12 +228,12 @@
 }
 
 .header-nav li.current a {
-    /*font-family: "montserrat-extrabold", sans-serif;*/
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800; /* extrabold */
     /*color: #af2b2b;*/
     /*color: #22dd26;  /* GREEN */
     color: #FF69B4; /* PINK - FF69B4 */
+    /*font-family: "montserrat-extrabold", sans-serif;*/
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800; /* extrabold */
 }
 
 .highlights {
@@ -381,17 +381,17 @@
 }
 
 .home-content h3 {
+    color: #862121; /* MAROON */
     /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* bold */
     font-size: 1.8rem;
-    color: #862121; /* MAROON */
-    text-transform: uppercase;
+    font-weight: 700; /* bold */
     letter-spacing: .5rem;
-    position: relative;
-    padding-left: 80px;
-    margin-left: -30px;
     margin-bottom: .6rem;
+    margin-left: -30px;
+    padding-left: 80px;
+    position: relative;
+    text-transform: uppercase;
 }
 
 .home-content h3::before {
@@ -456,17 +456,17 @@
 }
 
 .home-content__scroll a {
+    color: #FFFFFF;
+    display: inline-block;
     /*font-family: "montserrat-semibold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 600; /* semibold */
     font-size: 1.1rem;
-    text-transform: uppercase;
     letter-spacing: .3rem;
-    color: #FFFFFF;
-    position: relative;
-    display: inline-block;
     line-height: 3rem;
     padding-right: 2rem;
+    position: relative;
+    text-transform: uppercase;
 }
 
 .home-content__scroll a::after {
@@ -499,6 +499,7 @@
  * ------------------------------------------------------------------- */
 
 .home-social {
+    bottom: 0;
     /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 700; /* bold */
@@ -506,7 +507,6 @@
     margin: 0;
     padding-bottom: 18rem;
     position: absolute;
-    bottom: 0;
     right: 40px;
 }
 

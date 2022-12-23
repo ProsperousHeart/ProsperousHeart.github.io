@@ -18,15 +18,15 @@
 }
 
 .section-intro h3 {
+    color: #862121; /* MAROON */
     /*font-family: "montserrat-semibold", sans-serif;*/
+    font-size: 2rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 600; /* semibold */
-    font-size: 2rem;
-    color: #862121; /* MAROON */
-    text-transform: uppercase;
     letter-spacing: .15rem;
-    margin-top: 0;
     margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
 }
 
 .section-intro.has-bottom-sep {
