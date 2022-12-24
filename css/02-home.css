@@ -409,11 +409,11 @@
 
 .home-content h1 {
     color: #FFFFFF;
-    /*font-family: "librebaskerville-bold", serif;*/
     font-family: "Libre Baskerville", serif;
     font-size: 6rem;
     font-weight: 700; /* bold */
-    line-height: 1.35;
+    /*line-height: 1.35;*/
+    line-height: 7rem;
     margin-top: 0;
 }
 

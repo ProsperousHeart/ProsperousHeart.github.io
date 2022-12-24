@@ -263,11 +263,10 @@ article.blog-single .blog-content {
 
 .page-header__title {
     color: #FFFFFF;
-    /*font-family: "librebaskerville-bold", serif;*/
     font-family: "Libre Baskerville", serif;
     font-size: 6.6rem;
     font-weight: 700; /* bold */
-    line-height: 1.227;
+    line-height: 1.227; /* TODO:  update when doing blog */
     margin-bottom: 3.6rem;
     margin-top: 0;
     position: relative;
