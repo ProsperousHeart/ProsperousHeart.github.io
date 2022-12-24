@@ -26,8 +26,14 @@
     font-family: 'Comfortaa', cursive;
     color:white;
     font-size: 3rem;
-    line-height: 1.3;
+    line-height: 1.2;
+    padding-right: 1rem;
  }
+
+#home .name {
+    font-family: 'Grandstander', cursive;
+    font-weight: 200; /* extra-light */
+}
 
 .s-header {
     width: 100%;
@@ -509,7 +515,7 @@
     font-weight: 700; /* bold */
     list-style: none;
     margin: 0;
-    padding-bottom: 18rem;
+    padding-bottom: 14.5rem;
     position: absolute;
     right: 40px;
 }
@@ -806,9 +812,6 @@ html.no-csstransitions .home-content__main {
 /*@media only screen and (max-width: 400px) {*/
 @media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
-    #home .h-intro {
-        padding-top:  20rem;
-    }
     .home-content {
         vertical-align: middle;
         /*width: 100%;
@@ -818,19 +821,24 @@ html.no-csstransitions .home-content__main {
     }
     .home-content .h01 {
         display: flex;
-        font-size: 2.9rem;
-        letter-spacing: -.07rem;
-        line-height: 4rem;
+        flex-flow: row nowrap;
+        align-items: center;
+        align-content: center;
+        gap: 1px;
+        font-size: 3rem;
+        /*letter-spacing: -.07rem;
+        line-height: 1rem;*/
+        line-height: 6rem;
     }
     .home-content__scroll {
         /*position: absolute;
         left: .6rem;
         /*bottom: -13.2rem;*/
-        bottom: -2.2rem;
+        bottom: -3rem;
     }
-    /*.home-content h1 {*/
+    /*.home-content h1 {
         font-size: 3.5rem;
-    }
+    }*/
     .home-content__main {
         width: auto;
         margin-left: 25px;
@@ -841,5 +849,9 @@ html.no-csstransitions .home-content__main {
     }
     .home-social {
         /*display: none;*/
+        padding-bottom: 9.848rem;
+    }
+    .h-intro {
+        padding-top: 24.8rem;
     }
 }

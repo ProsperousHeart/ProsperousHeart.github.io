@@ -289,10 +289,13 @@
     instead of next to each other */
     .flex-row {
         flex-direction: column;
+
     }
     #home .home-content .row .h02 { /* succinct */
         font-size: 2.5rem;
         width: 95%;
+        padding-top: 0px;
+        margin-top: 0px;
     }
     #home .home-content__buttons {
         width:  80%;
