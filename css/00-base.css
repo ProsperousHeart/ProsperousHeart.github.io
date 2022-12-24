@@ -56,9 +56,10 @@ html {
 body {
     background: #0a0809;
     color: #5f5f5f;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400; /* regular */
-    font-size: 1.6rem;
+    /*font-family: "Libre Baskerville", serif;*/
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-weight: 300; /* light */
+    font-size: 1.8rem;
     height: 100%;
     /*line-height: 1;*/
     /*line-height: 1.875;*/
@@ -103,9 +104,16 @@ img.pull-left {
  * ## Typography resets - (_basic.scss)
  * ------------------------------------------------------------------- */
 
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, th, td {
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, th, td,
+ .h01, .h02 {
     margin: 0;
     padding: 0;
+}
+
+p {
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-weight: 300; /* light */
+    font-size: 1.6rem;
 }
 
 var, kbd, samp, code, pre {
@@ -207,10 +215,11 @@ p img {
 
 p.lead { /* .lead is in bootstrap */
     color: #0D0A0B;
-    font-family: "Montserrat", sans-serif;
-    line-height: 3rem;
+    /*font-family: "Montserrat", sans-serif;*/
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 2rem;
     font-weight: 400; /* regular */
+    line-height: 3rem;
     margin-bottom: 3.6rem;
 }
 

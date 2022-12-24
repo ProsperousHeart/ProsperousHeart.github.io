@@ -22,6 +22,13 @@
  *
  * ------------------------------------------------------------------- */
 
+ #home .h02 {
+    font-family: 'Comfortaa', cursive;
+    color:white;
+    font-size: 3rem;
+    line-height: 1.3;
+ }
+
 .s-header {
     width: 100%;
     height: 72px;
@@ -403,9 +410,11 @@
     top: 50%;
 }
 
-.home-content h1 {
+/*.home-content h1 {*/
+.home-content .h01 {
     color: #FFFFFF;
-    font-family: "Libre Baskerville", serif;
+    /*font-family: "Libre Baskerville", serif;*/
+    font-family: 'Readex Pro', sans-serif;
     font-size: 6rem;
     font-weight: 700; /* bold */
     /*line-height: 1.35;*/
@@ -690,7 +699,8 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 
 @media only screen and (max-width: 1500px) {
-    .home-content h1 {
+    /*.home-content h1 {*/
+    .home-content .h01 {
         font-size: 5.2rem;
     }
     .home-content__main {
@@ -699,7 +709,8 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 1200px) {
-    .home-content h1 {
+    /*.home-content h1 {*/
+    .home-content .h01 {
         font-size: 5rem;
     }
     .home-content br {
@@ -714,7 +725,8 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 1000px) {
-    .home-content h1 {
+    /*.home-content h1 {*/
+    .home-content .h01 {
         font-size: 4.8rem;
     }
     .home-content__main {
@@ -740,7 +752,8 @@ html.no-csstransitions .home-content__main {
     .home-content h3::before {
         width: 40px;
     }
-    .home-content h1 {
+    /*.home-content h1 {*/
+    .home-content .h01 {
         font-size: 4.4rem;
     }
     .home-content__main {
@@ -752,7 +765,8 @@ html.no-csstransitions .home-content__main {
     .home-content {
         padding-bottom: 15rem;
     }
-    .home-content h1 {
+    /*.home-content h1 {*/
+    .home-content .h01 {
         font-size: 4.2rem;
     }
     .home-content__main {
@@ -774,8 +788,10 @@ html.no-csstransitions .home-content__main {
     .s-home {
         min-height: 654px;
     }
-    .home-content h1 {
+    /*.home-content h1 {*/*/
+    .home-content .h01 {
         font-size: 3.8rem;
+        line-height: 0px;
     }
     .home-content h3 {
         font-size: 1.5rem;
@@ -783,13 +799,16 @@ html.no-csstransitions .home-content__main {
     .home-content__main {
         max-width: none;
         width: 85%;
-        margin-top: 150px;
+        margin-top: 0px;
     }
 }
 
 /*@media only screen and (max-width: 400px) {*/
 @media only screen and (max-width: 412px) {
 /*@media only screen and (max-width: 6.2in) {*/
+    #home .h-intro {
+        padding-top:  20rem;
+    }
     .home-content {
         vertical-align: middle;
         /*width: 100%;
@@ -797,13 +816,19 @@ html.no-csstransitions .home-content__main {
         vertical-align: bottom;*/
         padding-bottom: 10rem;
     }
+    .home-content .h01 {
+        display: flex;
+        font-size: 2.9rem;
+        letter-spacing: -.07rem;
+        line-height: 4rem;
+    }
     .home-content__scroll {
         /*position: absolute;
         left: .6rem;
         /*bottom: -13.2rem;*/
         bottom: -2.2rem;
     }
-    .home-content h1 {
+    /*.home-content h1 {*/
         font-size: 3.5rem;
     }
     .home-content__main {
