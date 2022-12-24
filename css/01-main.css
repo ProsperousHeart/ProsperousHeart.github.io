@@ -94,7 +94,6 @@ input[type="button"] {
     color: #151515;
     cursor: pointer;
     display: inline-block;
-    /*font-family: "montserrat-semibold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     font-weight: 600; /* semibold */
@@ -216,11 +215,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .alert-box {
     border-radius: 3px;
-    /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
     font-weight: 400; /* regular */
-    line-height: 1.6;
+    line-height: 1.6; /* TODO:  need to test this sizing out later */
     margin-bottom: 3rem;
     padding: 2.1rem 4rem 2.1rem 3rem;
     position: relative;
@@ -271,7 +269,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background: transparent;
     float: left;
     font-size: 8.4rem;
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 700; /* bold */
     line-height: 6rem;

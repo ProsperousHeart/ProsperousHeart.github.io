@@ -128,7 +128,6 @@
 
 .item-folio__title {
     color: #FFFFFF;
-    /*font-family: "montserrat-semibold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 600; /* semibold */
     font-size: 1.4rem;
@@ -139,7 +138,6 @@
 
 .item-folio__cat {
     color: rgba(255, 255, 255, 0.5);
-    /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
     font-weight: 400; /* regular */

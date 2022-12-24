@@ -104,7 +104,6 @@
 .header-menu-toggle {
     color: rgba(255, 255, 255, 0.5);
     display: none;
-    /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
     font-weight: 400; /* regular */
@@ -197,7 +196,6 @@
  * ------------------------------------------------------------------- */
 
 .header-nav-wrap {
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 11px;
     font-weight: 700; /* bold */
@@ -231,7 +229,6 @@
     /*color: #af2b2b;*/
     /*color: #22dd26;  /* GREEN */
     color: #FF69B4; /* PINK - FF69B4 */
-    /*font-family: "montserrat-extrabold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 800; /* extrabold */
 }
@@ -382,7 +379,6 @@
 
 .home-content h3 {
     color: #862121; /* MAROON */
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
     font-weight: 700; /* bold */
@@ -458,7 +454,6 @@
 .home-content__scroll a {
     color: #FFFFFF;
     display: inline-block;
-    /*font-family: "montserrat-semibold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 600; /* semibold */
     font-size: 1.1rem;
