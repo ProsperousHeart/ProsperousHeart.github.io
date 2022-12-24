@@ -276,6 +276,8 @@
     }
     #home .home-content .row .h02 {
         font-size: 2.2rem;
+        margin-top: 0px;
+        padding-top: 2rem;
     }
 }
 
