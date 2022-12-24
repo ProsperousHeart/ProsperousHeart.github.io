@@ -71,10 +71,9 @@
     color: #FFFFFF;
     background: #862121; /* MAROON */
     bottom: -0.3rem;
-    /*font-family: "montserrat-semibold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 600; /* semibold */
     font-size: 1.1rem;
+    font-weight: 600; /* semibold */
     letter-spacing: .1rem;
     line-height: 2.4rem;
     margin: 0;
@@ -179,7 +178,6 @@
 .submit-loader .text-loader {
     color: #FFFFFF;
     display: none;
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
     font-weight: 700; /* bold */
@@ -310,7 +308,6 @@ textarea, select {
     height: 6rem;
     outline: none;
     padding: 1.5rem 0;
-    /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
     font-weight: 400; /* regular */
@@ -395,11 +392,10 @@ textarea:focus, select:focus {
 label, legend {
     color: #0D0A0B;
     display: block;
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
     font-weight: 700; /* bold */
-    line-height: 1.714rem;
+    line-height: 1.714rem; /* TODO:  need to check this - might have added remaccidentally */
     margin-bottom: .9rem;
 }
 
@@ -409,7 +405,6 @@ input[type="checkbox"], input[type="radio"] {
 
 label > .label-text {
     display: inline-block;
-    /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 400; /* regular */
     line-height: inherit;

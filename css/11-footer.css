@@ -18,7 +18,6 @@
 
 footer {
     color: rgba(255, 255, 255, 0.2);
-    /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 400; /* regular */
@@ -45,7 +44,6 @@ footer a:hover, footer a:focus {
 }
 
 .footer-social {
-    /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-size: 1.3rem;
     font-weight: 400; /* regular */
