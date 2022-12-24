@@ -54,22 +54,22 @@ html {
 }
 
 body {
-    font-weight: normal;
-    line-height: 1;
-    word-wrap: break-word;
-    text-rendering: optimizeLegibility;
-    -webkit-overflow-scrolling: touch;
-    -webkit-text-size-adjust: none;
-    height: 100%;
     background: #0a0809;
-    /*font-family: "librebaskerville-regular", serif;*/
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400; /* regular */
-    font-size: 1.6rem;
-    line-height: 1.875;
     color: #5f5f5f;
+    /*font-family: "Libre Baskerville", serif;*/
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-weight: 300; /* light */
+    font-size: 1.8rem;
+    height: 100%;
+    /*line-height: 1;*/
+    /*line-height: 1.875;*/
+    line-height: 2.5rem;
     margin: 0;
     padding: 0;
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: none;
 }
 
 body, input, button {
@@ -104,9 +104,16 @@ img.pull-left {
  * ## Typography resets - (_basic.scss)
  * ------------------------------------------------------------------- */
 
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, th, td {
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, th, td,
+ .h01, .h02 {
     margin: 0;
     padding: 0;
+}
+
+p {
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-weight: 300; /* light */
+    font-size: 1.6rem;
 }
 
 var, kbd, samp, code, pre {
@@ -146,33 +153,31 @@ h5, .h05, h6, .h06 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: #0D0A0B;
+    /*font-family: "montserrat-medium", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500; /* medium */
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: auto;
     -webkit-font-smoothing: antialiased;
     -webkit-font-variant-ligatures: common-ligatures;
     -moz-font-variant-ligatures: common-ligatures;
-    font-variant-ligatures: common-ligatures;
-    /*font-family: "montserrat-medium", sans-serif;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500; /* medium */
-    color: #0D0A0B;
-    text-rendering: optimizeLegibility;
 }
 
 .h01, .h02, .h03, .h04, .h05, .h06 {
-    /*font-family: "montserrat-medium", sans-serif;*/
+    color: #0D0A0B;
     font-family: "Montserrat", sans-serif;
     font-weight: 500; /* medium */
-    color: #0D0A0B;
     text-rendering: optimizeLegibility;
 }
 
 h1, .h01 {
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* bold */
     font-size: 3.6rem;
-    line-height: 1.25;
+    font-weight: 700; /* bold */
     letter-spacing: -.1rem;
+    line-height: 1.25rem;
 }
 
 h2, .h02 {
@@ -196,13 +201,12 @@ h5, .h05 {
 }
 
 h6, .h06 {
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 700; /* bold */
-    font-size: 1.4rem;
     line-height: 1.5;
-    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700; /* bold */
     letter-spacing: .16rem;
+    text-transform: uppercase;
 }
 
 p img {
@@ -210,28 +214,26 @@ p img {
 }
 
 p.lead { /* .lead is in bootstrap */
-    /*font-family: "montserrat-regular", sans-serif;*/
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
-    font-size: 2rem;
-    line-height: 1.8;
-    margin-bottom: 3.6rem;
     color: #0D0A0B;
+    /*font-family: "Montserrat", sans-serif;*/
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 2rem;
+    font-weight: 400; /* regular */
+    line-height: 3rem;
+    margin-bottom: 3.6rem;
 }
 
 em, i {
-    /*font-family: "librebaskerville-italic", serif;*/
     font-family: "Libre Baskerville", serif;
-    font-weight: 400; /* regular italic */
     line-height: inherit;
     font-size: inherit;
+    font-weight: 400; /* regular italic */
 }
 
 strong, b {
-    /*font-family: "librebaskerville-bold", serif;*/
     font-family: "Libre Baskerville", serif;
-    font-weight: 700; /* bold */
     font-size: inherit;
+    font-weight: 700; /* bold */
     line-height: inherit;
 }
 
@@ -250,13 +252,12 @@ li {
 }
 
 abbr {
-    /*font-family: "librebaskerville-bold", serif;*/
+    color: #6c6c6c;
     font-family: "Libre Baskerville", serif;
     font-weight: 700; /* bold */
     font-variant: small-caps;
-    text-transform: lowercase;
     letter-spacing: .05rem;
-    color: #6c6c6c;
+    text-transform: lowercase;
 }
 abbr[title], dfn[title] {
     border-bottom: 1px dotted;
@@ -281,21 +282,18 @@ blockquote:before {
     left: 0;
 }
 blockquote p {
-    /*font-family: "montserrat-regular", sans-serif;*/
+    color: #0D0A0B;
+    font-size: 2.1rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 400; /* regular */
+    line-height: 1.857; /* TODO:  not currently using this - need to test when I am */
     padding: 0;
-    font-size: 2.1rem;
-    line-height: 1.857;
-    color: #0D0A0B;
 }
 blockquote cite {
     display: block;
-    /*font-family: "montserrat-regular", sans-serif;*/
     font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
     font-size: 1.4rem;
-    font-style: normal;
+    font-weight: 400; /* regular */
     line-height: 1.5;
 }
 blockquote cite:before {
@@ -433,11 +431,10 @@ dd {
 
 table {
     border-width: 0;
-    width: 100%;
-    max-width: 100%;
-    /*font-family: "librebaskerville-regular", serif;*/
     font-family: "Libre Baskerville", serif;
     font-weight: 400; /* regular */
+    max-width: 100%;
+    width: 100%;
 }
 
 th, td {
@@ -448,7 +445,6 @@ th, td {
 
 th {
     color: #0D0A0B;
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 700; /* bold */
 }
@@ -652,4 +648,13 @@ form,
     content: "";
     display: table;
     clear: both;
+}
+
+.hidden-txt {
+    /*
+        https://www.woorank.com/en/edu/seo-guides/html-header
+        https://moz.com/blog/guide-to-hidden-text
+    */
+    visibility: hidden;
+    text-size: 0px;
 }

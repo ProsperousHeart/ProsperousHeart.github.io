@@ -31,7 +31,9 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"> <!-- do not remove unless complete removal of all traces - must wait AT LEAST until after blog is integrated -->
+    <!-- https://fonts.google.com/share?selection.family=Comfortaa:wght@300;400;500;600;700%7CFredoka:wght@300;400;500;600;700%7CGrandstander:wght@200%7CLibre%20Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400%7CNoto%20Sans%20Cherokee:wght@200;300;400;500;700%7CRadio%20Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400%7CReadex%20Pro:wght@200;300;400;500;600;700%7CRed%20Hat%20Display:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400%7CRubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400;1,700%7CSpline%20Sans:wght@300;400;500;600;700%7CUrbanist:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,400%7CYaldevi:wght@400;500;600;700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&family=Grandstander:wght@200&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Cherokee:wght@200;300;400;500;700&family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Readex+Pro:wght@200;300;400;500;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400;1,700&family=Spline+Sans:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,400&family=Yaldevi:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- personal CSS tweaks -->
     <!-- github.com/necolas/normalize.css && https://cdnjs.com/libraries/normalize -->
@@ -113,22 +115,20 @@
         <div class="shadow-overlay"></div>
 
         <div class="home-content">
-
+            <h1 class="hidden-txt">Digital Resume for Kassandra Keeton</h1>
             <div class="row home-content__main">
 
                 <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items -->
                 <div class="flex-row two-col">
-                    <div>
+                    <div class="h-intro">
                         <h3><span class="hdr-HL-gp">Welcome</span></h3>
 
-                        <h1>
-                            I am Kassandra Keeton. <br>
-                        </h1>
-                        <h2 style="color:white"> <!-- TODO:  really liked the font & size for current h2 ... need to set for paragraph -->
+                        <p class="h01">I am Kassandra Keeton.</p>
+                        <div><p class="h02"> <!-- TODO:  really liked the font & size for current h2 ... need to set for paragraph -->
                             Software Engineer.<br>
                             Digital Marketer.<br>
                             Compassionate Teacher.
-                        </h2>
+                        </p></div>
                     </div>
 
                     <div class="home-content__buttons push-rt">
@@ -484,7 +484,7 @@
                         </div>
                     </div> <!-- end timeline__block for COL Scripting Lead -->
 
-                    <div id="CSL" class="timeline__block"> <!-- My Business -->
+                    <div class="timeline__block"> <!-- My Business -->
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
                             <p class="timeline__timeframe">2015 - CURRENT</p>
@@ -809,7 +809,9 @@
 
                 <div class="testimonials__slide">
                     <a href="https://www.linkedin.com/in/david-mcallister-301250a8" target="_blank"
-                           rel="noreferrer noopener"><img src="IMGs/avatars/Dave_McAllister.jpg" alt="Testimonial Provider Image" class="testimonials__avatar"></a>
+                           rel="noreferrer noopener"><img src="IMGs/avatars/Dave_McAllister.jpg"
+                                                          alt="Testimonial Provider Image - Dave McAllister"
+                                                          class="testimonials__avatar"></a>
                     <p>Kassandra is extremely knowledgeable of Python and I got a lot out of her class.
                         The material is very interactive and she helped me with any questions or issues that came up.</p>
                     <div class="testimonials__author h06">
@@ -821,8 +823,8 @@
 
                 <div class="testimonials__slide">
                     <a href="https://www.linkedin.com/in/knickerbocker1/" target="_blank" rel="noreferrer noopener">
-                        <img src="IMGs/avatars/Jennifer_Knickerbocker.jpg" alt="Testimonial Provider Image"
-                             class="testimonials__avatar"></a>
+                        <img src="IMGs/avatars/Jennifer_Knickerbocker.jpg"
+                             alt="Testimonial Provider Image - Jennifer Knickerbocker" class="testimonials__avatar"></a>
                     <p>I recall from our time together in the women's leadership course back in 2016, your tenacity and
                         passion around teaching coding. You should walk away from your time at Cisco knowing that you
                         have made an impact on so many people.<br>
@@ -837,11 +839,12 @@
                 <div class="testimonials__slide">
                     <a href="https://www.linkedin.com/in/santanu-ganguly-70512a1/" target="_blank"
                        rel="noreferrer noopener"><img src="IMGs/avatars/Santanu_Ganguly.jpg"
-                                                      alt="Testimonial Provider Image" class="testimonials__avatar"></a>
-                    <p>I have known you when you were training people on Python at Cisco, attended a lot of those coding hours
-                        and whereas I was your worst student and can’t code to save my life (not your fault), you were an amazing
-                        teacher and trainer.<br>Anyone willing to learn, upgrade or polish off Python skills will
-                        benefit amazingly from your sessions. Highly recommended!</p>
+                                                      alt="Testimonial Provider Image - Santanu Ganguly"
+                                                      class="testimonials__avatar"></a><p>I have known you when you were
+                    training people on Python at Cisco, attended a lot of those coding hours and whereas I was your
+                    worst student and can’t code to save my life (not your fault), you were an amazing teacher and
+                    trainer.<br>Anyone willing to learn, upgrade or polish off Python skills will benefit amazingly from
+                    your sessions. Highly recommended!</p>
                     <div class="testimonials__author h06">
                         <a class="str-testimonial-names" href="https://www.linkedin.com/in/santanu-ganguly-70512a1/"
                            target="_blank" rel="noreferrer noopener">Santanu Ganguly</a>
@@ -852,7 +855,7 @@
 
                 <div class="testimonials__slide">
                     <a href="https://www.linkedin.com/in/ariellesumits/" target="_blank" rel="noreferrer noopener">
-                        <img src="IMGs/avatars/Arielle_Sumits.jpg" alt="Testimonial Provider Image"
+                        <img src="IMGs/avatars/Arielle_Sumits.jpg" alt="Testimonial Provider Image - Arielle Sumits"
                              class="testimonials__avatar"></a>
                     <p>Kassandra you are a total go-getter! I have enjoyed partnering with you on Data Science for Good,
                         and I am sure exciting adventures await you wherever you go.</p>
@@ -865,7 +868,7 @@
 
                 <div class="testimonials__slide">
                     <a href="https://www.linkedin.com/in/kirtee-yadav/" target="_blank" rel="noreferrer noopener">
-                        <img src="IMGs/avatars/Kirtee_Yadav.jpg" alt="Testimonial Provider Image"
+                        <img src="IMGs/avatars/Kirtee_Yadav.jpg" alt="Testimonial Provider Image - Kirtee Yadav"
                              class="testimonials__avatar"></a>
                     <p>I really enjoyed working with you on DS4Good program, appreciate your leadership skills in
                         building a team of volunteers and provide guidance on data science project!</p>
@@ -879,9 +882,10 @@
                 <div class="testimonials__slide">
                     <a href="https://www.linkedin.com/in/larry-rios-b83a8866/" target="_blank"
                        rel="noreferrer noopener"><img src="IMGs/avatars/Larry_Rios.jpg"
-                                                      alt="Testimonial Provider Image" class="testimonials__avatar"></a>
-                    <p>Thank you so much for everything you have done to improve our ML and Data Science skills
-                        Kassandra. Also, thanks for helping new hires get connected to different groups in Cisco.</p>
+                                                      alt="Testimonial Provider Image - Larry Rios"
+                                                      class="testimonials__avatar"></a><p>Thank you so much for
+                    everything you have done to improve our ML and Data Science skills Kassandra. Also, thanks for
+                    helping new hires get connected to different groups in Cisco.</p>
                     <div class="testimonials__author h06">
                         <a class="str-testimonial-names" href="https://www.linkedin.com/in/larry-rios-b83a8866/"
                            target="_blank" rel="noreferrer noopener">Larry Rios</a>
@@ -892,7 +896,8 @@
                 <div class="testimonials__slide">
                     <a href="https://www.linkedin.com/in/david-spindola-15750274/" target="_blank"
                        rel="noreferrer noopener"><img src="IMGs/avatars/David_Spindola.jpg"
-                                                      alt="Testimonial Provider Image" class="testimonials__avatar"></a>
+                                                      alt="Testimonial Provider Image - David Spindola"
+                                                      class="testimonials__avatar"></a>
                     <p>It was amazing to work with you Kassandra, your passion to share knowledge and make innovation
                         happen is inspiring.</p>
                     <div class="testimonials__author h06">

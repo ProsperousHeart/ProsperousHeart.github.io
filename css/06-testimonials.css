@@ -44,12 +44,11 @@
 }
 
 .testimonials-header h1 {
-    /*font-family: "librebaskerville-bold", serif;*/
-    font-family: "Libre Baskerville", serif;
-    font-weight: 700; /* bold */
-    font-size: 4.2rem;
-    margin-top: 0;
     color: #FFFFFF;
+    font-family: "Libre Baskerville", serif;
+    font-size: 4.2rem;
+    font-weight: 700; /* bold */
+    margin-top: 0;
 }
 
 .testimonials {
@@ -187,14 +186,13 @@
 }
 
 .testimonials__author span {
-    display: block;
-    /*font-family: "montserrat-regular", sans-serif;*/
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
-    font-size: 1.3rem;
     color: rgba(95, 95, 95, 0.7);
-    text-transform: none;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400; /* regular */
     letter-spacing: 0;
+    text-transform: none;
 }
 
 

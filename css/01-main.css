@@ -89,26 +89,25 @@
 input[type="submit"], 
 input[type="reset"], 
 input[type="button"] {
-    display: inline-block;
-    /*font-family: "montserrat-semibold", sans-serif;*/
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600; /* semibold */
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: .3rem;
-    height: 5.4rem;
-    line-height: calc(5.4rem - .6rem);
-    padding: 0 3rem;
-    margin: 0 .3rem 1.2rem 0;
-    color: #151515;
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
     background-color: #c5c5c5;
     border: .3rem solid #c5c5c5;
+    color: #151515;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600; /* semibold */
+    height: 5.4rem;
+    letter-spacing: .3rem;
+    line-height: calc(5.4rem - .6rem);
+    margin: 0 .3rem 1.2rem 0;
+    padding: 0 3rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 .btn:hover, 
@@ -215,15 +214,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 
 .alert-box {
+    border-radius: 3px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400; /* regular */
+    line-height: 1.6; /* TODO:  need to test this sizing out later */
+    margin-bottom: 3rem;
     padding: 2.1rem 4rem 2.1rem 3rem;
     position: relative;
-    margin-bottom: 3rem;
-    border-radius: 3px;
-    /*font-family: "montserrat-regular", sans-serif;*/
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* regular */
-    font-size: 1.5rem;
-    line-height: 1.6;
 }
 
 .alert-box__close {
@@ -267,17 +265,16 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ----------------------------------------------- */
 
 .drop-cap:first-letter {
+    color: #000000;
+    background: transparent;
     float: left;
-    margin: 0;
-    padding: 1.5rem .6rem 0 0;
     font-size: 8.4rem;
-    /*font-family: "montserrat-bold", sans-serif;*/
     font-family: "Montserrat", sans-serif;
     font-weight: 700; /* bold */
     line-height: 6rem;
+    margin: 0;
+    padding: 1.5rem .6rem 0 0;
     text-indent: 0;
-    background: transparent;
-    color: #000000;
 }
 
 
