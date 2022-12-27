@@ -25,7 +25,7 @@
  *
  * ------------------------------------------------------------------- */
 
-#preloader {
+#preloader { /* flashing circle before site load */
     position: fixed;
     top: 0;
     left: 0;
@@ -37,7 +37,7 @@
     width: 100%;
 }
 
-.no-js #preloader, .oldie #preloader {
+.no-js #preloader, .oldie #preloader { /* flashing circle before site load */
     display: none;
 }
 
