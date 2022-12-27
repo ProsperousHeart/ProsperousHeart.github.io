@@ -20,7 +20,7 @@
     doc.setAttribute('data-useragent', navigator.userAgent);
 
 
-    /* Preloader
+    /* Preloader -- flashing circle before site loda
      * --------------------------------------------------
     var ssPreloader = function() {
 
@@ -130,7 +130,7 @@
 
 
     /* Masonry
-     * ---------------------------------------------------- */ 
+     * ----------------------------------------------------
     var ssMasonryFolio = function () {
 
         var containerBricks = $('.masonry');
@@ -141,7 +141,7 @@
                 resize: true
             });
         });
-    };
+    };*/
 
 
     /* photoswipe
@@ -418,8 +418,8 @@
         /*ssPrettyPrint();*/
         ssMoveHeader();
         ssMobileMenu();
-        /*ssMasonryFolio();
-        ssPhotoswipe();*/
+        /*ssMasonryFolio();*/
+        ssPhotoswipe();
         ssSlickSlider();
         ssWaypoints();
         /*ssStatCount();*/
