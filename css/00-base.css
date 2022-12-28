@@ -321,6 +321,16 @@ hr {
     height: 0;
 }
 
+.highlights {
+    display: flex;
+    flex-flow: row wrap;
+}
+/*@media only screen and (max-width: 1200px) {
+    .highlights {
+        flex-flow: row nowrap;
+    }
+}*/
+
 /* -------------------------------------------------------------------
  * ## links - (_basic.scss)
  * ------------------------------------------------------------------- */
@@ -657,4 +667,48 @@ form,
     */
     visibility: hidden;
     text-size: 0px;
+}
+
+/* -------------------------------------------------------------------
+ * ## small mobile devices - (_grid.scss)
+ * ------------------------------------------------------------------- */
+
+
+/* stack columns on small mobile devices
+ * ------------------------------------------------------------------- */
+
+/*@media only screen and (max-width: 412px) { -- could also use in*/
+@media only screen and (max-width: 500px) {
+    /* typography */
+    html {
+        font-size: 9.375px;
+    }
+
+    /* grid needs */
+    .row .row {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    [class*="col-"] {
+        width: 100% !important;
+        float: none !important;
+        clear: both !important;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    [class*="col-"] + [class*="col-"].end {
+        float: none;
+    }
+
+    /* block grid needs */
+    .stack .col-block {
+        width: 100% !important;
+        float: none !important;
+        clear: both !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

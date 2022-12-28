@@ -155,3 +155,14 @@
   flex: 50%;
   /*padding: 20px;*/
 }
+
+/*@media only screen and (max-width: 412px) { -- could also use in*/
+@media only screen and (max-width: 500px) {
+    /* On screens that are 500px wide or less,
+    make the columns stack on top of each other
+    instead of next to each other */
+    .flex-row {
+        flex-direction: column;
+
+    }
+}

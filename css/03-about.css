@@ -91,9 +91,24 @@
     }
 }
 
-/*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 412px) {
-/*@media only screen and (max-width: 6.2in) {*/
+/*@media only screen and (max-width: 412px) { -- could also use in*/
+@media only screen and (max-width: 500px) {
+    #about h1 {
+        font-size: 3.1rem;
+    }
+    #about .section-intro {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+    #about p {
+        font-size: 1.75rem; /* less than p .ead */
+        /*padding-bottom: 2.2rem;*/
+    }
+    #about p.lead {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+    }
     .about-content .left {
         padding-right: 0;
     }
