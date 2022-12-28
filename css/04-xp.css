@@ -114,9 +114,29 @@
     }
 }
 
-/*@media only screen and (max-width: 400px) {*/
-@media only screen and (max-width: 412px) {
-/*@media only screen and (max-width: 6.2in) {*/
+/*@media only screen and (max-width: 412px) { -- could also use in*/
+@media only screen and (max-width: 500px) {
+    #XP .section-intro,
+    #XP .col-six {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #XP h1 {
+        font-size: 3.1rem;
+    }
+    #XP h3 {
+        font-size: 2.1rem;
+    }
+    #XP h5 {
+        font-size: 1.45rem;
+        color: #15AD30;
+    }
+    #XP p.lead {
+        font-size: 1.815rem;
+    }
+    #XP ul.lead {
+        font-size: 1.6rem;
+    }
     .timeline__block {
         padding-left: 5.5rem;
     }
