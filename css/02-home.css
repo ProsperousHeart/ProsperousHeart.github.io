@@ -542,8 +542,8 @@ html.no-csstransitions .home-content__main {
         line-height: 4rem;
     }
     #home .home-content .row .h02 { /* succinct */
-        font-size: 2.4rem;
-        width: 90%;
+        font-size: 2.7rem;
+        width: 100%;
         padding-top: 0px;
         margin-top: 0px;
     }
@@ -579,5 +579,51 @@ html.no-csstransitions .home-content__main {
     .home-social {
         /*display: none;*/
         padding-bottom: 9.848rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #home .home-content .row .h02 { /* succinct */
+        font-size: 2.4rem;
+        width: 95%;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .h-intro {
+        padding-top: 66%;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-height: 700px) {
+    #home .home-content .row .h02 { /* succinct */
+        font-size: 1.35em;
+        width: 100%;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .h-intro {
+        padding-top: 17.5em;
+    }
+}
+
+@media only screen and (min-height: 850px) {
+    #home .home-content .row .h02 { /* succinct */
+        font-size: 1.5em;
+        width: 100%;
+    }
+    .h-intro {
+        padding-top: 23.9em;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-height: 840px) {
+    #home .home-content .row .h02 { /* succinct */
+        font-size: 1.45em;
+        width: 100%;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .h-intro {
+        padding-top: 21em;
     }
 }
