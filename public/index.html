@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+    <head>
+        <!--- basic page needs
+        ================================================== -->
+        <meta charset="utf-8">
+
+        <!-- favicons
+        ================================================== -->
+        <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">-->
+        <link rel="shortcut icon" href="IMGs/favicon.png" type="image/x-icon">
+        <link rel="icon" href="%PUBLIC_URL%/favicon.png" type="image/x-icon" />
+
+        <!-- meta tags | https://ahrefs.com/blog/open-graph-meta-tags -->
+        <!-- mobile specific metas
+        ================================================== -->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- https://web.dev/responsive-web-design-basics/#:~:text=A%20meta%20viewport%20tag%20gives%20the%20browser%20instructions,better%20by%20increasing%20font%20sizes%20and%20scaling%20 -->
+        <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+
+        <!-- <meta name="theme-color" content="#000000" /> -->
+        <meta 
+            name="description" 
+            property="og:description" 
+            content="Software Engineer. Digital Marketer. Compassionate Teacher. Passionate about empowering others for greater success!"
+        />
+        <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+        <!--
+        manifest.json provides metadata used when your web app is installed on a
+        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+        -->
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <!--
+        Notice the use of %PUBLIC_URL% in the tags above.
+        It will be replaced with the URL of the `public` folder during the build.
+        Only files inside the `public` folder can be referenced from the HTML.
+
+        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+        work correctly both with client-side routing and a non-root public URL.
+        Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+        <title>Resume - Kassandra The Prosperous Heart</title>
+        <meta property="og:title" content="Resume for Kassandra Keeton The Prosperous Heart">
+        <meta name="author" content="Kassandra Keeton - the Prosperous Heart">
+        
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://resume.prosperousheart.com/">
+
+        <!-- <meta property="og:image" content="https://resume.prosperousheart.com/IMGs/20180108.jpg"/>-->
+        <meta property="og:image" content="https://resume.prosperousheart.com/IMGs/social/large.png"/>
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <meta property="og:image:alt" content="Kassandra smiling" /> <!-- https://ogp.me/#structured -->
+        
+        <meta property="og:image" content="https://resume.prosperousheart.com/IMGs/social/square2.png"/>
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1080" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:image:alt" content="Kassandra smiling" /> <!-- https://ogp.me/#structured -->
+
+        <!-- CSS
+        ================================================== -->
+        <!-- bootstrap:  https://getbootstrap.com/ -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"> <!-- do not remove unless complete removal of all traces - must wait AT LEAST until after blog is integrated -->
+        <!-- https://fonts.google.com/share?selection.family=Comfortaa:wght@300;400;500;600;700%7CFredoka:wght@300;400;500;600;700%7CGrandstander:wght@200%7CLibre%20Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400%7CNoto%20Sans%20Cherokee:wght@200;300;400;500;700%7CRadio%20Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400%7CReadex%20Pro:wght@200;300;400;500;600;700%7CRed%20Hat%20Display:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400%7CRubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400;1,700%7CSpline%20Sans:wght@300;400;500;600;700%7CUrbanist:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,400%7CYaldevi:wght@400;500;600;700 -->
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&family=Grandstander:wght@200&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans+Cherokee:wght@200;300;400;500;700&family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Readex+Pro:wght@200;300;400;500;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400;1,700&family=Spline+Sans:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,400&family=Yaldevi:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- personal CSS tweaks -->
+        <!-- github.com/necolas/normalize.css && https://cdnjs.com/libraries/normalize -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+        <!-- slick.js:  https://github.com/kenwheeler/slick -->
+        <!--<link rel="stylesheet" href="css/vendors/slick-slider.css">-->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+        <link rel="stylesheet" href="css/media.css">
+        <link rel="stylesheet" href="css/00-base.css">
+        <link rel="stylesheet" href="css/01-main.css">
+        <link rel="stylesheet" href="css/00-sections.css">
+        <link rel="stylesheet" href="css/02-header.css">
+        <link rel="stylesheet" href="css/02-home.css">
+        <link rel="stylesheet" href="css/03-about.css">
+        <!--<link rel="stylesheet" href="css/vendors/photoswipe.css">-->
+        <!--<link rel="stylesheet" href="css/vendors/prettyprint.css">-->
+        <link rel="stylesheet" href="css/04-xp.css">
+        <link rel="stylesheet" href="css/04-projects.css">
+        <link rel="stylesheet" href="css/06-testimonials.css">
+        <link rel="stylesheet" href="css/10-contact.css">
+        <link rel="stylesheet" href="css/11-footer.css">
+        <link rel="stylesheet" href="css/helpers.css">
+
+        <!-- pace:  https://codebyzach.github.io/pace/ -->
+        <!--<script src="js/UNUSED/pace.min.js"></script>-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+        <link rel="stylesheet" href="css/vendors/pace-flash.css">           <!-- 3rd party:  pace-flash -->
+        <script data-pace-options='{ "ajax": false }' src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+
+        <!-- swiper: https://swiperjs.com/get-started -->
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>-->
+
+        <!-- script
+        ================================================== -->
+        <script src="js/modernizr.js"></script>
+
+    </head>
+
+<body id="top">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+</html>
