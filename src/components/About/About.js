@@ -4,35 +4,35 @@ import './About.css';
 const About = () => {
 
     return (
-        <section id="about" class="s-about target-section">
+        <section id="about" className="s-about target-section">
 
-            <div class="row narrow section-intro has-bottom-sep">
-                <div class="col-full text-center">
+            <div className="row narrow section-intro has-bottom-sep">
+                <div className="col-full text-center">
                     <h3>About</h3>
                     <h1>More About Me</h1>
-                    <p class="lead">I am passionate about empowering others for greater success by breaking the tech stuff
+                    <p className="lead">I am passionate about empowering others for greater success by breaking the tech stuff
                         down into easy-to-understand, byte-sized pieces.</p>
                     <p>I enjoy creating innovative software engineering solutions, mentoring other developers, and know the
                         importance of digital marketing - whether to find a job, grow a business, or simply to get the
                         word out on an event.</p>
                 </div>
-                <div id="xp-btns" class="about-content about-content--buttons">
+                <div id="xp-btns" className="about-content about-content--buttons">
 
-                    {/* <!--<div class="col-six tab-full left">--> */}
-                    <div class="col-six tab-full">
-                        <a href="https://prosperousheart.com/resume" target="_blank" rel="noreferrer noopener" class="btn btn--primary full-width">View My Resume (PDF)</a>
+                    {/* <!--<div className="col-six tab-full left">--> */}
+                    <div className="col-six tab-full">
+                        <a href="https://prosperousheart.com/resume" target="_blank" rel="noreferrer noopener" className="btn btn--primary full-width">View My Resume (PDF)</a>
                     </div>
-                    {/* <!--<div class="col-six tab-full right" title="Training on programming, digital marketing, Human Design, and more!">--> */}
-                    <div class="col-six tab-full" title="Training on programming, digital marketing, Human Design, and more!">
-                        <a href="https://prosperousheart.com" target="_blank" rel="noreferrer noopener" class="btn full-width" title="Training on programming, digital marketing, Human Design, and more!">Access My Blog</a>
+                    {/* <!--<div className="col-six tab-full right" title="Training on programming, digital marketing, Human Design, and more!">--> */}
+                    <div className="col-six tab-full" title="Training on programming, digital marketing, Human Design, and more!">
+                        <a href="https://prosperousheart.com" target="_blank" rel="noreferrer noopener" className="btn full-width" title="Training on programming, digital marketing, Human Design, and more!">Access My Blog</a>
                     </div>
 
                 </div> {/*<!-- end about-content buttons -->*/}
             </div>
 
-            {/* <!--<div class="row about-content">
+            {/* <!--<div className="row about-content">
 
-                <div class="col-six tab-full left">
+                <div className="col-six tab-full left">
                     <h3>Howdy!</h3>
 
                     <p>Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud mollit laboris sunt magna velit culpa consectetur nostrud consectetur labore sed do.</p>
@@ -42,32 +42,32 @@ const About = () => {
                     </p>
                 </div>
 
-                <div class="col-six tab-full right">
+                <div className="col-six tab-full right">
                     <h3>I've Got Some skills.</h3>
 
-                    <ul class="skill-bars">
+                    <ul className="skill-bars">
                         <li>
-                        <div class="progress percent90"><span>90%</span></div>
+                        <div className="progress percent90"><span>90%</span></div>
                         <strong>HTML5</strong>
                         </li>
                         <li>
-                        <div class="progress percent85"><span>85%</span></div>
+                        <div className="progress percent85"><span>85%</span></div>
                         <strong>CSS3</strong>
                         </li>
                         <li>
-                        <div class="progress percent70"><span>70%</span></div>
+                        <div className="progress percent70"><span>70%</span></div>
                         <strong>JQuery</strong>
                         </li>
                         <li>
-                        <div class="progress percent95"><span>95%</span></div>
+                        <div className="progress percent95"><span>95%</span></div>
                         <strong>PHP</strong>
                         </li>
                         <li>
-                        <div class="progress percent75"><span>75%</span></div>
+                        <div className="progress percent75"><span>75%</span></div>
                         <strong>Wordpress</strong>
                         </li>
                         <li>
-                        <div class="progress percent90"><span>90%</span></div>
+                        <div className="progress percent90"><span>90%</span></div>
                         <strong>Angular JS</strong>
                         </li>
                     </ul>
