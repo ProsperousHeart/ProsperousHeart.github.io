@@ -1,0 +1,143 @@
+/* ===================================================================
+ *
+ *  Kassandra Resume v1.0 XP (Experiences) Section Stylesheet
+    20221222
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  # XP section needs
+    # timeline + responsive needs
+  ===================================================================*/
+
+  #XP {
+    /*padding-top: 10rem;*/
+    padding-bottom: 4rem;
+    background-color: #FFFFFF;
+    position: relative;
+    /*max-height:  content;*/
+}
+
+#XP .has-bottom-sep {
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+
+#XP .has-bottom-sep::after {
+    display: inline-block;
+    height: 1px;
+    width: 240px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+}
+
+/* -------------------------------------------------------------------
+ * ## timeline - (_site-layout.scss)
+ * ------------------------------------------------------------------- */
+
+.timeline {
+    position: relative;
+    text-align: left;
+    margin-top: 3.6rem;
+}
+
+.timeline::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 2rem;
+    top: 0;
+}
+
+.timeline__block {
+    position: relative;
+    padding-left: 8rem;
+    min-height: 28.8rem;
+}
+
+.timeline__bullet {
+    background: #0D0A0B;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin-left: -0.75rem;
+    box-shadow: 0 0 0 9px #E9E9E9;
+    position: absolute;
+    left: 2rem;
+    top: .3rem;
+}
+
+.timeline__header .timeline__timeframe {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700; /* bold */
+    letter-spacing: .15rem;
+    line-height: 1.5rem;
+    margin-bottom: .9rem;
+    text-transform: uppercase;
+}
+
+.timeline__header h3 {
+    line-height: 1.25;
+    margin: 0 0 .3rem 0;
+}
+
+.timeline__header h5 {
+    margin-top: 0;
+}
+
+.timeline__desc p {
+    margin: 0;
+    padding-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * timeline
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+    p.lead { /* .lead is in bootstrap */
+        padding: 0px;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    ul li.lead {
+        font-size: 1.6rem;
+    }
+    .timeline__block {
+        padding-left: 6rem;
+    }
+}
+
+/*@media only screen and (max-width: 412px) { -- could also use in*/
+@media only screen and (max-width: 500px) {
+    #XP .section-intro,
+    #XP .col-six {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #XP h1 {
+        font-size: 3.1rem;
+    }
+    #XP h3 {
+        font-size: 2.1rem;
+    }
+    #XP h5 {
+        font-size: 1.45rem;
+        color: #15AD30;
+    }
+    #XP p.lead {
+        font-size: 1.815rem;
+    }
+    #XP ul.lead {
+        font-size: 1.6rem;
+    }
+    .timeline__block {
+        padding-left: 5.5rem;
+    }
+}
