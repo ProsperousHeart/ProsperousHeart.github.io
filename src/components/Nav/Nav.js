@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+// import { useRef } from 'react';
 // import React from 'react';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import './Nav.css';
 import $ from 'jquery';
 
@@ -36,16 +37,23 @@ function ssMobileMenu(element) {
 };
 
 // const Nav = () => {
-// export default function Nav({scrollDir, loc}) {
-export default function Nav({scrollDir}) {
+export default function Nav({navActiveStr, navPrevStr}) {
     // const [stickyClass, setStickyClass] = useState('.header-nav li a');
     const [dims, setDims] = useState({
         height: window.innerHeight,
         width: window.innerWidth
     });
-    // console.log("Scroll direction is:", scrollDir[0]);
-    // console.log("current section:", loc);
-    // console.log("current window location:", window.location);
+
+
+    // // "how to get all children element of html li"
+    // // https://www.encodedna.com/javascript/how-to-get-all-li-elements-in-ul-using-javascript.htm
+    // function getLIelems(parentID, tagName) {
+    //     console.log(`parentID:  ${parentID} | tagName: ${tagName}`);
+    //     const parent = document.getElementById(parentID);
+    //     console.log(`parent: ${parent}`);
+    //     const kids = parent.getElementsByTagName(tagName).innerHTML;
+    //     console.log(`kids: ${kids}`);
+    // }
 
     useEffect(() => {
         function handleResize() {
@@ -85,48 +93,98 @@ export default function Nav({scrollDir}) {
     //     }
     // };
 
+    // function clearNav(clickedNavStr) {
+    //     // setClickedNav(clickedNavStr)
+    //     const navMenuIDs = {
+    //       home: "navHome",
+    //       about: "navAbout",
+    //       xp: "navXP",
+    //       testimopnials: "navTestimonials",
+    //       contact: "navContact"
+    //     }
+    //     console.log(`clearNav | This is a test for the menu clicks (clicked on ${clickedNavStr}) ... `);
+    //     for (var key in navMenuIDs) {
+    //       document.getElementById(navMenuIDs[key]).classList.remove("current");
+    //     }
+    //     document.getElementById(clickedNavStr).classList.add("current");
+    // }
+
+    // const timeoutMS = 500;
     return (
         <header className="s-header">
             <div className="header-logo">
                 {/* <a className="site-logo" href="#"><img src="images/logo.png" alt="Homepage"></a>*/}
-                {/* <a className="site-logo" href="#"><img src="images/white.png" alt="Homepage" /></a> */}
-                <img 
-                    className="site-logo" 
-                    src="/IMGs/white.png" 
-                    alt="Homepage" 
-                    onClick={() => window.location.replace("/#")}
-                />
+                <a className="site-logo" 
+                    href="/#"
+                    // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navHome")}
+                    // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navHome")}
+                    // onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
+                    // onClick={setClickedNav("navHome")}
+                >
+                    <img 
+                        className="site-logo" 
+                        src="/IMGs/white.png" 
+                        alt="Homepage" 
+                        // onClick={() => {
+                        //     window.location.replace("/#");
+                        //     updateNav(navActive, "navHome");
+                        // }}
+                        // onClick={setActiveMenu("navHome")}
+                        // onClick={console.log(document.getElementById("headerNav"))}
+                    />  
+                </a>
             </div>
             <nav className="header-nav-wrap"> {/*<!-- see ssMobileMenu in main.js -->*/}
-                <ul className="header-nav">  {/*<!-- see ssWaypoints in main.js -->*/}
+                <ul id="headerNav" className="header-nav">  {/*<!-- see ssWaypoints in main.js -->*/}
                     <li id="navHome"
                         className="current"
                     >
                         <a className="smoothscroll"  
                             href="#home" 
                             title="Home"
+                            // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navHome")}
+                            // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navHome")}
+                            // onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
                         >Home</a>
                     </li>
-                    <li id="navAbout"><a 
-                        className="smoothscroll"  
-                        href="#about" 
-                        title="About"
-                    >About</a></li>
+                    <li id="navAbout">
+                        <a className="smoothscroll"  
+                            href="#about" 
+                            title="About"
+                            // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navAbout")}
+                            // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navAbout")}
+                            // onClick={() => clearNav("navAbout")}
+                            // onClick={() => setTimeout(clearNav, timeoutMS, "navAbout")}
+                        >About</a>
+                    </li>
                     <li id="navXP"><a 
                         className="smoothscroll"  
                         href="#XP" 
                         title="Experience"
+                        //onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navXP")}
+                        // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navXP")}
+                        // onClick={() => clearNav("navXP")}
+                        // onClick={() => setTimeout(clearNav, timeoutMS, "navXP")}
                     >Experience</a></li>
                     <li id="navTestimonials"><a 
                         className="smoothscroll"  
                         href="#Testimonials2" 
                         title="Testimonials"
+                        // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navTestimonials")}
+                        // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navTestimonials")}
+                        // onClick={() => clearNav("navTestimonials")}
+                        // onClick={() => setTimeout(clearNav, timeoutMS, "navTestimonials")}
                     >Testimonials</a></li>
                     {/* <!--<li><a className="smoothscroll"  href="#Projects" title="Projects">Projects</a></li>--> */}
                     <li id="navContact"><a 
                         className="smoothscroll"
                         href="#contact"
-                        title="Contact">Contact</a></li>
+                        title="Contact"
+                        // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navContact")}
+                        // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navContact")}
+                        // onClick={() => clearNav("navContact")}
+                        // onClick={() => setTimeout(clearNav, timeoutMS, "navContact")}
+                    >Contact</a></li>
                 </ul>
             </nav>
             <a 
