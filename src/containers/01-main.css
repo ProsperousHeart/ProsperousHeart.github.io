@@ -333,7 +333,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * -----------
  * markup:
  *
- * <aside class="pull-quote">
+ * <aside className="pull-quote">
  *		<blockquote>
  *			<p></p>
  *		</blockquote>
