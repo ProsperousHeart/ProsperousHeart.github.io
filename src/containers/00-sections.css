@@ -9,7 +9,8 @@
 }
 
 .section-intro h1 {
-    font-family: "Libre Baskerville", serif;
+    /* font-family: "Libre Baskerville", serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     line-height: 6rem; /*why is 1.375 not a size? without it, it looks funny*/
     font-size: 4.8rem;
     font-weight: 700; /* bold */
@@ -19,7 +20,8 @@
 .section-intro h3 {
     color: #862121; /* MAROON */
     font-size: 2rem;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-weight: 600; /* semibold */
     letter-spacing: .15rem;
     margin-bottom: 0;

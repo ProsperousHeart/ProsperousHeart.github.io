@@ -45,7 +45,8 @@
 
 .testimonials-header h1 {
     color: #FFFFFF;
-    font-family: "Libre Baskerville", serif;
+    /* font-family: "Libre Baskerville", serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 4.2rem;
     font-weight: 700; /* bold */
     margin-top: 0;

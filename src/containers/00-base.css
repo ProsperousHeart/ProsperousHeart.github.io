@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
     /*font-family: "montserrat-medium", sans-serif;
     font-family: "Montserrat", sans-serif;
     font-weight: 500; /* medium */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-variant-ligatures: common-ligatures;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: auto;
@@ -167,13 +168,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .h01, .h02, .h03, .h04, .h05, .h06 {
     color: #0D0A0B;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-weight: 500; /* medium */
     text-rendering: optimizeLegibility;
 }
 
 h1, .h01 {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 3.6rem;
     font-weight: 700; /* bold */
     letter-spacing: -.1rem;
@@ -201,7 +204,8 @@ h5, .h05 {
 }
 
 h6, .h06 {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     line-height: 1.5;
     font-size: 1.4rem;
     font-weight: 700; /* bold */
@@ -224,14 +228,16 @@ p.lead { /* .lead is in bootstrap */
 }
 
 em, i {
-    font-family: "Libre Baskerville", serif;
+    /* font-family: "Libre Baskerville", serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     line-height: inherit;
     font-size: inherit;
     font-weight: 400; /* regular italic */
 }
 
 strong, b {
-    font-family: "Libre Baskerville", serif;
+    /* font-family: "Libre Baskerville", serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: inherit;
     font-weight: 700; /* bold */
     line-height: inherit;
@@ -253,7 +259,8 @@ li {
 
 abbr {
     color: #6c6c6c;
-    font-family: "Libre Baskerville", serif;
+    /* font-family: "Libre Baskerville", serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-weight: 700; /* bold */
     font-variant: small-caps;
     letter-spacing: .05rem;
@@ -276,7 +283,8 @@ blockquote:before {
     line-height: 0px;
     margin: 0;
     color: rgba(0, 0, 0, 0.15);
-    font-family: arial, sans-serif;
+    /* font-family: arial, sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     position: absolute;
     top: 3.6rem;
     left: 0;
@@ -284,14 +292,16 @@ blockquote:before {
 blockquote p {
     color: #0D0A0B;
     font-size: 2.1rem;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-weight: 400; /* regular */
     line-height: 1.857; /* TODO:  not currently using this - need to test when I am */
     padding: 0;
 }
 blockquote cite {
     display: block;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 1.4rem;
     font-weight: 400; /* regular */
     line-height: 1.5;
@@ -441,7 +451,8 @@ dd {
 
 table {
     border-width: 0;
-    font-family: "Libre Baskerville", serif;
+    /* font-family: "Libre Baskerville", serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-weight: 400; /* regular */
     max-width: 100%;
     width: 100%;
@@ -455,7 +466,8 @@ th, td {
 
 th {
     color: #0D0A0B;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-weight: 700; /* bold */
 }
 

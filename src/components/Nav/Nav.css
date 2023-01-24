@@ -100,7 +100,8 @@
 .header-menu-toggle {
     color: rgba(255, 255, 255, 0.5);
     display: none;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 1.4rem;
     font-weight: 400; /* regular */
     height: 42px;
@@ -192,7 +193,8 @@
  * ------------------------------------------------------------------- */
 
 .header-nav-wrap {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 11px;
     font-weight: 700; /* bold */
     letter-spacing: .25rem;
@@ -225,7 +227,8 @@
     /*color: #af2b2b;*/
     /*color: #22dd26;  /* GREEN */
     color: #FF69B4; /* PINK - FF69B4 */
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-weight: 800; /* extrabold */
 }
 

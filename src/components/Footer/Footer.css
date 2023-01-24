@@ -18,7 +18,8 @@
 
 footer {
     color: rgba(255, 255, 255, 0.2);
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 14px;
     font-weight: 400; /* regular */
     padding: 6.6rem 0 4.2rem;
@@ -44,7 +45,8 @@ footer a:hover, footer a:focus {
 }
 
 .footer-social {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 1.3rem;
     font-weight: 400; /* regular */
     letter-spacing: .3rem;
