@@ -1,25 +1,46 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Testimonials.css';
 import TCardList from './TCardList';
 import { data } from './data';
 
-const Testimonials = () => {
-
-    return (
-        <section id="Testimonials2" class="s-testimonials target-section">
-            <div class="overlay"></div>
-            <div class="row testimonials-header">
-                <div class="col-full">
-                    <h1 class="h02">Testimonials</h1>
-                </div>
-            </div>
-            <div class="row testimonials">
-                <div class="col-full testimonials__slider">
+export default class Testimonials extends Component {
+    render() {
+        return (
+            <section
+                id="Testimonials2"
+                className="s-testimonials target-section"
+            >
+                <div>
+                    <div className="overlay"></div>
+                    <div className="row testimonials-header">
+                        <div className="col-full">
+                            <h1 className="h02">Testimonials</h1>
+                        </div>
+                    </div>
                     <TCardList data={data} />
                 </div>
-            </div>
-        </section>
-    );
+            </section>
+        );
+    }
 }
 
-export default Testimonials;
+// const Testimonials = () => {
+
+//     return (
+//         <section id="Testimonials2" className="s-testimonials target-section">
+//             <div className="overlay"></div>
+//             <div className="row testimonials-header">
+//                 <div className="col-full">
+//                     <h1 className="h02">Testimonials</h1>
+//                 </div>
+//             </div>
+//             <div className="row testimonials">
+//                 <div className="col-full testimonials__slider">
+//                    <TCardList data={data} />
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
+
+// export default Testimonials;
