@@ -14,7 +14,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 // import main_js from './js/main';
 import { Waypoint } from 'react-waypoint';
 import { useDetectScroll } from "@smakss/react-scroll-direction"; // https://stackoverflow.com/a/62497293/10474024
-import { Divider } from '@mui/material'; // https://www.geeksforgeeks.org/how-to-use-divider-component-in-reactjs/ --> https://mui.com/material-ui/migration/migration-v4/
+// import { Divider } from '@mui/material'; // https://www.geeksforgeeks.org/how-to-use-divider-component-in-reactjs/ --> https://mui.com/material-ui/migration/migration-v4/
 
 import './00-base.css';
 import './00-sections.css';
@@ -31,66 +31,50 @@ import './iconic/css/iconmonstr-iconic-font.css';
 // const SMARTBRAIN_BE = process.env.REACT_APP_BE;
 
 function App() { // original - functional component
-  // const [currloc, setCurrloc] = useState(window.location);
-  // // const [currloc, setCurrloc] = useState(window.location.hash);
-  // const [prevloc, setPrevloc] = useState(currloc);
-  // // const [testcnt, setTestcnt] = useState(0);
-  // console.log("current window location:", window.location);
 
   // const [activeNav, setActiveNav] = useState("home");
   // const [activeElem, setActiveElem] = useState(document.getElementById("home"));
 
-  const [activeNav, setActiveNav] = useState(document.getElementById("navHome"));
-  // const updateActiveNav = (navClass) => {
-  //   setActiveNav(() => document.getElementById(navClass));
-  // }
-  // useEffect(() => {
-  //   // activeNav.classList.add("current");
-  //   console.log("active nav:", activeNav);
-  // }, [activeNav]);
+  const [activeNavStr, setActiveNavStr] = useState("navHome");
+  // const [activeNav, setActiveNav] = useState(document.getElementById(activeNavStr));
+  // const [activeNav, setActiveNav] = useState(document.getElementById("navHome"));
 
-  const [prevActiveNav, setPrevActiveNav] = useState(document.getElementById("navHome"));
-  // const updatePrevNav = (navClass) => {
-  //   setPrevActiveNav(() => document.getElementById(navClass));
-  // }
-  // useEffect(() => {
-  //   // activeNav.classList.add("current");
-  //   // prevActiveNav.classList.remove("current");
-  //   console.log("prev nav:", prevActiveNav);
-  // }, [prevActiveNav]);
+  const [prevNavStr, setPrevNavStr] = useState("navHome");
+  // const [prevActiveNav, setPrevActiveNav] = useState(document.getElementById(prevNavStr));
+  // const [prevActiveNav, setPrevActiveNav] = useState(document.getElementById("navHome"));
 
-  const [nextActiveNav, setNextActiveNav] = useState(document.getElementById("navAbout"));
+  // const [nextActiveNav, setNextActiveNav] = useState(document.getElementById("navAbout"));
 
-  const setNavSecs = (prev, active) => {
-    console.log(`Updating section for prev (${prev}) and next (${active})`)
-    setPrevActiveNav(document.getElementById(prev));
-    // updatePrevNav(prev);
-    console.log("prevActiveNav:",prevActiveNav);
-    setActiveNav(document.getElementById(active));
-    // updateActiveNav(active);
-    console.log("activeNav:", activeNav);
-  }
-
-  function setNavClasses(prevElem, nextElem) {
-    console.log("prevActiveNav:", prevActiveNav);
-    prevActiveNav.classList.remove("current");
-    console.log("activeNav:", activeNav);
-    activeNav.classList.add("current");
-    console.log("nextActiveNav:", nextActiveNav);
-  }
-
-  // const [elemItm4ClassChg, setElemItm4ClassChg] = useState(activeNav.classList.add("current"));
-  // const [scrollDir, setScrollDir] = useState(useDetectScroll({}));
   const [scrollDir] = useDetectScroll({});
+
+  // const [clickedNav, setClickedNav] = useState("navHome");
+
+  // function updateNavMenu({navMenuID, wpLoc}) {
+
+  //   const navMenuIDs = {
+  //     home: "navHome",
+  //     about: "navAbout",
+  //     xp: "navXP",
+  //     testimopnials: "navTestimonials",
+  //     contact: "navContact"
+  //   }
+
+  //   console.log(`updateNavMenu (${wpLoc}) | This is a test for the menu ${navMenuID} ... `);
+  //   for (var key in navMenuIDs) {
+  //     if (navMenuIDs[key] === navMenuID) {
+  //       console.log(`updateNavMenu (${wpLoc}) | making ${navMenuID} active`);
+  //       document.getElementById(navMenuID).classList.add("current");
+  //     } else {
+  //       console.log(`updateNavMenu (${wpLoc}) | making ${navMenuIDs[key]} inactive`);
+  //       document.getElementById(navMenuIDs[key]).classList.remove("current");
+  //     }
+  //   }
+  // }
   
   useEffect(() => {
     // const navSec = document.getElementsByClassName("header-nav-wrap")[0];
     const navSec = document.getElementsByClassName("s-header")[0];
-    // const abtSec = document.getElementById("about");
-    // const sticky = homeSec.offsetTop;
-    // const sticky = abtSec.offsetTop - 100;
     const sticky = document.getElementById("about").offsetTop - 100;
-    // const sticky = {aboutSec}.offsetTop - 100;
 
     const scrollCallBack = window.addEventListener("scroll", () => {
       // this is the scroll listener to stick menu
@@ -110,256 +94,328 @@ function App() { // original - functional component
         //   setHeaderText(whenNotFixed);
         // }
       }
-
-      // // this section will be to update colors of nav bar
-      // if (window.pageYOffset >= aboutSec.offsetTop) {
-      //   // console.log("About section has come to top! Time for menu color change")
-      //   navSec.classList.remove("target-section");
-      //   aboutSec.classList.add("target-section");
-      // } //else if 
-      
-
-      
-      // if (currloc !== window.location.hash) {
-      //   console.log("curr loc:", currloc);
-      //   setCurrloc(window.location.hash);
-      //   console.log("curr loc (updated):", currloc);
-      // }
-      // if (currloc !== prevloc) {
-      //   console.log("updating previous location from:", prevloc);
-      //   setPrevloc(currloc);
-      // }
     });
     return () => {
       window.removeEventListener("scroll", scrollCallBack);
     };
+  });
 
-    // function watchScroll() {
-    //   window.addEventListener('scroll', setCurrLoc);
-    // }
-    // watchScroll();
-    // return () => window.removeEventListener('scroll', setCurrLoc);
+  function wpDance(wpType, wpNum, loc, prevWPpos, currWPpos, evt, 
+    wpTop, vpTop, vpBtm, data) {
 
-    // // const onScroll = () => setLoc(window.location.hash);
-    // // // clean up code
-    // // window.removeEventListener('scroll', onScroll);
-    // // window.addEventListener('scroll', onScroll, { passive: true });
-    // // return () => window.removeEventListener('scroll', onScroll);
-  // }, [currloc, prevloc]);
-});
+    const destination = data.dest;
+    console.log(`WP${wpNum} ${wpType} (${loc}) |  scrollDir: ${scrollDir}  ---> going into ${destination}`);
+    
+    const intPrevNavStr = data.prev;
+    console.log(`WP${wpNum} ${wpType} (${loc}) | intPrevNavStr: ${intPrevNavStr}`);
+    const intActiveNavStr = data.curr;
+    console.log(`WP${wpNum} ${wpType} (${loc}) | intActiveNavStr: ${intActiveNavStr}`);
+    console.log(intActiveNavStr);
+    // const intNextNavStr = data.next;
+    // console.log(`WP${wpNum} ${wpType} (${loc}) | intNextNavStr: ${intNextNavStr}`);
 
-  // useEffect(() => {
-  //   prevActiveNav.classList.remove("current");
-  //   activeNav.classList.add("current");
-  // }, [setPrevActiveNav, setActiveNav]);
+    // getLIelems("headerNav", "li");
 
-  const homeSec = document.getElementById("home");
-  // const [homeSec, setHomeSec] = useState(document.getElementById("home"));
-  const aboutSec = document.getElementById("about");
-  // const [aboutSec, setAboutSec] = useState(document.getElementById("about"));
-  // const xpSec = document.getElementById("XP");
-  // const testimonialsSec = document.getElementById("Testimonials2");
-  // const contactSec = document.getElementById("contact");
+    console.log(`WP${wpNum} ${wpType} (${loc}) |  previousPosition: ${prevWPpos}`);
+    console.log(`WP${wpNum} ${wpType} (${loc}) |  currentPosition: ${currWPpos}`);
+    if (!evt) {
+      console.log(`=============== WP${wpNum} ${wpType} (${loc}) | This came from a menu click? (likely just the start of site here) ===============`);
+    }
+    console.log(`WP${wpNum} ${wpType} (${loc}) |  event: ${evt}`);
+    console.log(`WP${wpNum} ${wpType} (${loc}) |  waypointTop: ${wpTop}`);
+    console.log(`WP${wpNum} ${wpType} (${loc}) |  viewportTop: ${vpTop}`);
+    console.log(`WP${wpNum} ${wpType} (${loc}) |  viewportBottom: ${vpBtm}`);
+
+    console.log("updating 'React globals'");
+    // setNavSecs(intPrevNavStr, intActiveNavStr);
+    setPrevNavStr(intPrevNavStr);
+    // setPrevActiveNav(document.getElementById(intPrevNavStr));
+
+    setActiveNavStr(intActiveNavStr);
+    // setActiveNav(document.getElementById(intActiveNavStr));
+
+    // setNextActiveNav(document.getElementById(intNextNavStr));
+        
+    // console.log(`WP${wpNum} ${wpType} (${loc}) prev (uncertain if updated): ${prevActiveNav}`);
+    // console.log(prevActiveNav);
+    // console.log(`WP${wpNum} ${wpType} (${loc}) active (uncertain if updated): ${activeNav}`);
+    // console.log(activeNav);
+    // console.log(`WP${wpNum} ${wpType} (${loc}) next (uncertain if updated): ${nextActiveNav}`);
+    // console.log(nextActiveNav);
+
+    console.log(`SEtting NAv classes with ${intPrevNavStr} and ${intActiveNavStr}`)
+
+    let temp = document.getElementById(intPrevNavStr);
+    console.log(temp);
+    document.getElementById(intPrevNavStr).classList.remove("current");
+
+    temp = document.getElementById(intActiveNavStr);
+    console.log(temp);
+    document.getElementById(intActiveNavStr).classList.add("current");
+
+    // console.log(`WP${wpNum} ${wpType} (${loc}) prev nav (NOT updated):`, prevActiveNav); // I don't think this is showing the most recent update yet
+    // console.log(`WP${wpNum} ${wpType} (${loc}) active nav (NOT updated):`, activeNav);
+    // console.log(`WP${wpNum} ${wpType} (${loc}) next (uncertain if updated): ${nextActiveNav}`);
+
+    // final check if linked clicked
+    const currentURL = window.location.href;
+    console.log(`WP${wpNum} ${wpType} (${loc}) | Current URL:  ${currentURL}`)
+      
+    const navMenuIDs = {
+      "#home": "navHome",
+      "#about": "navAbout",
+      "#XP": "navXP",
+      "#Testimonials2": "navTestimonials",
+      "#contact": "navContact"
+    }
+    if (currentURL.includes("#")) {
+      console.log("A LINK WAS CLICKED!!!");
+      // let found = false;
+      for (const [key, val] of Object.entries(navMenuIDs)) {
+        if (currentURL.includes(key)) {
+          // found = true;for (var key in navMenuIDs) {
+          document.getElementById(val).classList.add("current");
+        } else {
+          document.getElementById(val).classList.remove("current");
+        }
+          
+      }
+
+    }
+
+  }
 
   return (
     <div className="App">
       {/* <FunBG id="tsparticles" /> */}
       {/*<Particles options={particlesOptions}/>*/}
-      <Waypoint
-        onEnter={({ previousPosition, currentPosition, event }) => {
-          // do something useful!
+      <Waypoint // WP0
+        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           // console.log("isntantiation - setting active nav to navHome");
-          // setPrevActiveNav(document.getElementById("navHome"));
-          console.log(`WP0 [before nav] OE with direction:  ${scrollDir}`);
-          // setNavSecs("navHome", "navHome");
-          // console.log("activeNav:", activeNav);
-          // console.log("prevActiveNav:", prevActiveNav);
+          let data = null;
+          if (scrollDir === "down" || scrollDir === "still"){
+            data = {
+              prev: "navHome",
+              curr: "navHome",
+              // next: "navAbout",
+              dest: "about section"
+            }
+          }
+          else { // SCROLLING UP
+            data = {
+              prev: "navAbout",
+              curr: "navHome",
+              // next: "navHome",
+              dest: "home section"
+            }
+          }
+          console.log("Calling the wpDance ...");
+          wpDance("OE", 0, "before Nav", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
-        onLeave={({ previousPosition, currentPosition, event }) => {
-          // do something useful!
-          // console.log("WP0 off screen @ top");
-          // console.log("current active nav:", activeNav);
-          console.log(`WP0 [before nav] OL with direction:  ${scrollDir}`);
-          // console.log("activeNav:", activeNav);
-          // console.log("prevActiveNav:", prevActiveNav);
-          setPrevActiveNav(document.getElementById("navHome"));
-          setActiveNav(document.getElementById("navAbout"));
-          setNextActiveNav(document.getElementById("navXP"));
+        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+          let data = null;
+          if (scrollDir === "down" || scrollDir === "still"){
+            data = {
+              prev: "navHome",
+              curr: "navAbout",
+              // next: "navXP",
+              dest: "about section"
+            }
+          }
+          else { // SCROLLING UP
+            data = {
+              prev: "navAbout",
+              curr: "navHome",
+              // next: "navHome",
+              dest: "home section"
+            }
+          }
+          
+          console.log("Calling the wpDance ...");
+          wpDance("OL", 0, "before Nav", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
       />
       {/* <Navigation onRouteChg={this.onRouteChg} isSignedIn={isSignedIn} /> */}
-      <Nav scrollDir={scrollDir} />
+      {/* <Nav scrollDir={scrollDir}  */}
+      <Nav navActiveStr={activeNavStr} navPrevStr={prevNavStr} />
       <Home 
         // ref={homeRef} 
         // visSelection={`${visibleSection === "Home" ? ".target-section" : ""}`}
         // onClick={() => window.location.replace("/#home")}
       />
-      <Waypoint
-        onEnter={({ previousPosition, currentPosition, event }) => {
-          // do something useful!
-          console.log(`WP1 (after home/before about) OE with direction:  ${scrollDir}`);
-          if (scrollDir === "down") {
-            console.log(`WP1 (after home/before about) oE | Entering ABOUT section going ${scrollDir}`);
-            setPrevActiveNav(document.getElementById("navHome"));
-            setActiveNav(document.getElementById("navAbout"));
-            setNextActiveNav(document.getElementById("navXP"));
-            // setNavSecs("navHome", "navAbout");
-            // console.log("prevActiveNav:", prevActiveNav);
-            // console.log("activeNav:", activeNav);
-          } else {
-            console.log(`WP1 (after home/before about) oE | Entering HOME section going ${scrollDir}`);
-            // setNavSecs("navAbout", "navHome");
-            // // setPrevActiveNav(document.getElementById("about"));
-            setPrevActiveNav(document.getElementById("navAbout"));
-            // // console.log("prevActiveNav:", prevActiveNav);
-            // // setActiveNav(document.getElementById("home"));
-            setActiveNav(document.getElementById("navHome"));
-            setNextActiveNav(document.getElementById("navHome")); // cause this is the 1st
+      <Waypoint // WP1
+        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+          let data = null;
+          if (scrollDir === "down"){
+            data = {
+              prev: "navHome",
+              curr: "navAbout",
+              // next: "navXP",
+              dest: "about section"
+            }
           }
-          console.log(`prev: ${prevActiveNav}`);
-          console.log(`active: ${activeNav}`);
-          // setNavClasses(prevActiveNav, activeNav);
-          console.log("WP1 OE (after home/before about)  prev nav:", prevActiveNav);
-          console.log("WP1 OE (after home/before about)  active nav:", activeNav);
-          setNavClasses(prevActiveNav, activeNav);
+          else { // SCROLLING UP
+            data = {
+              prev: "navHome",
+              curr: "navAbout",
+              // next: "navHome",
+              dest: "ABOUT section"
+            }
+          }
+          console.log("Calling the wpDance ...");
+          wpDance("OE", 1, "after home/before about", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
-        onLeave={({ previousPosition, currentPosition, event }) => {
-          console.log(`WP1 (after home/before about) OL with direction:  ${scrollDir}`);
-          // do something useful!
-          // console.log("WP1 (after home/before about) off screen @ top - about section main focus - update menu link color here");
-          if (scrollDir === "down") {
-            console.log(`WP1 OL | Going ${scrollDir} toward about - nothing to be done?`);
-            // setNavSecs("navHome", "navAbout");
-
+        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+          let data = null;
+          if (scrollDir === "down"){
+            data = {
+              prev: "navHome",
+              curr: "navAbout",
+              // next: "navXP",
+              dest: "ABOUT section"
+            }
           }
-          else {
-            console.log(`WP1 OL | Going ${scrollDir} toward home - update nav classes here????`);
-            // setNavSecs("navAbout", "navHome");
-            // console.log("Active nav:", activeNav); // should be about section
-            setPrevActiveNav(document.getElementById("navAbout"));
-            setActiveNav(document.getElementById("navHome"));
-            setNextActiveNav(document.getElementById("navHome")); // cause this is the 1st
+          else { // SCROLLING UP
+            data = {
+              prev: "navXP",
+              curr: "navAbout",
+              // next: "navHome",
+              dest: "ABOUT section"
+            }
           }
-          // console.log("should update nav classes OL?");
-          // setNavClasses(prevActiveNav, activeNav);
-          // console.log("updated active links in nav bar")
-          console.log("WP1 OL prev nav:", prevActiveNav);
-          console.log("WP1 OL active nav:", activeNav);
-          setNavClasses(prevActiveNav, activeNav);
+          console.log("Calling the wpDance ...");
+          wpDance("OL", 1, "after home/before about", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
       />
-      <Divider variant="middle" />
+      {/* <Divider variant="middle" /> */}
       <About 
         // ref={aboutRef} 
         // visSelection={`${visibleSection === "About" ? ".target-section" : ""}`}
         // onClick={() => window.location.replace("/#about")}
       />
-      <Waypoint
-        onEnter={({ previousPosition, currentPosition, event }) => {
-          console.log(`WP2 (after about/before XP timeline) OE with direction:  ${scrollDir}`);
-          let activeElem;
-          let prevElem;
-          // do something useful!
-          // console.log(`from prevActiveNav: ${prevActiveNav}`);
-          if (scrollDir === "down") {
-            console.log("Going toward XP (timeline) -- update nav links here?")
-            // setNavSecs("navAbout", "navXP");
-            // console.log("active nav:", activeNav);
-            setPrevActiveNav(document.getElementById("navAbout"));
-            setActiveNav(document.getElementById("navXP"));
-            setNextActiveNav(document.getElementById("navTestimonials"));
+      <Waypoint // WP2
+        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+          let data = null;
+          if (scrollDir === "down"){
+            data = {
+              prev: "navAbout",
+              curr: "navXP",
+              next: "navTestimonials",
+              dest: "XP (timeline)"
+            }
           }
-          else {
-            console.log("Going toward ABOUT")
-            // setNavSecs("navXP", "navAbout");
-            // console.log("Active nav:", activeNav);
-            setPrevActiveNav(document.getElementById("navXP"));
-            setActiveNav(document.getElementById("navAbout"));
-            setNextActiveNav(document.getElementById("navHome"));
+          else { // SCROLLING UP
+            // data = {
+            //   prev: "navTestimonials",
+            //   curr: "navXP",
+            //   // next: "navAbout",
+            //   dest: "XP (timeline)"
+            // }
+            data = {
+              prev: "navXP",
+              curr: "navAbout",
+              dest: "ABOUT section"
+            }
           }
-          // console.log("updating classes for WP2");
-          // setNavClasses(prevActiveNav, activeNav);
-          // prevActiveNav.classList.remove("current");
-          // activeNav.classList.add("current");
-          // console.log("updated active links in nav bar - on leave WP2");
-          // // setPrevActiveNav(document.getElementById("about"));
-          // if (scrollDir === "down") {
-          //   console.log("WP2 oe | Going into timeline");
-          //   setPrevActiveNav(document.getElementById("navAbout"));
-          //   setActiveNav(document.getElementById("navXP"));
-          //   console.log("current active nag:", activeNav);
-          //   console.log("set active nav bar links");
-            
-          //   activeNav.classList.add("current");
-          //   prevActiveNav.classList.remove("current");
-          // }
-          // else {
-          //   console.log("WP2 oe | Going into about - nothing changed yet");
-          // }
-          console.log("WP2 prev nav:", prevActiveNav);
-          console.log("WP2 active nav:", activeNav);
-          setNavClasses(prevActiveNav, activeNav);
-          // console.log("WP2 prev nav:", prevActiveNav);
-          // console.log("WP2 active nav:", activeNav);
+          console.log("Calling the wpDance ...");
+          wpDance("OE", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
-        onLeave={({ previousPosition, currentPosition, event }) => {
-          console.log(`WP2 (after about/before XP timeline) OL with direction:  ${scrollDir} (update colors???)`);
-          
-          setNavClasses(prevActiveNav, activeNav);
-          // do something useful!
-          // prevActiveNav.classList.remove("current");
-          // // document.getElementById("navAbout").classList.add("current");
-          // activeNav.classList.add("current");
-          // console.log("updated active links in nav bar - on leave WP2");
-          if (scrollDir === "down") {
-            console.log(`Going toward XP timeline - update nav classes here!`);
-            // setNavSecs("navHome", "navAbout");
-            // setNextActiveNav(document.getElementById("navTestimonials"));
-            setPrevActiveNav(document.getElementById("navAbout"));
-            setActiveNav(document.getElementById("navXP"));
-            setNextActiveNav(document.getElementById("navTestimonials"));
+        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
+          let data = null;
+          if (scrollDir === "down"){
+            data = {
+              prev: "navAbout",
+              curr: "navXP",
+              // next: "navTestimonials",
+              dest: "XP (timeline)"
+            }
           }
-          else {
-            console.log(`Going toward about - update nav classes here????`);
-            // setNavSecs("navAbout", "navHome");
-            // console.log("Active nav:", activeNav); // should be about section
-            setPrevActiveNav(document.getElementById("navXP"));
-            setActiveNav(document.getElementById("navAbout"));
-            setNextActiveNav(document.getElementById("navHome"));
+          else { // SCROLLING UP
+            data = {
+              prev: "navXP",
+              curr: "navAbout",
+              // next: "navHome",
+              dest: "ABOUT section"
+            }
+            // data = {
+            //   prev: "navXP",
+            //   curr: "navTestimonials",
+            //   // next: "navHome",
+            //   dest: "TESTIMONIALS section"
+            // }
           }
-          // console.log("should update nav classes OL?");
-          // setNavClasses(prevActiveNav, activeNav);
-          // console.log("updated active links in nav bar")
-          console.log("WP2 prev nav:", prevActiveNav);
-          console.log("WP2 active nav:", activeNav);
-          console.log("calling function to set classes ...");
-          setNavClasses(prevActiveNav, activeNav);
+          console.log("Calling the wpDance ...");
+          wpDance("OL", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
       />
-      <Divider variant="middle" />
+      {/* <Divider variant="middle" /> */}
       <Exp 
         // ref={xpRef} 
         // visSelection={`${visibleSection === "Exp" ? ".target-section" : ""}`}
         // onClick={() => window.location.replace("/#XP")}
       />
-      <Waypoint
-        onEnter={({ previousPosition, currentPosition, event }) => {
-          console.log(`WP3 (after about/before XP timeline) OE with direction:  ${scrollDir}`);
-          // console.log("prevActiveNav:", prevActiveNav);
-          // do something useful!
-          if (scrollDir === "down") {
-            console.log("Going into testimonials");
-            // setNavSecs("navXP", "navTestimonials");
-          } else {
-            console.log("Going into XP (timeline)");
-            // setNavSecs("navTestimonials", "navXP");
+      <Waypoint // WP3
+        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+          let data = null;
+          if (scrollDir === "down"){
+            data = {
+              prev: "navXP",
+              curr: "navTestimonials",
+              // next: "navContact",
+              dest: "TESTIMONIALS section"
+            }
           }
-          // setNavClasses(prevActiveNav, activeNav);
+          else { // SCROLLING UP
+            // data = {
+            //   prev: "navContact",
+            //   curr: "navTestimonials",
+            //   // next: "navXP",
+            //   dest: "TESTIMONIALS section"
+            // }
+            data = {
+              prev: "navTestimonials",
+              curr: "navXP",
+              // next: "navXP",
+              dest: "XP (timeline) section"
+            }
+          }
+          console.log("Calling the wpDance ...");
+          wpDance("OE", 3, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
-        onLeave={({ previousPosition, currentPosition, event }) => {
-          // do something useful!
-          console.log(`WP3 (after about/before XP timeline) OL with direction:  ${scrollDir}`);
-          // console.log(activeNav);
+        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
+          let data = null;
+          if (scrollDir === "down"){
+            data = {
+              prev: "navXP",
+              curr: "navTestimonials",
+              // next: "navContact",
+              dest: "testimonials section"
+            }
+          }
+          else { // SCROLLING UP
+            data = {
+              prev: "navTestimonials",
+              curr: "navXP",
+              // next: "navAbout",
+              dest: "XP (timeline)"
+            }
+            // data = {
+            //   prev: "navContact",
+            //   curr: "navTestimonials",
+            //   // next: "navAbout",
+            //   dest: "TESTIMONIALS section"
+            // }
+          }
+          console.log("Calling the wpDance ...");
+          wpDance("OL", 3, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
       />
       <ErrorBoundary>
@@ -369,25 +425,65 @@ function App() { // original - functional component
           // onClick={() => window.location.replace("/#Testimonials2")}
         />
       </ErrorBoundary>
-      <Waypoint
-        onEnter={({ previousPosition, currentPosition, event }) => {
-          // do something useful!
-          // setPrevActiveNav(document.getElementById("navTestimonials"));
-          // console.log("prevActiveNav:", prevActiveNav);
-          console.log(`WP4 (after Testimonials/before contact) OE with direction:  ${scrollDir}`);
+      <Waypoint // WP4
+        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+          let data = null;
+          if (scrollDir === "down"){
+            data = {
+              prev: "navTestimonials",
+              curr: "navContact",
+              // next: "navContact", // same because last section of site
+              dest: "CONTACT section"
+            }
+          }
+          else { // SCROLLING UP
+            data = {
+              prev: "navContact",
+              curr: "navTestimonials",
+              // next: "navXP",
+              dest: "TESTIMONIALS section"
+            }
+          }
+          console.log("Calling the wpDance ...");
+          wpDance("OE", 4, "after Testimonials/before contact", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
-        onLeave={({ previousPosition, currentPosition, event }) => {
-          // do something useful!
-          console.log(`WP4 (after Testimonials/before contact) OL with direction:  ${scrollDir}`);
+        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
+          let data = null;
+          if (scrollDir === "down"){
+            data = {
+              prev: "navTestimonials",
+              curr: "navContact",
+              // next: "navContact", // same because last section of site
+              dest: "CONTACT section"
+            }
+          }
+          else { // SCROLLING UP
+            data = {
+              prev: "navContact",
+              curr: "navTestimonials",
+              // next: "navXP",
+              dest: "TESTIMONIALS section"
+            }
+            // data = {
+            //   prev: "navXP",
+            //   curr: "navTestimonials",
+            //   // next: "navXP",
+            //   dest: "TESTIMONIALS section"
+            // }
+          }
+          console.log("Calling the wpDance ...");
+          wpDance("OL", 4, "after Testimonials/before contact", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
         }}
       />
-      <Divider variant="middle" />
+      {/* <Divider variant="middle" /> */}
       <Contact 
         // ref={contactRef} 
         // visSelection={`${visibleSection === "Contact" ? ".target-section" : ""}`}
         // onClick={() => window.location.replace("/#contact")}
       />
-      <Divider variant="middle" />
+      {/* <Divider variant="middle" /> */}
       <Footer />
     </div>
   );
