@@ -1,49 +1,55 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 // import { useRef } from 'react';
-// import React from 'react';
-import { useEffect } from 'react';
+import React from 'react';
+// import { useEffect } from 'react';
 import './Nav.css';
 import $ from 'jquery';
 
-function ssMobileMenu(element) {
-
-    // console.log("Clicked on element:", element);
-
-    var toggleButton = $('.header-menu-toggle'),
-        nav = $('.header-nav-wrap');
-
-    toggleButton.on('click', function(event){
-        event.preventDefault();
-
-        toggleButton.toggleClass('is-clicked');
-        nav.slideToggle();
-    });
-
-    if (toggleButton.is(':visible')) nav.addClass('mobile');
-
-    // window.on('resize', function() {
-    //     if (toggleButton.is(':visible')) nav.addClass('mobile');
-    //     else nav.removeClass('mobile');
-    // });
-
-    nav.find('a').on("click", function() {
-
-        if (nav.hasClass('mobile')) {
-            toggleButton.toggleClass('is-clicked');
-            nav.slideToggle(); 
-        }
-    });
-
-};
+// function ssMobileMenu(element) {
+//     // console.log("Clicked on element:", element);
+//     var toggleButton = $('.header-menu-toggle'),
+//         nav = $('.header-nav-wrap');
+//     toggleButton.on('click', function(event){
+//         event.preventDefault();
+//         toggleButton.toggleClass('is-clicked');
+//         nav.slideToggle();
+//     });
+//     if (toggleButton.is(':visible')) nav.addClass('mobile');
+//     // window.on('resize', function() {
+//     //     if (toggleButton.is(':visible')) nav.addClass('mobile');
+//     //     else nav.removeClass('mobile');
+//     // });
+//     nav.find('a').on("click", function() {
+//         if (nav.hasClass('mobile')) {
+//             toggleButton.toggleClass('is-clicked');
+//             nav.slideToggle(); 
+//         }
+//     });
+// };
 
 // const Nav = () => {
-export default function Nav({navActiveStr, navPrevStr}) {
+export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
     // const [stickyClass, setStickyClass] = useState('.header-nav li a');
-    const [dims, setDims] = useState({
-        height: window.innerHeight,
-        width: window.innerWidth
-    });
+    // const [dims, setDims] = useState({
+    //     height: window.innerHeight,
+    //     width: window.innerWidth
+    // });
 
+    const toggleOpen = (evt, navStr) => {
+        evt.preventDefault();
+        var toggleButton = $('.header-menu-toggle'),
+            nav = $('.header-nav-wrap');
+        
+        if (toggleButton.is(':visible')) nav.addClass('mobile');
+
+        console.log(`${navStr} menu option clicked`);
+        // if (nav.hasClass('mobile')) {
+        //     toggleButton.toggleClass('is-clicked');
+        //     nav.slideToggle();
+        // }
+        toggleButton.toggleClass('is-clicked');
+        nav.slideToggle();
+    }
 
     // // "how to get all children element of html li"
     // // https://www.encodedna.com/javascript/how-to-get-all-li-elements-in-ul-using-javascript.htm
@@ -55,46 +61,10 @@ export default function Nav({navActiveStr, navPrevStr}) {
     //     console.log(`kids: ${kids}`);
     // }
 
-    useEffect(() => {
-        function handleResize() {
-            var toggleButton = $('.header-menu-toggle'),
-                nav = $('.header-nav-wrap');
-            setDims({
-                height: window.innerHeight,
-                width: window.innerWidth
-              });
-            console.log('resized to: ', dims.width, 'x', dims.height);
-
-            if (toggleButton.is(':visible')) nav.addClass('mobile');
-            else nav.removeClass('mobile');
-        }
-        window.addEventListener('resize', handleResize)
-    });
-    // useEffect(() => {
-    //     window.addEventListener('scroll', stickNavbar(scrollDir));
-
-    //     return () => {
-    //         window.removeEventListener('scroll', stickNavbar(scrollDir));
-    //     };
-    // }, [scrollDir]);
-
-    // const stickNavbar = ({scrollDir}) => {
-    //     let sections = $(".target-section");
-    //     let navigation_links = $(".header-nav li a");
-    //     let active_section = $('section#' + window.element.id);
-
-    //     if (scrollDir === "up") active_section = active_section.prevAll(".target-section").first();
-
-    //     if (window !== undefined) {
-    //         let windowHeight = window.scrollY;
-    //         windowHeight > 500 
-    //             ? setStickyClass('fixed top-0 left-0 z-50') 
-    //             : setStickyClass('relative');
-    //     }
-    // };
-
     function clearNav(clickedNavStr) {
-        // setClickedNav(clickedNavStr)
+        var nav = $('.header-nav-wrap');
+        nav.slideToggle();
+
         const navMenuIDs = {
           home: "navHome",
           about: "navAbout",
@@ -102,7 +72,6 @@ export default function Nav({navActiveStr, navPrevStr}) {
           testimopnials: "navTestimonials",
           contact: "navContact"
         }
-        console.log(`clearNav | This is a test for the menu clicks (clicked on ${clickedNavStr}) ... `);
         for (var key in navMenuIDs) {
           document.getElementById(navMenuIDs[key]).classList.remove("current");
         }
@@ -127,13 +96,7 @@ export default function Nav({navActiveStr, navPrevStr}) {
         <header className="s-header">
             <div className="header-logo">
                 {/* <a className="site-logo" href="#"><img src="images/logo.png" alt="Homepage"></a>*/}
-                <a className="site-logo" 
-                    href="/#"
-                    // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navHome")}
-                    // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navHome")}
-                    // onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
-                    // onClick={setClickedNav("navHome")}
-                >
+                <a className="site-logo" href="/home" >
                     <img 
                         className="site-logo" 
                         src="/IMGs/white.png" 
@@ -142,16 +105,12 @@ export default function Nav({navActiveStr, navPrevStr}) {
                         //     window.location.replace("/#");
                         //     updateNav(navActive, "navHome");
                         // }}
-                        // onClick={setActiveMenu("navHome")}
-                        // onClick={console.log(document.getElementById("headerNav"))}
                     />  
                 </a>
             </div>
             <nav className="header-nav-wrap"> {/*<!-- see ssMobileMenu in main.js -->*/}
                 <ul id="headerNav" className="header-nav">
-                    <li id="navHome"
-                        className="current"
-                    >
+                    <li id="navHome" className="current">
                         <a className="smoothscroll"  
                             href="#home" 
                             title="Home"
@@ -208,7 +167,8 @@ export default function Nav({navActiveStr, navPrevStr}) {
             <a 
                 className="header-menu-toggle" 
                 href="#0"
-                onClick={(elem) => ssMobileMenu(elem)}
+                // onClick={(elem) => ssMobileMenu(elem)}
+                onClick={(event) => toggleOpen(event, "Hamburger")}
             >
                 <span>Menu</span>
             </a>
