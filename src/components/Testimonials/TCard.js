@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TCard = ({ name, img, content, url, title }) => {
+const TCard = ({ name, img, content, url, title, sliderSettings }) => {
 
     let html_name = <div className="str-testimonial-names">{name}</div>;
 
@@ -20,13 +20,15 @@ const TCard = ({ name, img, content, url, title }) => {
     }
 
     return (
-        <div className="testimonials__slide">
-            { html_img }
-            <p>{content}</p>
-            <div className="testimonials__author h06">
-                { html_name }
-                <span>{ title }</span>
-            </div>
+        <div className="col-full testimonials__slider">
+            <div className="testimonials__slide">
+                { html_img }
+                <p>{content}</p>
+                <div className="testimonials__author h06">
+                    { html_name }
+                    <span>{ title }</span>
+                </div>
+            </div>                          
         </div>
     );
 }
