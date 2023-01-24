@@ -49,7 +49,8 @@
     z-index: 600;
 }
 
-.s-header.sticky .header-logo a {
+/* .s-header.sticky .header-logo a { */
+.s-header.sticky .header-logo img {
     margin: 0;
 }
 
