@@ -135,7 +135,7 @@ export default function Nav({navActiveStr, navPrevStr}) {
                 </a>
             </div>
             <nav className="header-nav-wrap"> {/*<!-- see ssMobileMenu in main.js -->*/}
-                <ul id="headerNav" className="header-nav">  {/*<!-- see ssWaypoints in main.js -->*/}
+                <ul id="headerNav" className="header-nav">
                     <li id="navHome"
                         className="current"
                     >
