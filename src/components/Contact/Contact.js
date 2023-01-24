@@ -17,7 +17,7 @@ const Contact = () => {
                         If you are looking to join my community and receive direct mentorship through my training program,
                         please <b><a className="str-HL-green-lt"
                                     href="mailto:training@prosperousheart.com?subject=Interested%20In%20Training">send an
-                        email here</a></b>.<br /><br />
+                        email here</a></b>.</p><p className="lead">
                         If you are looking to hire me for a project or potential full time role, please contact me through
                         <a className="str-HL-pink-lt" href="https://www.linkedin.com/in/kkeeton" target="_blank" rel="noreferrer noopener">LinkedIn</a>
                         or via <a className="str-HL-pink-lt" href="mailto:krk.ph.rr@gmail.com?subject=Discussion%20of%20Potential%20Job">this email</a>.
