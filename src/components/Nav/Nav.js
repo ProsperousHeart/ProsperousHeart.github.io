@@ -93,23 +93,36 @@ export default function Nav({navActiveStr, navPrevStr}) {
     //     }
     // };
 
-    // function clearNav(clickedNavStr) {
-    //     // setClickedNav(clickedNavStr)
+    function clearNav(clickedNavStr) {
+        // setClickedNav(clickedNavStr)
+        const navMenuIDs = {
+          home: "navHome",
+          about: "navAbout",
+          xp: "navXP",
+          testimopnials: "navTestimonials",
+          contact: "navContact"
+        }
+        console.log(`clearNav | This is a test for the menu clicks (clicked on ${clickedNavStr}) ... `);
+        for (var key in navMenuIDs) {
+          document.getElementById(navMenuIDs[key]).classList.remove("current");
+        }
+        document.getElementById(clickedNavStr).classList.add("current");
+    }
+
+    // function deselectLinks() {
     //     const navMenuIDs = {
-    //       home: "navHome",
-    //       about: "navAbout",
-    //       xp: "navXP",
-    //       testimopnials: "navTestimonials",
-    //       contact: "navContact"
-    //     }
-    //     console.log(`clearNav | This is a test for the menu clicks (clicked on ${clickedNavStr}) ... `);
-    //     for (var key in navMenuIDs) {
-    //       document.getElementById(navMenuIDs[key]).classList.remove("current");
-    //     }
-    //     document.getElementById(clickedNavStr).classList.add("current");
+    //         "#home": "navHome",
+    //         "#about": "navAbout",
+    //         "#XP": "navXP",
+    //         "#Testimonials2": "navTestimonials",
+    //         "#contact": "navContact"
+    //       }
+    //       for (const [key, val] of Object.entries(navMenuIDs)) {
+    //         document.getElementById(val).classList.remove("current");
+    //       }
     // }
 
-    // const timeoutMS = 500;
+    const timeoutMS = 1000;
     return (
         <header className="s-header">
             <div className="header-logo">
@@ -144,7 +157,8 @@ export default function Nav({navActiveStr, navPrevStr}) {
                             title="Home"
                             // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navHome")}
                             // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navHome")}
-                            // onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
+                            onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
+                            // onClick={(deselectLinks)}
                         >Home</a>
                     </li>
                     <li id="navAbout">
@@ -154,7 +168,8 @@ export default function Nav({navActiveStr, navPrevStr}) {
                             // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navAbout")}
                             // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navAbout")}
                             // onClick={() => clearNav("navAbout")}
-                            // onClick={() => setTimeout(clearNav, timeoutMS, "navAbout")}
+                            onClick={() => setTimeout(clearNav, timeoutMS, "navAbout")}
+                            // onClick={(deselectLinks)}
                         >About</a>
                     </li>
                     <li id="navXP"><a 
@@ -164,7 +179,8 @@ export default function Nav({navActiveStr, navPrevStr}) {
                         //onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navXP")}
                         // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navXP")}
                         // onClick={() => clearNav("navXP")}
-                        // onClick={() => setTimeout(clearNav, timeoutMS, "navXP")}
+                        onClick={() => setTimeout(clearNav, timeoutMS, "navXP")}
+                        // onClick={(deselectLinks)}
                     >Experience</a></li>
                     <li id="navTestimonials"><a 
                         className="smoothscroll"  
@@ -173,7 +189,8 @@ export default function Nav({navActiveStr, navPrevStr}) {
                         // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navTestimonials")}
                         // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navTestimonials")}
                         // onClick={() => clearNav("navTestimonials")}
-                        // onClick={() => setTimeout(clearNav, timeoutMS, "navTestimonials")}
+                        onClick={() => setTimeout(clearNav, timeoutMS, "navTestimonials")}
+                        // onClick={(deselectLinks)}
                     >Testimonials</a></li>
                     {/* <!--<li><a className="smoothscroll"  href="#Projects" title="Projects">Projects</a></li>--> */}
                     <li id="navContact"><a 
@@ -183,7 +200,8 @@ export default function Nav({navActiveStr, navPrevStr}) {
                         // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navContact")}
                         // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navContact")}
                         // onClick={() => clearNav("navContact")}
-                        // onClick={() => setTimeout(clearNav, timeoutMS, "navContact")}
+                        onClick={() => setTimeout(clearNav, timeoutMS, "navContact")}
+                        // onClick={(deselectLinks)}
                     >Contact</a></li>
                 </ul>
             </nav>
