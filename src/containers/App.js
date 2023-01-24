@@ -45,19 +45,29 @@ function App() { // original - functional component
 
   // const [nextActiveNav, setNextActiveNav] = useState(document.getElementById("navAbout"));
 
+  const [clickedBool, setClickedBool] = useState(false);
+  const [lastNav, setLastNav] = useState();
+
   const [scrollDir] = useDetectScroll({});
 
   // const [clickedNav, setClickedNav] = useState("navHome");
 
   // function updateNavMenu({navMenuID, wpLoc}) {
 
-  //   const navMenuIDs = {
-  //     home: "navHome",
-  //     about: "navAbout",
-  //     xp: "navXP",
-  //     testimopnials: "navTestimonials",
-  //     contact: "navContact"
-  //   }
+    // // const navMenuIDs = {
+    // //   home: "navHome",
+    // //   about: "navAbout",
+    // //   xp: "navXP",
+    // //   testimopnials: "navTestimonials",
+    // //   contact: "navContact"
+    // // }
+    // const navMenuIDs = {
+    //   "#home": "navHome",
+    //   "#about": "navAbout",
+    //   "#XP": "navXP",
+    //   "#Testimonials2": "navTestimonials",
+    //   "#contact": "navContact"
+    // }
 
   //   console.log(`updateNavMenu (${wpLoc}) | This is a test for the menu ${navMenuID} ... `);
   //   for (var key in navMenuIDs) {
@@ -157,32 +167,58 @@ function App() { // original - functional component
     // console.log(`WP${wpNum} ${wpType} (${loc}) active nav (NOT updated):`, activeNav);
     // console.log(`WP${wpNum} ${wpType} (${loc}) next (uncertain if updated): ${nextActiveNav}`);
 
-    // final check if linked clicked
-    const currentURL = window.location.href;
-    console.log(`WP${wpNum} ${wpType} (${loc}) | Current URL:  ${currentURL}`)
+    // // final check if linked clicked
+    // const currentURL = window.location.href;
+    // console.log(`WP${wpNum} ${wpType} (${loc}) | Current URL:  ${currentURL}`)
       
-    const navMenuIDs = {
-      "#home": "navHome",
-      "#about": "navAbout",
-      "#XP": "navXP",
-      "#Testimonials2": "navTestimonials",
-      "#contact": "navContact"
-    }
-    if (currentURL.includes("#")) {
-      console.log("A LINK WAS CLICKED!!!");
-      // let found = false;
-      for (const [key, val] of Object.entries(navMenuIDs)) {
-        if (currentURL.includes(key)) {
-          // found = true;for (var key in navMenuIDs) {
-          document.getElementById(val).classList.add("current");
-        } else {
-          document.getElementById(val).classList.remove("current");
-        }
-          
-      }
+    // const navMenuIDs = {
+    //   "#home": "navHome",
+    //   "#about": "navAbout",
+    //   "#XP": "navXP",
+    //   "#Testimonials2": "navTestimonials",
+    //   "#contact": "navContact"
+    // }
+    // if (currentURL.includes("#")) {
+    //   console.log(`WP${wpNum} ${wpType} (${loc}) | lastNav URL:  ${lastNav}`)
+      
+      
+    //   if (clickedBool) {
+    //     console.log(`WP${wpNum} ${wpType} (${loc}) | A LINK WAS CLICKED!!! Must update NAV`);
+    //     for (const [key, val] of Object.entries(navMenuIDs)) {
+    //       if (currentURL.includes(key)) {
+    //           // found = true;for (var key in navMenuIDs) {
+    //           document.getElementById(val).classList.add("current");
+    //           setClickedBool(false);
+    //           setLastNav(key);
+    //           console.log(`WP${wpNum} ${wpType} (${loc}) | only active nav should be ${key}`);
+    //       } else {
+    //         document.getElementById(val).classList.remove("current");
+    //       }
+    //     }
+    //   }
+    //   else {
+    //     console.log(`WP${wpNum} ${wpType} (${loc}) | No link cancelled - just moving through with last nav @ ${lastNav} ...`);
+    //   }
 
-    }
+    //   // if (currentURL.includes(lastNav)) {
+    //   //   if (clickedBool) {
+    //   //     console.log("A LINK WAS CLICKED!!!");
+    //   //     setClickedBool(false);
+    //   //     // let found = false;
+    //   //     for (const [key, val] of Object.entries(navMenuIDs)) {
+    //   //       if (currentURL.includes(key)) {
+    //   //         // found = true;for (var key in navMenuIDs) {
+    //   //         document.getElementById(val).classList.add("current");
+    //   //       } else {
+    //   //         document.getElementById(val).classList.remove("current");
+    //   //       }
+              
+    //   //     }
+    //   //   }
+    //   // } else {
 
+    //   // }
+    // }
   }
 
   return (
