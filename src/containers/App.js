@@ -3,7 +3,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 // import { useState, useEffect, useRef } from 'react';
-import Nav from '../components/Nav/Nav';
+import Nav from '../components/Nav/Nav'; // used for testing
 import Home from '../components/Home/Home';
 import About from '../components/About/About';
 import Exp from '../components/XP/XP';
@@ -15,6 +15,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { Waypoint } from 'react-waypoint';
 import { useDetectScroll } from "@smakss/react-scroll-direction"; // https://stackoverflow.com/a/62497293/10474024
 // import { Divider } from '@mui/material'; // https://www.geeksforgeeks.org/how-to-use-divider-component-in-reactjs/ --> https://mui.com/material-ui/migration/migration-v4/
+// import $ from 'jquery';
 
 import './00-base.css';
 import './00-sections.css';
@@ -29,6 +30,37 @@ import './iconic/css/iconmonstr-iconic-font.css';
 
 // require('dotenv').config();
 // const SMARTBRAIN_BE = process.env.REACT_APP_BE;
+
+// function ssMobileMenu(element) {
+
+//   // console.log("Clicked on element:", element);
+
+//   var toggleButton = $('.header-menu-toggle'),
+//       nav = $('.header-nav-wrap');
+
+//   toggleButton.on('click', function(event){
+//       event.preventDefault();
+
+//       toggleButton.toggleClass('is-clicked');
+//       nav.slideToggle();
+//   });
+
+//   if (toggleButton.is(':visible')) nav.addClass('mobile');
+
+//   // window.on('resize', function() {
+//   //     if (toggleButton.is(':visible')) nav.addClass('mobile');
+//   //     else nav.removeClass('mobile');
+//   // });
+
+//   nav.find('a').on("click", function() {
+
+//       if (nav.hasClass('mobile')) {
+//           toggleButton.toggleClass('is-clicked');
+//           nav.slideToggle(); 
+//       }
+//   });
+
+// };
 
 function App() { // original - functional component
 
@@ -45,41 +77,12 @@ function App() { // original - functional component
 
   // const [nextActiveNav, setNextActiveNav] = useState(document.getElementById("navAbout"));
 
-  const [clickedBool, setClickedBool] = useState(false);
-  const [lastNav, setLastNav] = useState();
+  // const [clickedBool, setClickedBool] = useState(false);
+  // const [lastNav, setLastNav] = useState();
 
   const [scrollDir] = useDetectScroll({});
 
-  // const [clickedNav, setClickedNav] = useState("navHome");
 
-  // function updateNavMenu({navMenuID, wpLoc}) {
-
-    // // const navMenuIDs = {
-    // //   home: "navHome",
-    // //   about: "navAbout",
-    // //   xp: "navXP",
-    // //   testimopnials: "navTestimonials",
-    // //   contact: "navContact"
-    // // }
-    // const navMenuIDs = {
-    //   "#home": "navHome",
-    //   "#about": "navAbout",
-    //   "#XP": "navXP",
-    //   "#Testimonials2": "navTestimonials",
-    //   "#contact": "navContact"
-    // }
-
-  //   console.log(`updateNavMenu (${wpLoc}) | This is a test for the menu ${navMenuID} ... `);
-  //   for (var key in navMenuIDs) {
-  //     if (navMenuIDs[key] === navMenuID) {
-  //       console.log(`updateNavMenu (${wpLoc}) | making ${navMenuID} active`);
-  //       document.getElementById(navMenuID).classList.add("current");
-  //     } else {
-  //       console.log(`updateNavMenu (${wpLoc}) | making ${navMenuIDs[key]} inactive`);
-  //       document.getElementById(navMenuIDs[key]).classList.remove("current");
-  //     }
-  //   }
-  // }
   
   useEffect(() => {
     // const navSec = document.getElementsByClassName("header-nav-wrap")[0];
@@ -276,6 +279,7 @@ function App() { // original - functional component
       {/* <Navigation onRouteChg={this.onRouteChg} isSignedIn={isSignedIn} /> */}
       {/* <Nav scrollDir={scrollDir}  */}
       <Nav navActiveStr={activeNavStr} navPrevStr={prevNavStr} />
+      {/* <Nav navActiveStr={activeNavStr} navPrevStr={prevNavStr} ssMobileMenu={ssMobileMenu} /> */}
       <Home 
         // ref={homeRef} 
         // visSelection={`${visibleSection === "Home" ? ".target-section" : ""}`}
