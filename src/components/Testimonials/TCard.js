@@ -28,7 +28,7 @@ const TCard = ({ name, img, content, url, title, sliderSettings }) => {
                     { html_name }
                     <span>{ title }</span>
                 </div>
-            </div>                          
+            </div>
         </div>
     );
 }
