@@ -31,7 +31,7 @@ It was at this stage I realized I likely needed to run `npx create-react-app APP
 
 9. to detect scroll:  `npm i @smakss/react-scroll-direction` as per [here](https://www.npmjs.com/package/@smakss/react-scroll-direction)
 
-10. `npm install @mui/material @emotion/react @emotion/styled` from [here](https://mui.com/material-ui/getting-started/installation/)
+10. `npm install @mui/material @emotion/react @emotion/styled` from [here](https://mui.com/material-ui/getting-started/installation/) ... NOTE that I believe this is no longer needed as VSCode cannot find it in my code anymore ... but sometimes it comes up empty. So be aware that this may be extraneous.
 
 # Migrating From Vanilla to React
 
