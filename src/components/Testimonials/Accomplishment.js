@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Accomplishment = ({ bulltPts }) => {
+const Accomplishment = ({ bulltPts, data }) => {
 
     // let html_name = <div className="str-testimonial-names">{name}</div>;
 
