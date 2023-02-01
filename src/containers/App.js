@@ -80,7 +80,7 @@ function App() { // original - functional component
 
   useEffect(() => {
     // const navSec = document.getElementsByClassName("header-nav-wrap")[0];
-    const navSec = document.getElementsByClassName("s-header")[0];
+    const navSec = document.getElementsByClassName("nav-header")[0];
     const sticky = document.getElementById("about").offsetTop - 100;
 
     const scrollCallBack = window.addEventListener("scroll", () => {
