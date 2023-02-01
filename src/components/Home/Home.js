@@ -19,17 +19,18 @@ const Home = () => {
                         {/* <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items --> */}
                         <div className="flex-row two-col">
                             <div className="h-intro">
-                                <h3><span className="hdr-HL-gp">Welcome</span></h3>
+                                {/* <h3><span className="hdr-HL-gp">Welcome</span></h3> */}
+                                <span className="hdr-HL-gp">Welcome</span>
 
-                                <p className="h01">I am Kassandra Keeton.</p>
+                                <p className="home-name">I am Kassandra Keeton.</p>
                                 <div className="desc">
-                                    <p className="h02">Software Engineer.</p>
-                                    <p className="h02">Digital Marketer.</p>
-                                    <p className="h02">Compassionate Teacher.</p>
+                                    <p className="home-desc">Software Engineer.</p>
+                                    <p className="home-desc">Digital Marketer.</p>
+                                    <p className="home-desc">Compassionate Teacher.</p>
                                 </div>
                             </div>
 
-                            <div className="home-content__buttons push-rt">
+                            <div className="home-buttons push-rt">
                                 <a href="#XP" className="smoothscroll btn btn--stroke">
                                     Latest Projects
                                 </a>
@@ -37,10 +38,11 @@ const Home = () => {
                                     More About Me
                                 </a>
                             </div>
-                        </div> {/*<!-- end of home before scrolling -->*/}
+                        </div>
 
-                        <div className="home-content__scroll">
-                            <a href="#about" className="scroll-link smoothscroll">
+                        <div className="home-scroll">
+                            {/* <a href="#about" className="scroll-link smoothscroll"> */}
+                            <a href="#about" className="smoothscroll">
                                 <span>Scroll Down</span>
                             </a>
                         </div>
