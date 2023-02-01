@@ -17,7 +17,7 @@
  *
  * ------------------------------------------------------------------- */
 
-.s-header {
+.nav-header {
     width: 100%;
     height: 72px;
     background-color: transparent;
@@ -26,7 +26,7 @@
     z-index: 500;
 }
 
-.s-header.offset {
+.nav-header.offset {
     -webkit-transform: translate3d(0, -100%, 0);
     -ms-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -34,13 +34,13 @@
     transition: all 1s ease-in-out;
 }
 
-.s-header.scrolling {
+.nav-header.scrolling {
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
-.s-header.sticky {
+.nav-header.sticky {
     position: fixed;
     top: 0;
     background-color: #000000 !important;
@@ -49,16 +49,16 @@
     z-index: 600;
 }
 
-/* .s-header.sticky .header-logo a { */
-.s-header.sticky .header-logo img {
+/* .nav-header.sticky .header-logo a { */
+.nav-header.sticky .header-logo img {
     margin: 0;
 }
 
-.s-header.sticky .header-nav-wrap {
+.nav-header.sticky .header-nav-wrap {
     top: 0;
 }
 
-.s-header.sticky.scrolling {
+.nav-header.sticky.scrolling {
     opacity: 1;
     visibility: visible;
 }
@@ -158,7 +158,7 @@
     bottom: -9px;
 }
 
-.s-header.sticky .header-menu-toggle {
+.nav-header.sticky .header-menu-toggle {
     top: 12px;
 }
 
