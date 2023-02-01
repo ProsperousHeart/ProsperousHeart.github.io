@@ -17,6 +17,7 @@ Old-JS
 # folder originally used elsewhere with vanilla JS
 ssWayPoints/
 js/
+public/index-withJS.html
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
