@@ -66,49 +66,18 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
     //     console.log(`kids: ${kids}`);
     // }
 
-    // function clearNav(clickedNavStr) {
-    //     var nav = $('.header-nav-wrap');
-    //     nav.slideToggle();
-
-    //     const navMenuIDs = {
-    //       home: "navHome",
-    //       about: "navAbout",
-    //       xp: "navXP",
-    //       testimopnials: "navTestimonials",
-    //       contact: "navContact"
-    //     }
-    //     for (var key in navMenuIDs) {
-    //       document.getElementById(navMenuIDs[key]).classList.remove("current");
-    //     }
-    //     document.getElementById(clickedNavStr).classList.add("current");
-    // }
-
-    // function deselectLinks() {
-    //     const navMenuIDs = {
-    //         "#home": "navHome",
-    //         "#about": "navAbout",
-    //         "#XP": "navXP",
-    //         "#Testimonials2": "navTestimonials",
-    //         "#contact": "navContact"
-    //       }
-    //       for (const [key, val] of Object.entries(navMenuIDs)) {
-    //         document.getElementById(val).classList.remove("current");
-    //       }
-    // }
-
     // const timeoutMS = 1000;
     return (
-        <header className="s-header">
+        <header className="nav-header">
             <div className="header-logo">
                 {/* <a className="site-logo" href="#"><img src="images/logo.png" alt="Homepage"></a>*/}
-                <a className="site-logo" href="/home" >
+                <a className="site-logo" href="#home" >
                     <img 
                         className="site-logo" 
                         src="/IMGs/white.png" 
                         alt="Homepage" 
                         // onClick={() => {
                         //     window.location.replace("/#");
-                        //     updateNav(navActive, "navHome");
                         // }}
                     />  
                 </a>
@@ -119,10 +88,7 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
                         <a className="smoothscroll"  
                             href="#home" 
                             title="Home"
-                            // // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navHome")}
-                            // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navHome")}
                             // onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
-                            // // onClick={(deselectLinks)}
                             onClick={(event) => toggleOpen(event, "navHome")}
                         >Home</a>
                     </li>
@@ -130,11 +96,7 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
                         <a className="smoothscroll"  
                             href="#about" 
                             title="About"
-                            // // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navAbout")}
-                            // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navAbout")}
-                            // // onClick={() => clearNav("navAbout")}
                             // onClick={() => setTimeout(clearNav, timeoutMS, "navAbout")}
-                            // // onClick={(deselectLinks)}
                             onClick={(event) => toggleOpen(event, "navAbout")}
                         >About</a>
                     </li>
@@ -142,22 +104,14 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
                         className="smoothscroll"  
                         href="#XP" 
                         title="Experience"
-                        // //onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navXP")}
-                        // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navXP")}
-                        // // onClick={() => clearNav("navXP")}
                         // onClick={() => setTimeout(clearNav, timeoutMS, "navXP")}
-                        // // onClick={(deselectLinks)}
                         onClick={(event) => toggleOpen(event, "navXP")}
                     >Experience</a></li>
                     <li id="navTestimonials"><a 
                         className="smoothscroll"  
                         href="#Testimonials2" 
                         title="Testimonials"
-                        // // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navTestimonials")}
-                        // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navTestimonials")}
-                        // // onClick={() => clearNav("navTestimonials")}
                         // onClick={() => setTimeout(clearNav, timeoutMS, "navTestimonials")}
-                        // // onClick={(deselectLinks)}
                         onClick={(event) => toggleOpen(event, "navTestimonials")}
                     >Testimonials</a></li>
                     {/* <!--<li><a className="smoothscroll"  href="#Projects" title="Projects">Projects</a></li>--> */}
@@ -165,11 +119,7 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
                         className="smoothscroll"
                         href="#contact"
                         title="Contact"
-                        // // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navContact")}
-                        // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navContact")}
-                        // // onClick={() => clearNav("navContact")}
                         // onClick={() => setTimeout(clearNav, timeoutMS, "navContact")}
-                        // // onClick={(deselectLinks)}
                         onClick={(event) => toggleOpen(event, "navContact")}
                     >Contact</a></li>
                 </ul>
@@ -180,18 +130,11 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
                 // onClick={(elem) => ssMobileMenu(elem)}
                 onClick={(event) => {
                     event.preventDefault();
-                    toggleOpen(event, "Hamburger")
+                    toggleOpen(event, "Mobile Menu")
                 }}
             >
                 <span>Menu</span>
             </a>
-            {/* <button 
-                className="header-menu-toggle"
-                // onClick={(elem) => ssMobileMenu(elem)}
-                onClick={(event) => toggleOpen(event, "Hamburger")}
-            >
-                <span></span>
-            </button> */}
         </header>
     )
 }
