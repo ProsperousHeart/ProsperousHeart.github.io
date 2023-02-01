@@ -10,11 +10,13 @@ const About = () => {
                 <div className="col-full text-center">
                     <h3>About</h3>
                     <h1>More About Me</h1>
-                    <p className="lead">I am passionate about empowering others for greater success by breaking the tech stuff
-                        down into easy-to-understand, byte-sized pieces.</p>
-                    <p>I enjoy creating innovative software engineering solutions, mentoring other developers, and know the
-                        importance of digital marketing - whether to find a job, grow a business, or simply to get the
-                        word out on an event.</p>
+                    <p className="lead">I am passionate about empowering others for 
+                        greater success by breaking the tech stuff down into 
+                        easy-to-understand, byte-sized pieces.</p>
+                    <p>I enjoy creating innovative software engineering solutions, 
+                        mentoring other developers, and know the importance of digital 
+                        marketing - whether to find a job, grow a business, or simply 
+                        to get the word out on an event.</p>
                 </div>
                 <div id="xp-btns" className="about-content about-content--buttons">
 
