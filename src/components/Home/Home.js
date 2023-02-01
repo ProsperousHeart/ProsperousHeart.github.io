@@ -22,10 +22,10 @@ const Home = () => {
                                 <h3><span className="hdr-HL-gp">Welcome</span></h3>
 
                                 <p className="h01">I am Kassandra Keeton.</p>
-                                <div><p className="h02" /> {/*<!-- TODO:  really liked the font & size for current h2 ... need to set for paragraph -->*/}
-                                    Software Engineer.<br />
-                                    Digital Marketer.<br />
-                                    Compassionate Teacher.
+                                <div className="desc">
+                                    <p className="h02">Software Engineer.</p>
+                                    <p className="h02">Digital Marketer.</p>
+                                    <p className="h02">Compassionate Teacher.</p>
                                 </div>
                             </div>
 

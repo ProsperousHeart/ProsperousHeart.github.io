@@ -12,6 +12,13 @@
         ## responsive HOME needs
   ===================================================================*/
 
+/* description in home */
+.desc {
+    display: flexbox;
+    flex-flow: column nowrap;
+    margin-bottom: 2rem;
+}
+
 /* ===================================================================
  * # header styles - (_site-layout.scss)
  *
@@ -21,8 +28,12 @@
     font-family: 'Comfortaa', cursive;
     color:white;
     font-size: 3rem;
-    line-height: 1.2;
-    padding-right: 1rem;
+    line-height: 3rem;
+    /* padding-right: 1rem; */
+    /* padding-top: 0px;
+    padding-bottom: 0px; */
+    margin-top: .3rem;
+    margin-bottom: .3rem;
  }
 
 #home .name {
@@ -611,6 +622,8 @@ html.no-csstransitions .home-content__main {
     #home .home-content .row .h02 { /* succinct */
         font-size: 1.5em;
         width: 100%;
+        padding-top: 0px;
+        margin-top: 0px;
     }
     .h-intro {
         padding-top: 23.9em;
