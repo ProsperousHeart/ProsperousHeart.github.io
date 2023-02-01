@@ -193,16 +193,19 @@
 
 @media only screen and (max-width: 600px) {
     /* typography */
-    h1, .h01, h2, .h02, h3, .h03, h4, .h04 {
+    h1, h2, .h02, h3, .h03, h4, .h04,  {
         margin-top: 5.1rem;
     }
     h5, .h05, h6, .h06 {
         margin-top: 3.6rem;
         margin-bottom: 0.9rem;
     }
-    h1, .h01 {
+    h1 { /* consider for .home-name */
         font-size: 3.3rem;
         letter-spacing: -.07rem;
+    }
+    .home-name {
+        margin-bottom: 0.9rem;
     }
 
     /* grid needs */
@@ -273,10 +276,5 @@
     instead of next to each other */
     .flex-row {
         flex-direction: column;
-    }
-    #home .home-content .row .h02 {
-        font-size: 2.2rem;
-        margin-top: 0px;
-        /* padding-top: 2rem; */
     }
 }
