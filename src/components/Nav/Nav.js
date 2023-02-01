@@ -4,6 +4,7 @@ import React from 'react';
 // import { useEffect } from 'react';
 import './Nav.css';
 import $ from 'jquery';
+// import clearNav from './clearNavFunc';
 
 // function ssMobileMenu(element) {
 //     // console.log("Clicked on element:", element);
@@ -36,19 +37,23 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
     // });
 
     const toggleOpen = (evt, navStr) => {
-        evt.preventDefault();
+        console.log(`${navStr} was clicked`)
+        // evt.preventDefault();
         var toggleButton = $('.header-menu-toggle'),
             nav = $('.header-nav-wrap');
         
-        if (toggleButton.is(':visible')) nav.addClass('mobile');
+        if (toggleButton.is(':visible')) {
+            nav.addClass('mobile');
 
-        console.log(`${navStr} menu option clicked`);
-        // if (nav.hasClass('mobile')) {
-        //     toggleButton.toggleClass('is-clicked');
-        //     nav.slideToggle();
-        // }
+            console.log(`${navStr} menu option clicked`);
+            // if (nav.hasClass('mobile')) {
+            //     toggleButton.toggleClass('is-clicked');
+            //     nav.slideToggle();
+            // }
+            nav.slideToggle();
+        }
         toggleButton.toggleClass('is-clicked');
-        nav.slideToggle();
+        // window.location.replace(`/${navStr}`);
     }
 
     // // "how to get all children element of html li"
@@ -61,22 +66,22 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
     //     console.log(`kids: ${kids}`);
     // }
 
-    function clearNav(clickedNavStr) {
-        var nav = $('.header-nav-wrap');
-        nav.slideToggle();
+    // function clearNav(clickedNavStr) {
+    //     var nav = $('.header-nav-wrap');
+    //     nav.slideToggle();
 
-        const navMenuIDs = {
-          home: "navHome",
-          about: "navAbout",
-          xp: "navXP",
-          testimopnials: "navTestimonials",
-          contact: "navContact"
-        }
-        for (var key in navMenuIDs) {
-          document.getElementById(navMenuIDs[key]).classList.remove("current");
-        }
-        document.getElementById(clickedNavStr).classList.add("current");
-    }
+    //     const navMenuIDs = {
+    //       home: "navHome",
+    //       about: "navAbout",
+    //       xp: "navXP",
+    //       testimopnials: "navTestimonials",
+    //       contact: "navContact"
+    //     }
+    //     for (var key in navMenuIDs) {
+    //       document.getElementById(navMenuIDs[key]).classList.remove("current");
+    //     }
+    //     document.getElementById(clickedNavStr).classList.add("current");
+    // }
 
     // function deselectLinks() {
     //     const navMenuIDs = {
@@ -91,7 +96,7 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
     //       }
     // }
 
-    const timeoutMS = 1000;
+    // const timeoutMS = 1000;
     return (
         <header className="s-header">
             <div className="header-logo">
@@ -114,64 +119,79 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
                         <a className="smoothscroll"  
                             href="#home" 
                             title="Home"
-                            // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navHome")}
-                            // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navHome")}
-                            onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
-                            // onClick={(deselectLinks)}
+                            // // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navHome")}
+                            // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navHome")}
+                            // onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
+                            // // onClick={(deselectLinks)}
+                            onClick={(event) => toggleOpen(event, "navHome")}
                         >Home</a>
                     </li>
                     <li id="navAbout">
                         <a className="smoothscroll"  
                             href="#about" 
                             title="About"
-                            // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navAbout")}
-                            // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navAbout")}
-                            // onClick={() => clearNav("navAbout")}
-                            onClick={() => setTimeout(clearNav, timeoutMS, "navAbout")}
-                            // onClick={(deselectLinks)}
+                            // // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navAbout")}
+                            // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navAbout")}
+                            // // onClick={() => clearNav("navAbout")}
+                            // onClick={() => setTimeout(clearNav, timeoutMS, "navAbout")}
+                            // // onClick={(deselectLinks)}
+                            onClick={(event) => toggleOpen(event, "navAbout")}
                         >About</a>
                     </li>
                     <li id="navXP"><a 
                         className="smoothscroll"  
                         href="#XP" 
                         title="Experience"
-                        //onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navXP")}
-                        // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navXP")}
-                        // onClick={() => clearNav("navXP")}
-                        onClick={() => setTimeout(clearNav, timeoutMS, "navXP")}
-                        // onClick={(deselectLinks)}
+                        // //onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navXP")}
+                        // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navXP")}
+                        // // onClick={() => clearNav("navXP")}
+                        // onClick={() => setTimeout(clearNav, timeoutMS, "navXP")}
+                        // // onClick={(deselectLinks)}
+                        onClick={(event) => toggleOpen(event, "navXP")}
                     >Experience</a></li>
                     <li id="navTestimonials"><a 
                         className="smoothscroll"  
                         href="#Testimonials2" 
                         title="Testimonials"
-                        // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navTestimonials")}
-                        // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navTestimonials")}
-                        // onClick={() => clearNav("navTestimonials")}
-                        onClick={() => setTimeout(clearNav, timeoutMS, "navTestimonials")}
-                        // onClick={(deselectLinks)}
+                        // // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navTestimonials")}
+                        // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navTestimonials")}
+                        // // onClick={() => clearNav("navTestimonials")}
+                        // onClick={() => setTimeout(clearNav, timeoutMS, "navTestimonials")}
+                        // // onClick={(deselectLinks)}
+                        onClick={(event) => toggleOpen(event, "navTestimonials")}
                     >Testimonials</a></li>
                     {/* <!--<li><a className="smoothscroll"  href="#Projects" title="Projects">Projects</a></li>--> */}
                     <li id="navContact"><a 
                         className="smoothscroll"
                         href="#contact"
                         title="Contact"
-                        // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navContact")}
-                        // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navContact")}
-                        // onClick={() => clearNav("navContact")}
-                        onClick={() => setTimeout(clearNav, timeoutMS, "navContact")}
-                        // onClick={(deselectLinks)}
+                        // // onClick={() => updateNav(activeElem, prevElem, prevNavActive, navActive, "navContact")}
+                        // // onClick={(event) => updateNav(event, navActiveStr, navPrevStr, prevNavActive, navActive, "navContact")}
+                        // // onClick={() => clearNav("navContact")}
+                        // onClick={() => setTimeout(clearNav, timeoutMS, "navContact")}
+                        // // onClick={(deselectLinks)}
+                        onClick={(event) => toggleOpen(event, "navContact")}
                     >Contact</a></li>
                 </ul>
             </nav>
             <a 
                 className="header-menu-toggle" 
-                href="#0"
+                href="#home"
                 // onClick={(elem) => ssMobileMenu(elem)}
-                onClick={(event) => toggleOpen(event, "Hamburger")}
+                onClick={(event) => {
+                    event.preventDefault();
+                    toggleOpen(event, "Hamburger")
+                }}
             >
                 <span>Menu</span>
             </a>
+            {/* <button 
+                className="header-menu-toggle"
+                // onClick={(elem) => ssMobileMenu(elem)}
+                onClick={(event) => toggleOpen(event, "Hamburger")}
+            >
+                <span></span>
+            </button> */}
         </header>
     )
 }
