@@ -16,6 +16,7 @@ import { Waypoint } from 'react-waypoint';
 import { useDetectScroll } from "@smakss/react-scroll-direction"; // https://stackoverflow.com/a/62497293/10474024
 // import { Divider } from '@mui/material'; // https://www.geeksforgeeks.org/how-to-use-divider-component-in-reactjs/ --> https://mui.com/material-ui/migration/migration-v4/
 // import $ from 'jquery';
+import clearNav from '../components/Nav/clearNavFunc';
 
 import './00-base.css';
 import './00-sections.css';
@@ -69,21 +70,14 @@ function App() { // original - functional component
 
   const [activeNavStr, setActiveNavStr] = useState("navHome");
   // const [activeNav, setActiveNav] = useState(document.getElementById(activeNavStr));
-  // const [activeNav, setActiveNav] = useState(document.getElementById("navHome"));
 
   const [prevNavStr, setPrevNavStr] = useState("navHome");
   // const [prevActiveNav, setPrevActiveNav] = useState(document.getElementById(prevNavStr));
-  // const [prevActiveNav, setPrevActiveNav] = useState(document.getElementById("navHome"));
 
   // const [nextActiveNav, setNextActiveNav] = useState(document.getElementById("navAbout"));
 
-  // const [clickedBool, setClickedBool] = useState(false);
-  // const [lastNav, setLastNav] = useState();
-
   const [scrollDir] = useDetectScroll({});
 
-
-  
   useEffect(() => {
     // const navSec = document.getElementsByClassName("header-nav-wrap")[0];
     const navSec = document.getElementsByClassName("s-header")[0];
@@ -113,11 +107,34 @@ function App() { // original - functional component
     };
   });
 
+  // function clearNav(clickedNavStr) {
+
+  //   const navMenuIDs = {
+  //     home: "navHome",
+  //     about: "navAbout",
+  //     xp: "navXP",
+  //     testimopnials: "navTestimonials",
+  //     contact: "navContact"
+  //   }
+  //   for (var key in navMenuIDs) {
+  //     document.getElementById(navMenuIDs[key]).classList.remove("current");
+  //   }
+  //   document.getElementById(clickedNavStr).classList.add("current");
+  // }
+
   function wpDance(wpType, wpNum, loc, prevWPpos, currWPpos, evt, 
     wpTop, vpTop, vpBtm, data) {
 
     const destination = data.dest;
-    console.log(`WP${wpNum} ${wpType} (${loc}) |  scrollDir: ${scrollDir}  ---> going into ${destination}`);
+    if (scrollDir === "down"){
+      console.log(`WP${wpNum} ${wpType} (${loc}) |  scrollDir: ${scrollDir}  ---> going into ${destination}`);
+    }
+    // else if ( scrollDir === "still" ) {
+
+    // }
+    else {
+      console.log(`WP${wpNum} ${wpType} (${loc}) |  scrollDir: ${scrollDir}  ---> likely the start`);
+    }
     
     const intPrevNavStr = data.prev;
     console.log(`WP${wpNum} ${wpType} (${loc}) | intPrevNavStr: ${intPrevNavStr}`);
@@ -139,89 +156,95 @@ function App() { // original - functional component
     console.log(`WP${wpNum} ${wpType} (${loc}) |  viewportTop: ${vpTop}`);
     console.log(`WP${wpNum} ${wpType} (${loc}) |  viewportBottom: ${vpBtm}`);
 
-    console.log("updating 'React globals'");
-    // setNavSecs(intPrevNavStr, intActiveNavStr);
-    setPrevNavStr(intPrevNavStr);
-    // setPrevActiveNav(document.getElementById(intPrevNavStr));
-
-    setActiveNavStr(intActiveNavStr);
-    // setActiveNav(document.getElementById(intActiveNavStr));
-
-    // setNextActiveNav(document.getElementById(intNextNavStr));
-        
-    // console.log(`WP${wpNum} ${wpType} (${loc}) prev (uncertain if updated): ${prevActiveNav}`);
-    // console.log(prevActiveNav);
-    // console.log(`WP${wpNum} ${wpType} (${loc}) active (uncertain if updated): ${activeNav}`);
-    // console.log(activeNav);
-    // console.log(`WP${wpNum} ${wpType} (${loc}) next (uncertain if updated): ${nextActiveNav}`);
-    // console.log(nextActiveNav);
-
-    console.log(`SEtting NAv classes with ${intPrevNavStr} and ${intActiveNavStr}`)
-
-    let temp = document.getElementById(intPrevNavStr);
-    console.log(temp);
-    document.getElementById(intPrevNavStr).classList.remove("current");
-
-    temp = document.getElementById(intActiveNavStr);
-    console.log(temp);
-    document.getElementById(intActiveNavStr).classList.add("current");
-
-    // console.log(`WP${wpNum} ${wpType} (${loc}) prev nav (NOT updated):`, prevActiveNav); // I don't think this is showing the most recent update yet
-    // console.log(`WP${wpNum} ${wpType} (${loc}) active nav (NOT updated):`, activeNav);
-    // console.log(`WP${wpNum} ${wpType} (${loc}) next (uncertain if updated): ${nextActiveNav}`);
-
-    // // final check if linked clicked
-    // const currentURL = window.location.href;
-    // console.log(`WP${wpNum} ${wpType} (${loc}) | Current URL:  ${currentURL}`)
-      
-    // const navMenuIDs = {
-    //   "#home": "navHome",
-    //   "#about": "navAbout",
-    //   "#XP": "navXP",
-    //   "#Testimonials2": "navTestimonials",
-    //   "#contact": "navContact"
-    // }
-    // if (currentURL.includes("#")) {
-    //   console.log(`WP${wpNum} ${wpType} (${loc}) | lastNav URL:  ${lastNav}`)
-      
-      
-    //   if (clickedBool) {
-    //     console.log(`WP${wpNum} ${wpType} (${loc}) | A LINK WAS CLICKED!!! Must update NAV`);
-    //     for (const [key, val] of Object.entries(navMenuIDs)) {
-    //       if (currentURL.includes(key)) {
-    //           // found = true;for (var key in navMenuIDs) {
-    //           document.getElementById(val).classList.add("current");
-    //           setClickedBool(false);
-    //           setLastNav(key);
-    //           console.log(`WP${wpNum} ${wpType} (${loc}) | only active nav should be ${key}`);
-    //       } else {
-    //         document.getElementById(val).classList.remove("current");
-    //       }
-    //     }
-    //   }
-    //   else {
-    //     console.log(`WP${wpNum} ${wpType} (${loc}) | No link cancelled - just moving through with last nav @ ${lastNav} ...`);
-    //   }
-
-    //   // if (currentURL.includes(lastNav)) {
-    //   //   if (clickedBool) {
-    //   //     console.log("A LINK WAS CLICKED!!!");
-    //   //     setClickedBool(false);
-    //   //     // let found = false;
-    //   //     for (const [key, val] of Object.entries(navMenuIDs)) {
-    //   //       if (currentURL.includes(key)) {
-    //   //         // found = true;for (var key in navMenuIDs) {
-    //   //         document.getElementById(val).classList.add("current");
-    //   //       } else {
-    //   //         document.getElementById(val).classList.remove("current");
-    //   //       }
-              
-    //   //     }
-    //   //   }
-    //   // } else {
-
-    //   // }
-    // }
+    if (scrollDir === "down" || scrollDir === "up"){
+      if (intPrevNavStr !== intActiveNavStr) {
+        console.log("updating 'React globals'");
+        // setNavSecs(intPrevNavStr, intActiveNavStr);
+        setPrevNavStr(intPrevNavStr);
+        // setPrevActiveNav(document.getElementById(intPrevNavStr));
+  
+        setActiveNavStr(intActiveNavStr);
+        // setActiveNav(document.getElementById(intActiveNavStr));
+  
+        // setNextActiveNav(document.getElementById(intNextNavStr));
+            
+        // console.log(`WP${wpNum} ${wpType} (${loc}) prev (uncertain if updated): ${prevActiveNav}`);
+        // console.log(prevActiveNav);
+        // console.log(`WP${wpNum} ${wpType} (${loc}) active (uncertain if updated): ${activeNav}`);
+        // console.log(activeNav);
+        // console.log(`WP${wpNum} ${wpType} (${loc}) next (uncertain if updated): ${nextActiveNav}`);
+        // console.log(nextActiveNav);
+  
+        console.log(`SEtting NAv classes with ${intPrevNavStr} and ${intActiveNavStr}`)
+  
+        let temp = document.getElementById(intPrevNavStr);
+        console.log(temp);
+        document.getElementById(intPrevNavStr).classList.remove("current");
+  
+        temp = document.getElementById(intActiveNavStr);
+        console.log(temp);
+        document.getElementById(intActiveNavStr).classList.add("current");
+  
+        // console.log(`WP${wpNum} ${wpType} (${loc}) prev nav (NOT updated):`, prevActiveNav); // I don't think this is showing the most recent update yet
+        // console.log(`WP${wpNum} ${wpType} (${loc}) active nav (NOT updated):`, activeNav);
+        // console.log(`WP${wpNum} ${wpType} (${loc}) next (uncertain if updated): ${nextActiveNav}`);
+  
+        // // final check if linked clicked
+        // const currentURL = window.location.href;
+        // console.log(`WP${wpNum} ${wpType} (${loc}) | Current URL:  ${currentURL}`)
+          
+        // const navMenuIDs = {
+        //   "#home": "navHome",
+        //   "#about": "navAbout",
+        //   "#XP": "navXP",
+        //   "#Testimonials2": "navTestimonials",
+        //   "#contact": "navContact"
+        // }
+        // if (currentURL.includes("#")) {
+        //   console.log(`WP${wpNum} ${wpType} (${loc}) | lastNav URL:  ${lastNav}`)
+          
+          
+        //   if (clickedBool) {
+        //     console.log(`WP${wpNum} ${wpType} (${loc}) | A LINK WAS CLICKED!!! Must update NAV`);
+        //     for (const [key, val] of Object.entries(navMenuIDs)) {
+        //       if (currentURL.includes(key)) {
+        //           // found = true;for (var key in navMenuIDs) {
+        //           document.getElementById(val).classList.add("current");
+        //           setClickedBool(false);
+        //           setLastNav(key);
+        //           console.log(`WP${wpNum} ${wpType} (${loc}) | only active nav should be ${key}`);
+        //       } else {
+        //         document.getElementById(val).classList.remove("current");
+        //       }
+        //     }
+        //   }
+        //   else {
+        //     console.log(`WP${wpNum} ${wpType} (${loc}) | No link cancelled - just moving through with last nav @ ${lastNav} ...`);
+        //   }
+  
+        //   // if (currentURL.includes(lastNav)) {
+        //   //   if (clickedBool) {
+        //   //     console.log("A LINK WAS CLICKED!!!");
+        //   //     setClickedBool(false);
+        //   //     // let found = false;
+        //   //     for (const [key, val] of Object.entries(navMenuIDs)) {
+        //   //       if (currentURL.includes(key)) {
+        //   //         // found = true;for (var key in navMenuIDs) {
+        //   //         document.getElementById(val).classList.add("current");
+        //   //       } else {
+        //   //         document.getElementById(val).classList.remove("current");
+        //   //       }
+                  
+        //   //     }
+        //   //   }
+        //   // } else {
+  
+        //   // }
+        // }
+        clearNav(intActiveNavStr);
+      }
+    }
+    
   }
 
   return (
@@ -288,7 +311,7 @@ function App() { // original - functional component
       <Waypoint // WP1
         onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
-          if (scrollDir === "down"){
+          if (scrollDir === "down"){ // ABOUT on screen going up
             data = {
               prev: "navHome",
               curr: "navAbout",
@@ -310,15 +333,15 @@ function App() { // original - functional component
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
-          if (scrollDir === "down"){
+          if (scrollDir === "down"){  // ABOUT @ top
             data = {
-              prev: "navHome",
-              curr: "navAbout",
+              prev: "navAbout",
+              curr: "navXP",
               // next: "navXP",
-              dest: "ABOUT section"
+              dest: "XP timeline section"
             }
           }
-          else { // SCROLLING UP
+          else { // SCROLLING UP - 
             data = {
               prev: "navXP",
               curr: "navAbout",
@@ -348,22 +371,25 @@ function App() { // original - functional component
               dest: "XP (timeline)"
             }
           }
-          else { // SCROLLING UP
-            // data = {
-            //   prev: "navTestimonials",
-            //   curr: "navXP",
-            //   // next: "navAbout",
-            //   dest: "XP (timeline)"
-            // }
+          else { // SCROLLING UP - timeline at top
             data = {
-              prev: "navXP",
-              curr: "navAbout",
-              dest: "ABOUT section"
+              prev: "navTestimonials",
+              curr: "navXP",
+              // next: "navAbout",
+              dest: "XP (timeline)"
             }
-          }
-          console.log("Calling the wpDance ...");
-          wpDance("OE", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
+            // data = {
+            //   prev: "navXP",
+            //   curr: "navAbout",
+            //   dest: "ABOUT section"
+            // }
+            console.log("Calling the wpDance ...");
+            wpDance("OE", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
+          }
+          // console.log("Calling the wpDance ...");
+          // wpDance("OE", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
+          //   waypointTop, viewportTop, viewportBottom, data);
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
           let data = null;
@@ -411,19 +437,22 @@ function App() { // original - functional component
               dest: "TESTIMONIALS section"
             }
           }
-          else { // SCROLLING UP
-            // data = {
-            //   prev: "navContact",
-            //   curr: "navTestimonials",
-            //   // next: "navXP",
-            //   dest: "TESTIMONIALS section"
-            // }
+          else { // SCROLLING UP -- testimonials @ top coming down
             data = {
-              prev: "navTestimonials",
-              curr: "navXP",
+              prev: "navContact",
+              curr: "navTestimonials",
               // next: "navXP",
-              dest: "XP (timeline) section"
+              dest: "TESTIMONIALS section"
             }
+            // data = {
+            //   prev: "navTestimonials",
+            //   curr: "navXP",
+            //   // next: "navXP",
+            //   dest: "XP (timeline) section"
+            // }
+            // console.log("Calling the wpDance ...");
+            // wpDance("OE", 3, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
+            //   waypointTop, viewportTop, viewportBottom, data);
           }
           console.log("Calling the wpDance ...");
           wpDance("OE", 3, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
@@ -431,13 +460,16 @@ function App() { // original - functional component
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
           let data = null;
-          if (scrollDir === "down"){
+          if (scrollDir === "down"){ // CONTACT coming into view from bottom
             data = {
-              prev: "navXP",
-              curr: "navTestimonials",
+              prev: "navTestimonials",
+              curr: "navContact",
               // next: "navContact",
-              dest: "testimonials section"
+              dest: "CONTACT section"
             }
+            // console.log("Calling the wpDance ...");
+            // wpDance("OL", 3, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
+            //   waypointTop, viewportTop, viewportBottom, data);
           }
           else { // SCROLLING UP
             data = {
@@ -483,10 +515,10 @@ function App() { // original - functional component
               // next: "navXP",
               dest: "TESTIMONIALS section"
             }
-          }
-          console.log("Calling the wpDance ...");
-          wpDance("OE", 4, "after Testimonials/before contact", previousPosition, currentPosition, event, 
+            console.log("Calling the wpDance ...");
+            wpDance("OE", 4, "after Testimonials/before contact", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
+          }
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
           let data = null;
@@ -498,12 +530,12 @@ function App() { // original - functional component
               dest: "CONTACT section"
             }
           }
-          else { // SCROLLING UP
+          else { // SCROLLING UP -- XP coming into view from top
             data = {
-              prev: "navContact",
-              curr: "navTestimonials",
+              prev: "navTestimonials",
+              curr: "navXP",
               // next: "navXP",
-              dest: "TESTIMONIALS section"
+              dest: "EXPERIENCE section"
             }
             // data = {
             //   prev: "navXP",
