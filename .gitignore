@@ -1,3 +1,8 @@
+# To Be Added Back When Ready
+Blog/
+Projects/
+Nav-OLD.*
+
 # Hide files not intended for publication
 Old Testing
 Old Testing/Testing
@@ -7,6 +12,11 @@ Old Testing/TestingGround
 .idea
 IMGs/projs/OLD-TEMPLATE
 Old-JS
+.env
+
+# folder originally used elsewhere with vanilla JS
+ssWayPoints/
+js/
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
