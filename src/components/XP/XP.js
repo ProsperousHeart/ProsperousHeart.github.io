@@ -1,5 +1,6 @@
 import React from 'react';
 import './XP.css';
+// import { data } from './data';
 
 const Exp = () => {
 
@@ -240,7 +241,7 @@ const Exp = () => {
                         <div className="timeline__block"> {/*<!-- My Business -->*/}
                             <div className="timeline__bullet"></div>
                             <div className="timeline__header">
-                                <p className="timeline__timeframe">2015 - CURRENT</p>
+                                <p className="timeline__timeframe">Oct 2015 - CURRENT</p>
                                 <h3>Marketer & Trainer</h3>
                                 <h5>Business Owner - <a className="str-HL-green-drk" href="https://prosperousheart.com" target="_blank" rel="noreferrer noopener">Prosperous Heart</a>, LLC</h5>
                             </div>
