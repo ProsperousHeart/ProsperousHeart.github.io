@@ -105,7 +105,7 @@ img.pull-left {
  * ------------------------------------------------------------------- */
 
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, th, td,
- .h01, .h02 {
+ .h02 { /* consdier for .home-name */
     margin: 0;
     padding: 0;
 }
@@ -142,9 +142,9 @@ pre > code {
     margin: 0;
 }
 
-h1, .h01, h2, .h02, h3, .h03, h4, .h04 {
+h1, h2, .h02, h3, .h03, h4, .h04 { /* consdier for .home-name */
     margin-top: 1.5rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 h5, .h05, h6, .h06 {
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
     -moz-font-variant-ligatures: common-ligatures;
 }
 
-.h01, .h02, .h03, .h04, .h05, .h06 {
+.h02, .h03, .h04, .h05, .h06 { /* consdier for .home-name */
     color: #0D0A0B;
     /* font-family: "Montserrat", sans-serif; */
     font-family: 'Noto Sans Cherokee', sans-serif;
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
 }
 
-h1, .h01 {
+h1 { /* consdier for .home-name */
     /* font-family: "Montserrat", sans-serif; */
     font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 3.6rem;
@@ -353,7 +353,7 @@ a {
     transition: all 0.3s ease-in-out;
 }
 a:hover, a:focus, a:active {
-    color: #191A3F;
+    /* color: #191A3F; */
 }
 a:focus {
     outline: none;
