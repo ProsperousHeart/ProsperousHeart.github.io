@@ -539,8 +539,8 @@ form,
 .row .row {
     width: auto;
     max-width: none;
-    margin-left: -20px;
-    margin-right: -20px;
+    /* margin-left: -20px;
+    margin-right: -20px; */
 }
 
 
@@ -678,7 +678,9 @@ form,
         https://moz.com/blog/guide-to-hidden-text
     */
     visibility: hidden;
-    text-size: 0px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px;
 }
 
 /* -------------------------------------------------------------------
