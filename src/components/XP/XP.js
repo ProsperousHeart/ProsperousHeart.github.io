@@ -11,13 +11,19 @@ const Exp = () => {
 
                 <div className="section-intro">
                     <div className="col-full text-center">
-                        <h3>My Experience</h3>
-                        <h1>Timeline</h1>
+                        {/* <h3>My Experience</h3> */}
+                        {/* <span className="sec-light-hdr-top">My Experience</span> */}
+                        <p className="sec-light-hdr-top">My Experience</p>
+                        {/* <h1>Timeline</h1> */}
+                        <span className="sec-light-hdr-title">Timeline</span>
                         <p className="lead">
                             Here are the most recent roles with which I have had the pleasure of working on.
                             Due to the nature of most of them, I have worn many hats for several projects.
-                            If you would like to see more details about what these roles entailed, please <b><a href="https://docs.google.com/document/d/1_UqCMOFebcXdRAKjrf5wLjpeFzTNEKht-hMHxCkXXno/edit?usp=sharing" target="_blank" rel="noreferrer noopener" >review this document</a></b>
-                            or <b><a href="https://www.linkedin.com/in/kkeeton" target="_blank" rel="noreferrer noopener" >my LinkedIn</a></b>.
+                            If you would like to see more details about what these roles entailed, 
+                            please <b><a href="https://docs.google.com/document/d/1_UqCMOFebcXdRAKjrf5wLjpeFzTNEKht-hMHxCkXXno/edit?usp=sharing" 
+                                        target="_blank" 
+                                        rel="noreferrer noopener" >review this document</a></b> or <b><a 
+                                        href="https://www.linkedin.com/in/kkeeton" target="_blank" rel="noreferrer noopener" >my LinkedIn</a></b>.
                         </p>
                     </div>
                 </div>
@@ -30,11 +36,16 @@ const Exp = () => {
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">June 2022 - Present</p>
                                 <h3>Software Engineer</h3>
-                                <h5>CEAD (Escalations) - <a className="str-HL-green-drk"
+                                {/* <h5>CEAD (Escalations) - <a className="str-HL-green-drk"
                                                                                     href="https://www.cisco.com"
                                                                                     target="_blank"
-                                                                                    rel="noreferrer noopener">Cisco
-                                    Systems</a>, Inc</h5>
+                                                                                    rel="noreferrer noopener"
+                                                            >Cisco Systems</a>, Inc</h5> */}
+                                <span className="xp-titleco">CEAD (Escalations) - <a className="str-HL-green-drk"
+                                                                                    href="https://www.cisco.com"
+                                                                                    target="_blank"
+                                                                                    rel="noreferrer noopener"
+                                                            >Cisco Systems</a>, Inc</span>
                             </div>
                             <div className="timeline__desc">
                                 {/* <!-- originally a paragraph section
@@ -71,7 +82,12 @@ const Exp = () => {
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">January 2021 - June 2022</p>
                                 <h3>Community Advocate</h3>
-                                <h5>Marketing - <a className="str-HL-green-drk" href="https://manychat.com/" target="_blank" rel="noreferrer noopener">ManyChat</a></h5>
+                                {/* <h5>Marketing - <a className="str-HL-green-drk" href="https://manychat.com/" target="_blank" rel="noreferrer noopener">ManyChat</a></h5> */}
+                                <span className="xp-titleco">Marketing - <a className="str-HL-green-drk" 
+                                                                            href="https://manychat.com/"
+                                                                            target="_blank"
+                                                                            rel="noreferrer noopener"
+                                                                            >ManyChat</a></span>
                             </div>
                             <div className="timeline__desc">
                                 {/* <!--<span className="lead">
@@ -83,8 +99,8 @@ const Exp = () => {
                                 <ul className="lead">
                                     <li>
                                         Was the acting <span className="str-HL-pink-drk">Technical Director</span> and <span
-                                            className="str-HL-pink-drk">Head of Support</span> for the company's <b>first</b>
-                                        100% virtual event - <b><a className="str-HL-green-drk"
+                                            className="str-HL-pink-drk">Head of Support</span> for the company's <b>first</b> 100%
+                                            virtual event - <b><a className="str-HL-green-drk"
                                                                 href="https://youtu.be/wPIK1ZsFLik" target="_blank"
                                                                 rel="noreferrer noopener">Instagram Summit 2021</a></b>.
                                         Become the sole company expert in <b><a className="str-HL-darkred"
@@ -117,7 +133,16 @@ const Exp = () => {
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">June 2019 - January 2021</p>
                                 <h3>Community Evangelist</h3>
-                                <h5>Data & Analytics - <a className="str-HL-green-drk" href="https://www.cisco.com" target="_blank" rel="noreferrer noopener">Cisco Systems</a>, Inc</h5>
+                                {/* <h5>Data & Analytics - <a className="str-HL-green-drk" 
+                                                            href="https://www.cisco.com"
+                                                            target="_blank"
+                                                            rel="noreferrer noopener"
+                                                            >Cisco Systems</a>, Inc</h5> */}
+                                <span className="xp-titleco">Data & Analytics - <a className="str-HL-green-drk" 
+                                                            href="https://www.cisco.com"
+                                                            target="_blank"
+                                                            rel="noreferrer noopener"
+                                                            >Cisco Systems</a>, Inc</span>
                             </div>
                             <div className="timeline__desc">
                                 {/*<!--<p>Highlight items just for this specific role relating to code ... Maybe have drop-downs for the different pieces</p>-->*/}
@@ -159,10 +184,11 @@ const Exp = () => {
                                     <li>
                                         Led the <b><a className="str-HL-darkred"
                                                     href="https://blogs.cisco.com/analytics-automation/ds4g"
-                                                    target="_blank" rel="noreferrer noopener">Data Science & AI For Good</a></b>
-                                        program. In this role, I met with non-profits to understand their need and determine
-                                        if there was a fit for leveraging data science solutions. If leadership approved a
-                                        project, I marketed to Cisco volunteers & we began working towards a solution.
+                                                    target="_blank" rel="noreferrer noopener">Data Science & 
+                                                    AI For Good</a></b> program. In this role, I met with non-profits to 
+                                        understand their need and determine if there was a fit for leveraging data science
+                                        solutions. If leadership approved a project, I marketed to Cisco volunteers & we
+                                        began working towards a solution.
                                     </li>
                                     <li>
                                         Continued my work with the <b><span className="str-BG-pink-lt">Coding Hour</span></b> initiative I started as the <b>
@@ -185,7 +211,16 @@ const Exp = () => {
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">June 2016 - Jun 2019</p>
                                 <h3>Collaboration Scripting Lead</h3>
-                                <h5>TAC - <a className="str-HL-green-drk" href="https://www.cisco.com" target="_blank" rel="noreferrer noopener">Cisco Systems</a>, Inc</h5>
+                                {/* <h5>TAC - <a className="str-HL-green-drk" 
+                                                href="https://www.cisco.com"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                >Cisco Systems</a>, Inc</h5> */}
+                                <span className="xp-titleco">TAC - <a className="str-HL-green-drk" 
+                                                href="https://www.cisco.com"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                >Cisco Systems</a>, Inc</span>
                             </div>
                             <div className="timeline__desc">
                                 <ul className="lead">
@@ -243,7 +278,16 @@ const Exp = () => {
                             <div className="timeline__header">
                                 <p className="timeline__timeframe">Oct 2015 - CURRENT</p>
                                 <h3>Marketer & Trainer</h3>
-                                <h5>Business Owner - <a className="str-HL-green-drk" href="https://prosperousheart.com" target="_blank" rel="noreferrer noopener">Prosperous Heart</a>, LLC</h5>
+                                {/* <h5>Business Owner - <a className="str-HL-green-drk"
+                                                        href="https://prosperousheart.com"
+                                                        target="_blank"
+                                                        rel="noreferrer noopener"
+                                                    >Prosperous Heart</a>, LLC</h5> */}
+                                <span className="xp-titleco">Business Owner - <a className="str-HL-green-drk"
+                                                        href="https://prosperousheart.com"
+                                                        target="_blank"
+                                                        rel="noreferrer noopener"
+                                                    >Prosperous Heart</a>, LLC</span>
                             </div>
                             <div className="timeline__desc">
                                 <ul className="lead">
