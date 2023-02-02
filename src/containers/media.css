@@ -193,14 +193,25 @@
 
 @media only screen and (max-width: 600px) {
     /* typography */
-    h1, h2, .h02, h3, .h03, h4, .h04,  {
+    h1, h2, .h02, h3, h4, .h04  {
         margin-top: 5.1rem;
+    }
+    .sec-light-hdr-top, .sec-light-hdr-title { /* replacing h3, h1 */
+        /* margin-top: 5.1rem; */
     }
     h5, .h05, h6, .h06 {
         margin-top: 3.6rem;
         margin-bottom: 0.9rem;
     }
+    /*.xp-titleco { /* replacing h5 in XP
+        /* margin-top: 3.6rem;
+        margin-bottom: 0.9rem; 
+    }*/
     h1 { /* consider for .home-name */
+        font-size: 3.3rem;
+        letter-spacing: -.07rem;
+    }
+    .sec-light-hdr-title { /* replacing h1 ? */
         font-size: 3.3rem;
         letter-spacing: -.07rem;
     }
@@ -211,8 +222,12 @@
     /* grid needs */
     .row {
         width: auto;
-        padding-left: 25px;
-        padding-right: 25px;
+        /* padding-left: 25px; */
+        /* padding-left: 4%; */
+        padding-left: 2%;
+        /* padding-right: 25px; */
+        /* padding-right: 4%; */
+        padding-right: 2%;
     }
     .row .row {
         margin-left: -10px;
