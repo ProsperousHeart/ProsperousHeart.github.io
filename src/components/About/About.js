@@ -8,8 +8,9 @@ const About = () => {
 
             <div className="row narrow section-intro has-bottom-sep">
                 <div className="col-full text-center">
-                    <h3>About</h3>
-                    <h1>More About Me</h1>
+                    <p className="sec-light-hdr-top">About</p>
+                    {/* <h1>More About Me</h1> */}
+                    <span className="sec-light-hdr-title">More About Me</span>
                     <p className="lead">I am passionate about empowering others for 
                         greater success by breaking the tech stuff down into 
                         easy-to-understand, byte-sized pieces.</p>
@@ -29,7 +30,7 @@ const About = () => {
                         <a href="https://prosperousheart.com" target="_blank" rel="noreferrer noopener" className="btn full-width" title="Training on programming, digital marketing, Human Design, and more!">Access My Blog</a>
                     </div>
 
-                </div> {/*<!-- end about-content buttons -->*/}
+                </div>
             </div>
 
             {/* <!--<div className="row about-content">
