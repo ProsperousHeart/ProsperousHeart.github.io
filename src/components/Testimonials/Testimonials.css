@@ -97,14 +97,14 @@
     background-color: transparent;
 }
 
-/* .testimonials__slider .slick-prev { */
-.slick-prev, .im {
+.testimonials__slider .slick-prev {
+/* .slick-prev, .im { */
     /* display: block; */
     left: 4.5rem;
 }
 
-/* .testimonials__slider .slick-next { */
-.slick-next, .im {
+.testimonials__slider .slick-next {
+/* .slick-next, .im { */
     /* display: block; */
     right: 4.5rem;
 }
@@ -225,20 +225,28 @@
         width: 6rem;
         height: 6rem;
     }
+    .slick-prev {
+        top: 202px;
+        left: 5%;
+    }
+    .slick-next {
+        top: 202px;
+        right: 5%;
+    }
 }
 
 @media only screen and (max-width: 900px) {
+    .slick-prev {
+        top: 222px;
+    }
+    .slick-next {
+        top: 222px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     .testimonials-header h1 { /* to be replaced by sec-dark-hdr-top */
         font-size: 3rem;
-    }
-    .slick-prev, #Testimonials2 .im {
-        top: 11.1%;
-    }
-    .slick-next, #Testimonials2 .im {
-        top: 11.1%;
     }
 }
 
@@ -249,11 +257,19 @@
     .testimonials__slider .slick-arrow {
         top: 5.1rem;
     }
-    .testimonials__slider .slick-prev {
+    /* .testimonials__slider .slick-prev {
         left: 1rem;
     }
     .testimonials__slider .slick-next {
         right: 1rem;
+    } */
+    .slick-prev {
+        top: 75px;
+        left: 22%;
+    }
+    .slick-next {
+        top: 75px;
+        right: 22%;
     }
     .testimonials-header {
         padding: 0;
@@ -272,39 +288,29 @@
         left: 50%;
         margin-left: -3rem;
     }
-    .slick-prev, #Testimonials2 .im {
-        top: 16%;
-    }
-    .slick-next, #Testimonials2 .im {
-        top: 16%;
-    }
 }
 
-/* @media only screen and (max-width: 500px) {
-    .slick-prev, #Testimonials2 .im {
+@media only screen and (max-width: 500px) {
+    /* .slick-prev, #Testimonials2 .im {
         top: 15%;
     }
     .slick-next, #Testimonials2 .im {
         top: 15%;
+    } */
+    /* .slick-prev {
+        /* top: 75px; *
+        /* left: 0px; *
     }
-} */
+    .slick-next {
+        /* top: 75px; *
+        /* right: 0px; *
+    } */
+}
 
 @media only screen and (max-width: 400px) {
-    .slick-prev, #Testimonials2 .im {
-        top: 14%;
-    }
-    .slick-next, #Testimonials2 .im {
-        top: 14%;
-    }
 }
 
 @media only screen and (max-width: 300px) {
-    .slick-prev, #Testimonials2 .im {
-        top: 11.1%;
-    }
-    .slick-next, #Testimonials2 .im {
-        top: 11.1%;
-    }
 }
 
 /* ==============================================
