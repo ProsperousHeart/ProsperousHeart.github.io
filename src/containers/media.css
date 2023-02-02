@@ -196,9 +196,6 @@
     h1, h2, .h02, h3, h4, .h04  {
         margin-top: 5.1rem;
     }
-    .sec-light-hdr-top, .sec-light-hdr-title { /* replacing h3, h1 */
-        /* margin-top: 5.1rem; */
-    }
     h5, .h05, h6, .h06 {
         margin-top: 3.6rem;
         margin-bottom: 0.9rem;
