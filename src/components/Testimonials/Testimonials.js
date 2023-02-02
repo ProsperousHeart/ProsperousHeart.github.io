@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Testimonials.css';
+import './slick.css';
 import TCardList from './TCardList';
 import { data } from './data';
 
