@@ -142,7 +142,7 @@ pre > code {
     margin: 0;
 }
 
-h1, h2, .h02, h3, .h03, h4, .h04 { /* consdier for .home-name */
+h1, h2, .h02, h3, h4, .h04 { /* h3 no longer in use as per sec-light-hdr-top */ /* consdier for .home-name| h1 for .sec-light-hdr-title */
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -152,7 +152,7 @@ h5, .h05, h6, .h06 {
     margin-bottom: 1.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 { /* h3 no longer in use as per sec-light-hdr-top */ /* consdier for .home-name| h1 for .sec-light-hdr-title */
     color: #0D0A0B;
     /*font-family: "montserrat-medium", sans-serif;
     font-family: "Montserrat", sans-serif;
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
     -moz-font-variant-ligatures: common-ligatures;
 }
 
-.h02, .h03, .h04, .h05, .h06 { /* consdier for .home-name */
+.h02, .h04, .h05, .h06 { /* consdier for .home-name */
     color: #0D0A0B;
     /* font-family: "Montserrat", sans-serif; */
     font-family: 'Noto Sans Cherokee', sans-serif;
@@ -188,7 +188,7 @@ h2, .h02 {
     line-height: 1.3;
 }
 
-h3, .h03 {
+h3 { /* no longer in use as per sec-light-hdr-top */
     font-size: 2.4rem;
     line-height: 1.25;
 }
@@ -335,6 +335,7 @@ hr {
     display: flex;
     flex-flow: row wrap;
 }
+
 /*@media only screen and (max-width: 1200px) {
     .highlights {
         flex-flow: row nowrap;
