@@ -10,12 +10,22 @@ const TCard = ({ name, img, content, url, title, sliderSettings }) => {
     
     
     if (url.length !== 0) {
-        html_name=<a className="str-testimonial-names" href={url} target="_blank" rel="noreferrer noopener">{name}</a>;
-        html_img = <a href={url} target="_blank" rel="noreferrer noopener">
-                        <img 
-                            src={img} 
-                            alt={`Testimonial Provider - ${name}`}
-                            className="testimonials__avatar" />
+
+        html_name=<a 
+                    className="str-testimonial-names" href={url}
+                    target="_blank" 
+                    rel="noreferrer noopener"
+                    >{name}</a>;
+
+        html_img = <a href={url} 
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                    <img 
+                        src={img} 
+                        alt={`Testimonial Provider - ${name}`}
+                        className="testimonials__avatar"
+                    />
                     </a>;
     }
 
