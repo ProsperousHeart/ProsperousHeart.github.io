@@ -69,9 +69,6 @@
     .about-content .right .timeline {
         margin-top: 0;
     }
-    .about-content .left > h3, .about-content .right > h3 {
-        text-align: center;
-    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -93,7 +90,10 @@
 
 /*@media only screen and (max-width: 412px) { -- could also use in*/
 @media only screen and (max-width: 500px) {
-    #about h1 {
+    /*#about h1 { /* replaed by sec-light-hdr-title 
+        font-size: 3.1rem;
+    }*/
+    .sec-light-hdr-title {
         font-size: 3.1rem;
     }
     #about .section-intro {
