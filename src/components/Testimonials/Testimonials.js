@@ -15,6 +15,7 @@ export default class Testimonials extends Component {
                     <div className="row testimonials-header">
                         <div className="col-full">
                             <h1 className="h02">Testimonials</h1>
+                            {/* <span className="sec-dark-hdr-top">Testimonials</span> */}
                         </div>
                     </div>
                     <TCardList data={data} />
