@@ -100,13 +100,15 @@
 .testimonials__slider .slick-prev {
 /* .slick-prev, .im { */
     /* display: block; */
-    left: 4.5rem;
+    /* left: 4.5rem; ---- ORIGINALLY NEEDED */
+    /* top: 15%; */
 }
 
 .testimonials__slider .slick-next {
 /* .slick-next, .im { */
     /* display: block; */
-    right: 4.5rem;
+    /* right: 4.5rem; ---- ORIGINALLY NEEDED */
+    /* top: 15%; */
 }
 
 .testimonials__slider .slick-dots {
@@ -225,22 +227,26 @@
         width: 6rem;
         height: 6rem;
     }
-    .slick-prev {
+    .testimonials__slider .slick-prev {
         top: 202px;
-        left: 5%;
+        /* left: 5%; */
     }
-    .slick-next {
+    .testimonials__slider .slick-next {
         top: 202px;
-        right: 5%;
+        /* right: 5%; */
     }
 }
 
 @media only screen and (max-width: 900px) {
-    .slick-prev {
-        top: 222px;
+    /* .testimonials__slider .slick-prev { */
+    .testimonials .slick-prev {
+        /* top: 222px; */
+        top: 18px;
     }
-    .slick-next {
-        top: 222px;
+    /* .testimonials__slider .slick-next { */
+    .testimonials .slick-next {
+        /* top: 222px; */
+        top: 18px;
     }
 }
 
@@ -257,19 +263,26 @@
     .testimonials__slider .slick-arrow {
         top: 5.1rem;
     }
-    /* .testimonials__slider .slick-prev {
-        left: 1rem;
-    }
-    .testimonials__slider .slick-next {
-        right: 1rem;
+    /* .testimonials .slick-arrow {
+        top: 5.1rem;
     } */
-    .slick-prev {
-        top: 75px;
+    /* .testimonials__slider .slick-prev { */
+    .testimonials .slick-prev {
+        /* left: 1rem; */
+        /* top: 75px; */
+        /* top: 15%; */
+        /* top: 18px; */
         left: 22%;
-    }
-    .slick-next {
         top: 75px;
+    }
+    /* .testimonials__slider .slick-next { */
+    .testimonials .slick-next {
+        /* right: 1rem; */
+        /* top: 75px; */
+        /* top: 15%; */
+        /* top: 18px; */
         right: 22%;
+        top: 75px;
     }
     .testimonials-header {
         padding: 0;
@@ -294,17 +307,15 @@
     /* .slick-prev, #Testimonials2 .im {
         top: 15%;
     }
-    .slick-next, #Testimonials2 .im {
+    .testimonials__slider .slick-next, #Testimonials2 .im {
         top: 15%;
     } */
-    /* .slick-prev {
-        /* top: 75px; *
-        /* left: 0px; *
+    .testimonials .slick-prev {
+        top: 75px;
     }
-    .slick-next {
-        /* top: 75px; *
-        /* right: 0px; *
-    } */
+    .testimonials .slick-next {
+        top: 75px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
