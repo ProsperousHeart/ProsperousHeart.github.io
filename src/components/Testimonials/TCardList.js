@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import TCard from './TCard';
 import Slider from 'react-slick'; // https://react-slick.neostack.com/docs/api/ | https://github.com/kenwheeler/slick
 
+// https://react-slick.neostack.com/docs/get-started/
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
+
 function Arrow(props) {
     const { dClass, iClass, onClick } = props;
     return (
@@ -33,7 +37,7 @@ export default class TCardList extends Component {
         const {data, pArrowDClass, pArrowIClass, nArrowDClass, nArrowIClass} = this.state;
         // const { data } = this.state;
         const settings = {
-            // adaptiveHeight: true,
+            // adaptiveHeight: true,   // issue with multiples etending past parent
             arrows: true,
             dots: false,
             // dots: true,
@@ -53,6 +57,7 @@ export default class TCardList extends Component {
                 {
                     breakpoint: 900,
                     settings: {
+                        adaptiveHeight: true, /* https://www.freakyjolly.com/react-slick-carousel-with-custom-navigation-and-lazy-loaded-images-in-slider/ */
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
