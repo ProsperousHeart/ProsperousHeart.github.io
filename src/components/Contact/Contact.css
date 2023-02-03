@@ -14,8 +14,57 @@
  *      ## Change Autocomplete styles in Chrome
  * ==================================================================== */
 
- #contact h3 {
+ #contact h3 { /* to be replaced by .contact-top */
     color: #FF69B4;
+ }
+
+ #contact p {
+    color: #ffffffcb;
+    text-shadow: #000 1px 0 10px;
+    /* text-shadow: #0b3cef 1px 0 10px; */
+ }
+
+ .contact-top {
+    display: block;
+    color: #FF69B4;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 2rem;
+    /*font-weight: 600; /* semibold */
+    font-weight: 500; /* medium */
+    letter-spacing: .15rem; /* replacing .section-intro h3 */
+    line-height: 1.25; /* replacing h3 */
+    /* line-height: 6rem; */
+    text-transform: uppercase;
+
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-variant-ligatures: common-ligatures;
+    -moz-font-variant-ligatures: common-ligatures;
+ }
+
+ .contact-qlooking {
+    color: #FFFFFF; /* .s-contact .section-intro h */
+    display: block; /* h1 */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 4.8rem;
+    font-weight: 700;
+    letter-spacing: -.1rem;
+    line-height: 6rem; /* .section-intro h1 */
+    margin: 0; /* h1 */
+    margin-bottom: 1rem; /* h1 */
+    padding: 0; /* h1 */
+
+    /* h1 */
+    font-feature-settings: "liga", "clig";
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
  }
 
  /* ===================================================================
@@ -200,7 +249,7 @@
  * loader animation - (_site-layout.scss)
  * --------------------------------------------------------------- */
 
-.s-loader {
+/* .s-loader {
     margin: 1.2rem auto 3rem;
     width: 70px;
     text-align: center;
@@ -254,7 +303,7 @@
         -ms-transform: scale(1);
         transform: scale(1);
     }
-}
+} */
 
 
 /* -------------------------------------------------------------------
@@ -275,12 +324,38 @@
     .contact__form {
         padding-right: 10px;
     }
+
+    .contact-qlooking {
+        letter-spacing: -.07rem; /* h1 */
+    }
+
+    .s-contact {
+        /* parallax without JS - Create the scrolling effect */
+        background-attachment: fixed;
+        background-size: auto 100%;
+        background-position: 12.5%, 30%;
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+        /*background-repeat: no-repeat;
+        background-size: cover;*/
+    }
+    /*.s-contact .section-intro {
+        padding-top: 3rem;
+    }*/
 }
 
 /*@media only screen and (max-width: 412px) { -- could also use in*/
 @media only screen and (max-width: 500px) {
-    #contact h3 {
+    .contact-qlooking {
+        font-size: 3rem; /* .section-intro h1 */
+        padding: 0px;
+    }
+    #contact h3 { /* to be replaced by .contact-top */
         padding-top: 2rem;
+    }
+    .contact-top {
+        padding-top: 2rem;/* replacing #contact h3 */
+        font-size: 1.6rem; /* replacing .section-intro h3 */
     }
     #contact .section-intro {
         padding: 1.5rem;
@@ -293,9 +368,16 @@
         padding-left: 0px;
         padding-right: 0px;
     }
+    #contact p {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
     .contact__form {
         padding-right: 0;
     }
+}
+
+@media only screen and (max-width: 400px) {
 }
 
  /* ===================================================================
@@ -470,21 +552,4 @@ label > input[type="checkbox"], label > input[type="radio"] {
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
     -webkit-text-fill-color: #cf3e3e;
     transition: background-color 5000s ease-in-out 0s;
-}
-
-/* responsive section */
-@media only screen and (max-width: 600px) {
-    .s-contact {
-        /* parallax without JS - Create the scrolling effect */
-        background-attachment: fixed;
-        background-size: auto 100%;
-        background-position: 12.5%, 30%;
-        padding-top: 7rem;
-        padding-bottom: 3rem;
-        /*background-repeat: no-repeat;
-        background-size: cover;*/
-        }
-        /*.s-contact .section-intro {
-            padding-top: 3rem;
-        }*/
 }
