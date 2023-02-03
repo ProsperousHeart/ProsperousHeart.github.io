@@ -10,17 +10,24 @@ const Contact = () => {
 
             <div className="row narrow section-intro">
                 <div className="col-full">
-                    <h3>Contact</h3>
-                    <h1>Looking To Work With Me?</h1>
+                    {/* <h3>Contact</h3> */}
+                    <span className="contact-top">Contact</span>
+                    {/* <h1>Looking To Work With Me?</h1> */}
+                    <span className="contact-qlooking">Looking To Work With Me?</span>
                     {/* <!-- https://css-tricks.com/snippets/html/mailto-links/ --> */}
                     <p className="lead">
                         If you are looking to join my community and receive direct mentorship through my training program,
                         please <b><a className="str-HL-green-lt"
                                     href="mailto:training@prosperousheart.com?subject=Interested%20In%20Training">send an
-                        email here</a></b>.</p><p className="lead">
-                        If you are looking to hire me for a project or potential full time role, please contact me through
-                        <a className="str-HL-pink-lt" href="https://www.linkedin.com/in/kkeeton" target="_blank" rel="noreferrer noopener">LinkedIn</a>
-                        or via <a className="str-HL-pink-lt" href="mailto:krk.ph.rr@gmail.com?subject=Discussion%20of%20Potential%20Job">this email</a>.
+                        email here</a></b>.</p>
+                    <p className="lead">
+                        If you are looking to hire me for a project or potential full time role, please contact me
+                        through <a className="str-HL-pink-lt" 
+                            href="https://www.linkedin.com/in/kkeeton" 
+                            target="_blank" 
+                            rel="noreferrer noopener"
+                        >LinkedIn</a> or via <a className="str-HL-pink-lt"
+                                                href="mailto:krk.ph.rr@gmail.com?subject=Discussion%20of%20Potential%20Job">this email</a>.
                     </p>
                 </div>
             </div>
