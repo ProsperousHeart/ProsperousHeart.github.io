@@ -1,7 +1,32 @@
 import React from 'react';
+// import { useEffect } from 'react';
 import './Footer.css';
+// import $ from 'jquery';
+// import ScrollBtn from '../ScrollBtn/ScrollBtn';
 
 const Footer = () => {
+
+    // useEffect(() => {
+    //     // const navSec = document.getElementsByClassName("header-nav-wrap")[0];
+    //     // const goTopBtn = document.getElementsByClassName("go-top");
+    //     const goTopBtn = $(".go-top"); // document.getElementById("GoTop");
+    //     const goTopPX = 500;  // height on which the button will show
+    //     const fadeInTime = 400;
+    //     const fadeOutTime = 400;
+    
+    //     const scrollCallBack = window.addEventListener("scroll", () => {
+    //       if (window.pageYOffset >= goTopPX) {
+    //         // goTopBtn.addClass("scrolling");
+    //         goTopBtn.fadeIn(fadeInTime);
+    //       } else {
+    //         // goTopBtn.removeClass("scrolling");
+    //         goTopBtn.fadeOut(fadeOutTime);
+    //       }
+    //     });
+    //     return () => {
+    //       window.removeEventListener("scroll", scrollCallBack);
+    //     };
+    // });
 
     return (
         <footer>
@@ -71,17 +96,27 @@ const Footer = () => {
                         <span>Design inspired by <a href="https://www.styleshout.com/free-templates/hola/">styleshout</a> & Improved by Kassandra</span>
                     </div>
 
-                    <div className="go-top">
-                        {/* <a className="smoothscroll" title="Back to Top" href="#top"><i className="im im-arrow-up" aria-hidden="true"></i></a> */}
-                        <i className="smoothscroll im im-arrow-up" 
+                    {/* <div id="GoTop" className="go-top" style={{ display: "none"}}>
+                    {/* <div id="GoTop" className="go-top"> *
+                        <a className="smoothscroll"
+                            title="Back to Top"
+                            href="#home"
+                        >
+                            <i className="im im-arrow-up"
+                                aria-hidden="true">    
+                            </i>
+                        </a>
+                        {/* <i className="smoothscroll im im-arrow-up" 
                             title="Back to Top" 
                             aria-hidden="true">
-                            onClick={} {/* TO DO:  Need to add the ability to go back to the top */}
-                        </i>
-                    </div>
+                            onClick={} {/* TO DO:  Need to add the ability to go back to the top *} -->
+                        </i> *
+                    </div> */}
+                    {/* <ScrollBtn /> */}
+
                 </div>
 
-            </div> {/*<!-- end footer-bottom -->*/}
+            </div>
 
         </footer>
     );
