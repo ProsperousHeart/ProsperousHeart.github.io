@@ -4,7 +4,7 @@ import React from 'react';
 // import { useEffect } from 'react';
 import './Nav.css';
 import $ from 'jquery';
-// import clearNav from './clearNavFunc';
+import clearNav from './clearNavFunc';
 
 // function ssMobileMenu(element) {
 //     // console.log("Clicked on element:", element);
@@ -29,23 +29,23 @@ import $ from 'jquery';
 // };
 
 // const Nav = () => {
-export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
+// export default function Nav({navActiveStr, navPrevStr, ssMobileMenu, funcSetNavStr}) {
+// export default function Nav({funcSetNavStr}) {
+export default function Nav({setActiveNavStr}) {
     // const [stickyClass, setStickyClass] = useState('.header-nav li a');
     // const [dims, setDims] = useState({
     //     height: window.innerHeight,
     //     width: window.innerWidth
     // });
-
     const toggleOpen = (evt, navStr) => {
-        console.log(`${navStr} was clicked`)
+        console.log(`${navStr} menu option was clicked - setting activeNavStr`);
+        setActiveNavStr(navStr);
         // evt.preventDefault();
         var toggleButton = $('.header-menu-toggle'),
             nav = $('.header-nav-wrap');
         
         if (toggleButton.is(':visible')) {
             nav.addClass('mobile');
-
-            console.log(`${navStr} menu option clicked`);
             // if (nav.hasClass('mobile')) {
             //     toggleButton.toggleClass('is-clicked');
             //     nav.slideToggle();
@@ -54,7 +54,16 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
         }
         toggleButton.toggleClass('is-clicked');
         // window.location.replace(`/${navStr}`);
-    }
+    };
+
+    // useEffect((toggleOpen) => {
+
+    //     window.addEventListener('scroll', toggleOpen);
+    //     return () => {
+    //         window.removeEventListener('scroll', toggleOpen);
+    //     }
+
+    // }, []);
 
     // // "how to get all children element of html li"
     // // https://www.encodedna.com/javascript/how-to-get-all-li-elements-in-ul-using-javascript.htm
@@ -65,32 +74,42 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
     //     const kids = parent.getElementsByTagName(tagName).innerHTML;
     //     console.log(`kids: ${kids}`);
     // }
+    
 
-    // const timeoutMS = 1000;
+    function scrollToTop() {
+        // window.location.replace("/#");
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    const timeoutMS = 1000;
     return (
         <header className="nav-header">
             <div className="header-logo">
-                {/* <a className="site-logo" href="#"><img src="images/logo.png" alt="Homepage"></a>*/}
-                <a className="site-logo" href="#home" >
-                    <img 
-                        className="site-logo" 
-                        src="/IMGs/white.png" 
-                        alt="Homepage" 
-                        // onClick={() => {
-                        //     window.location.replace("/#");
-                        // }}
-                    />  
-                </a>
+                <img 
+                    className="site-logo" 
+                    src="/IMGs/white.png" 
+                    alt="Homepage" 
+                    onClick={scrollToTop}
+                /> 
             </div>
             <nav className="header-nav-wrap"> {/*<!-- see ssMobileMenu in main.js -->*/}
                 <ul id="headerNav" className="header-nav">
-                    <li id="navHome" className="current">
-                        <a className="smoothscroll"  
+                    {/* <li id="navHome" className="current"> */}
+                    <li id="navHome" 
+                        className="current smoothscroll"
+                        title='Home'
+                        onClick={scrollToTop}
+                    >
+                        {/* <a className="smoothscroll"  
                             href="#home" 
                             title="Home"
                             // onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
                             onClick={(event) => toggleOpen(event, "navHome")}
-                        >Home</a>
+                        >Home</a> */}
+                        Home
                     </li>
                     <li id="navAbout">
                         <a className="smoothscroll"  
@@ -105,7 +124,11 @@ export default function Nav({navActiveStr, navPrevStr, ssMobileMenu}) {
                         href="#XP" 
                         title="Experience"
                         // onClick={() => setTimeout(clearNav, timeoutMS, "navXP")}
-                        onClick={(event) => toggleOpen(event, "navXP")}
+                        // onClick={(event) => toggleOpen(event, "navXP")}
+                        onClick={(event) => {
+                            toggleOpen(event, "navXP");
+                            setTimeout(clearNav, timeoutMS, "navXP"); /* could be removed if the spacing was right, maybe? */
+                        }}
                     >Experience</a></li>
                     <li id="navTestimonials"><a 
                         className="smoothscroll"  
