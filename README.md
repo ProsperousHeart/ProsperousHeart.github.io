@@ -23,7 +23,7 @@ It was at this stage I realized I likely needed to run `npx create-react-app APP
 
 5. OPTIONAL (may not be needed / haven't installed yet) `npm install --save react-router-hash-link` from [here](https://www.npmjs.com/package/react-router-hash-link)
 
-6. In an attempt to resolve a Modernizr issue, I ram `npm install -g modernizr`
+6. In an attempt to resolve a Modernizr issue, I ram `npm install -g modernizr` ... but no longer using this
 
 7.  `npm install jquery --save` for jQuery use as well as `npm i --save-dev @types/jquery` as per [here](https://stackoverflow.com/a/41381583/10474024)
 
@@ -32,6 +32,19 @@ It was at this stage I realized I likely needed to run `npx create-react-app APP
 9. to detect scroll:  `npm i @smakss/react-scroll-direction` as per [here](https://www.npmjs.com/package/@smakss/react-scroll-direction)
 
 10. `npm install @mui/material @emotion/react @emotion/styled` from [here](https://mui.com/material-ui/getting-started/installation/) ... NOTE that I believe this is no longer needed as VSCode cannot find it in my code anymore ... but sometimes it comes up empty. So be aware that this may be extraneous.
+
+# Additional 3rd Party Tools
+
+1. Slider (from original site) --> [React-Slick](https://react-slick.neostack.com/docs/get-started) with [code here](https://github.com/kenwheeler/slick)
+
+```
+npm install react-slick --save
+npm install slick-carousel --save
+```
+
+<!-- 2. react-scroll-up-button using `npm install react-scroll-up-button --legacy-peer-deps` (as per [here](https://www.npmjs.com/package/react-scroll-up-button) and [here](https://github.com/dirtyredz/react-scroll-up-button/issues/23)) -->
+
+<!-- 3. `npm install react-scroll-up --legacy-peer-deps` -->
 
 # Migrating From Vanilla to React
 
