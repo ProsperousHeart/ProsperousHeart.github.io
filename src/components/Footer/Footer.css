@@ -22,9 +22,14 @@ footer {
     font-family: 'Noto Sans Cherokee', sans-serif;
     font-size: 14px;
     font-weight: 400; /* regular */
-    padding: 6.6rem 0 4.2rem;
-    /*padding: 3rem 0 2rem;*/
+    /* padding: 6.6rem 0 4.2rem; */
+    /* padding: 3rem 0 2rem; */
     text-align: center;
+    height: 100%;
+    width: 100%;
+    /* margin-bottom: 8.1rem; */
+    padding-top: 6.6rem;
+    padding-bottom: 2rem;
 }
 
 footer a, footer a:visited {
@@ -109,6 +114,8 @@ footer a:hover, footer a:focus {
 .footer-bottom {
     margin-top: .5rem;
     text-align: center;
+    height: 100%;
+    padding-bottom: 5.5rem;
 }
 
 .footer-bottom .copyright span {
@@ -135,7 +142,7 @@ footer a:hover, footer a:focus {
 @media only screen and (max-width: 600px) {
     footer {
         padding-top: 3.5rem;
-        padding-bottom: 5.5rem;
+        /* padding-bottom: 5.5rem; */
     }
     .footer-social li {
         margin-right: 1.8rem;
@@ -147,7 +154,7 @@ footer a:hover, footer a:focus {
         font-size: 2.4rem;
     }
     .footer-bottom {
-        padding-bottom: .6rem;
+        /* padding-bottom: .6rem; */
     }
     .footer-bottom .col-twelve {
         padding: 0px;
@@ -170,9 +177,9 @@ footer a:hover, footer a:focus {
     .footer-site-logo {
         width: 100px;
     }
-    .footer-social li {
+    /* .footer-social li {
         margin-right: 1.2rem;
-    }
+    } */
     .footer-social li i {
         font-size: 2.2rem;
     }
