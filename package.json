@@ -12,7 +12,9 @@
     "url": "https://github.com/ProsperousHeart/ProsperousHeart.github.io/issues"
   },
   "keywords": [
-    "resume"
+    "resume",
+    "Software Engineering",
+    "Digital Marketing"
   ],
   "homepage": "https://resume.properousheart.com",
   "main": "index.js",
@@ -40,6 +42,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-waypoint": "^10.3.0",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "eslintConfig": {
