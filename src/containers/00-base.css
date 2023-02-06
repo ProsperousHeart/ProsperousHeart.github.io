@@ -684,6 +684,7 @@ form,
     margin: 0px;
 }
 
+
 /* -------------------------------------------------------------------
  * ## small mobile devices - (_grid.scss)
  * ------------------------------------------------------------------- */
@@ -726,4 +727,16 @@ form,
         margin-left: 0;
         margin-right: 0;
     }
+}
+
+/* =========================================== 
+    react-scroll-up class needs
+   =========================================== */
+.to-top {
+    background: #FF69B4; /* dark pink */
+    background-color: #FF69B4;
+}
+.to-top:hover, .to-top:focus {
+    background: #FF69B4; /* dark pink */
+    background-color: #FF69B4;
 }
