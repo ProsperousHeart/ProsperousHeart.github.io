@@ -14,7 +14,7 @@ const Home = () => {
 
                 <div className="home-content">
                     <h1 className="hidden-txt">Digital Resume for Kassandra Keeton</h1>
-                    <div className="row home-content__main">
+                    <div className="row home-content__main flex-row">
 
                         {/* <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items --> */}
                         <div className="flex-row two-col">
@@ -30,7 +30,8 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className="home-buttons push-rt">
+                            {/* <div className="home-buttons push-rt"> */}
+                            <div className="home-buttons">
                                 <a href="#XP" className="smoothscroll btn btn--stroke">
                                     Latest Projects
                                 </a>
@@ -41,7 +42,6 @@ const Home = () => {
                         </div>
 
                         <div className="home-scroll">
-                            {/* <a href="#about" className="scroll-link smoothscroll"> */}
                             <a href="#about" className="smoothscroll">
                                 <span>Scroll Down</span>
                             </a>
@@ -49,7 +49,7 @@ const Home = () => {
 
                     </div>
 
-                </div> {/*<!-- end home-content -->*/}
+                </div>
 
                 <ul className="home-social">
                     <li>
@@ -73,7 +73,6 @@ const Home = () => {
                             <i className="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
                     </li>
                 </ul>
-                {/* <!-- end home-social --> */}
 
             </section>
     );
