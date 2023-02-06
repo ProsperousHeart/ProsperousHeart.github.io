@@ -2,6 +2,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+// import { useRef } from 'react';
 // import { useState, useEffect, useRef } from 'react';
 import Nav from '../components/Nav/Nav'; // used for testing
 import Home from '../components/Home/Home';
@@ -17,6 +18,9 @@ import { useDetectScroll } from "@smakss/react-scroll-direction"; // https://sta
 // import { Divider } from '@mui/material'; // https://www.geeksforgeeks.org/how-to-use-divider-component-in-reactjs/ --> https://mui.com/material-ui/migration/migration-v4/
 // import $ from 'jquery';
 import clearNav from '../components/Nav/clearNavFunc';
+// import ScrollUpButton from "react-scroll-up-button";
+// import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
+import ScrollBtn from '../components/ScrollBtn/ScrollBtn';
 
 import './00-base.css';
 import './00-sections.css';
@@ -71,17 +75,35 @@ function App() { // original - functional component
   const [activeNavStr, setActiveNavStr] = useState("navHome");
   // const [activeNav, setActiveNav] = useState(document.getElementById(activeNavStr));
 
-  const [prevNavStr, setPrevNavStr] = useState("navHome");
-  // const [prevActiveNav, setPrevActiveNav] = useState(document.getElementById(prevNavStr));
-
-  // const [nextActiveNav, setNextActiveNav] = useState(document.getElementById("navAbout"));
-
   const [scrollDir] = useDetectScroll({});
 
+  const [navClickedStr, setNavClickedStr] = useState("");
+  // const [goTopBool, setGoTopBool] = useState(false);
+  // let goTopBool = false;
+  // const [stickyNum, setStickyNum] = useState() 
+
+
+  // function getStickyNum() {
+  //   // const offset = document.getElementById("about").offsetTop - 100;
+  //   // const elem = document.getElementById("about");
+  //   // const elem = document.querySelector("#about");
+  //   const elem = $('#about');
+  //   console.log(elem);
+  //   // const offset = document.querySelector("#about").getBoundingClientRect().y - 100;
+  //   const offset = elem.getBoundingClientRect().y - 100;
+  //   return offset;
+  // };
+
   useEffect(() => {
+
+    // --- Original working section used for nav scrolling ---
     // const navSec = document.getElementsByClassName("header-nav-wrap")[0];
     const navSec = document.getElementsByClassName("nav-header")[0];
-    const sticky = document.getElementById("about").offsetTop - 100;
+    const sticky = document.getElementById("about").offsetTop - 100; // cannot use hook - otherwise it re-renders
+    // const sticky = aboutY;
+    
+    // const fadeInTime = 400;
+    // const fadeOutTime = 400;
 
     const scrollCallBack = window.addEventListener("scroll", () => {
       // this is the scroll listener to stick menu
@@ -93,13 +115,11 @@ function App() { // original - functional component
         // if (headerText !== fixedText) {
         //   setHeaderText(fixedText);
         // }
+
       } else {
         navSec.classList.remove("sticky");
         navSec.classList.remove("offset");        
         navSec.classList.remove("scrolling");
-        // if (headerText !== whenNotFixed) {
-        //   setHeaderText(whenNotFixed);
-        // }
       }
     });
     return () => {
@@ -107,23 +127,38 @@ function App() { // original - functional component
     };
   });
 
-  // function clearNav(clickedNavStr) {
-
-  //   const navMenuIDs = {
-  //     home: "navHome",
-  //     about: "navAbout",
-  //     xp: "navXP",
-  //     testimopnials: "navTestimonials",
-  //     contact: "navContact"
-  //   }
-  //   for (var key in navMenuIDs) {
-  //     document.getElementById(navMenuIDs[key]).classList.remove("current");
-  //   }
-  //   document.getElementById(clickedNavStr).classList.add("current");
+  // const aboutRef = useRef();  // https://www.kindacode.com/article/react-get-the-position-x-y-of-an-element/
+  const [aboutY, setAboutY] = useState();
+  // const getStickyNum = () => {
+  //   setAboutY(aboutRef.current.offsetTop - 100);
   // }
+
+  // useEffect(() => {
+  //   getStickyNum();
+  // }, [])
+
+  const setStickyNum = () => {
+    const aboutOffset = document.getElementById("about").offsetTop - 100;  // height on which the button will show
+    setAboutY(aboutOffset)
+  };
+
+  useEffect(() => {
+    setStickyNum();
+  }, []);
+
+  // const goToTop = (event) => {
+  //   event.preventDefault();
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: 'smooth',
+  //   });
+  // };
 
   function wpDance(wpType, wpNum, loc, prevWPpos, currWPpos, evt, 
     wpTop, vpTop, vpBtm, data) {
+    
+    console.log(`activeNavStr:  ${activeNavStr}`);
+    console.log(`navClickedStr:  ${navClickedStr}`);
 
     const destination = data.dest;
     if (scrollDir === "down"){
@@ -138,7 +173,13 @@ function App() { // original - functional component
     
     const intPrevNavStr = data.prev;
     console.log(`WP${wpNum} ${wpType} (${loc}) | intPrevNavStr: ${intPrevNavStr}`);
-    const intActiveNavStr = data.curr;
+    let intActiveNavStr;
+    if (navClickedStr === "") {
+      intActiveNavStr = data.curr;
+    } else {
+      intActiveNavStr = navClickedStr;
+    }
+    
     console.log(`WP${wpNum} ${wpType} (${loc}) | intActiveNavStr: ${intActiveNavStr}`);
     console.log(intActiveNavStr);
     // const intNextNavStr = data.next;
@@ -159,9 +200,9 @@ function App() { // original - functional component
     if (scrollDir === "down" || scrollDir === "up"){
       if (intPrevNavStr !== intActiveNavStr) {
         console.log("updating 'React globals'");
-        // setNavSecs(intPrevNavStr, intActiveNavStr);
-        setPrevNavStr(intPrevNavStr);
-        // setPrevActiveNav(document.getElementById(intPrevNavStr));
+        // // setNavSecs(intPrevNavStr, intActiveNavStr);
+        // setPrevNavStr(intPrevNavStr);
+        // // setPrevActiveNav(document.getElementById(intPrevNavStr));
   
         setActiveNavStr(intActiveNavStr);
         // setActiveNav(document.getElementById(intActiveNavStr));
@@ -177,11 +218,11 @@ function App() { // original - functional component
   
         console.log(`SEtting NAv classes with ${intPrevNavStr} and ${intActiveNavStr}`)
   
-        let temp = document.getElementById(intPrevNavStr);
-        console.log(temp);
-        document.getElementById(intPrevNavStr).classList.remove("current");
+        // let temp = document.getElementById(intPrevNavStr);
+        // console.log(temp);
+        // document.getElementById(intPrevNavStr).classList.remove("current");
   
-        temp = document.getElementById(intActiveNavStr);
+        let temp = document.getElementById(intActiveNavStr);
         console.log(temp);
         document.getElementById(intActiveNavStr).classList.add("current");
   
@@ -300,9 +341,7 @@ function App() { // original - functional component
         }}
       />
       {/* <Navigation onRouteChg={this.onRouteChg} isSignedIn={isSignedIn} /> */}
-      {/* <Nav scrollDir={scrollDir}  */}
-      <Nav navActiveStr={activeNavStr} navPrevStr={prevNavStr} />
-      {/* <Nav navActiveStr={activeNavStr} navPrevStr={prevNavStr} ssMobileMenu={ssMobileMenu} /> */}
+      <Nav setActiveNavStr={setActiveNavStr} />
       <Home 
         // ref={homeRef} 
         // visSelection={`${visibleSection === "Home" ? ".target-section" : ""}`}
@@ -311,25 +350,37 @@ function App() { // original - functional component
       <Waypoint // WP1
         onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
-          if (scrollDir === "down"){ // ABOUT on screen going up
-            data = {
-              prev: "navHome",
-              curr: "navAbout",
-              // next: "navXP",
-              dest: "about section"
+          console.log(`Menu ${navClickedStr} clicked - can we stop the scroll?`);
+          console.log(`Current Active: ${activeNavStr} -- should be able to get rid of the previous with the other function created`);
+
+          if (!navClickedStr) {
+            if (scrollDir === "down"){ // ABOUT on screen going up
+              data = {
+                prev: "navHome",
+                curr: "navAbout",
+                // next: "navXP",
+                dest: "about section"
+              }
             }
-          }
-          else { // SCROLLING UP
-            data = {
-              prev: "navHome",
-              curr: "navAbout",
-              // next: "navHome",
-              dest: "ABOUT section"
+            else { // SCROLLING UP
+              data = {
+                prev: "navHome",
+                curr: "navAbout",
+                // next: "navHome",
+                dest: "ABOUT section"
+              }
             }
+            console.log("Calling the wpDance ...");
+            wpDance("OE", 1, "after home/before about", previousPosition, currentPosition, event, 
+              waypointTop, viewportTop, viewportBottom, data);
           }
-          console.log("Calling the wpDance ...");
-          wpDance("OE", 1, "after home/before about", previousPosition, currentPosition, event, 
-            waypointTop, viewportTop, viewportBottom, data);
+          else {
+            
+            console.log("Calling the wpDance ...");
+            wpDance("OE", 1, "after home/before about", activeNavStr, navClickedStr, event, 
+              waypointTop, viewportTop, viewportBottom, data);
+            setNavClickedStr("");
+          }
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
@@ -341,12 +392,12 @@ function App() { // original - functional component
               dest: "XP timeline section"
             }
           }
-          else { // SCROLLING UP - 
+          else { // SCROLLING UP - ABOUT @ bottom            
             data = {
-              prev: "navXP",
-              curr: "navAbout",
+              prev: "navAbout",
+              curr: "navHome",
               // next: "navHome",
-              dest: "ABOUT section"
+              dest: "HOME section"
             }
           }
           console.log("Calling the wpDance ...");
@@ -373,16 +424,10 @@ function App() { // original - functional component
           }
           else { // SCROLLING UP - timeline at top
             data = {
-              prev: "navTestimonials",
-              curr: "navXP",
-              // next: "navAbout",
-              dest: "XP (timeline)"
+              prev: "navXP",
+              curr: "navAbout",
+              dest: "ABOUT section"
             }
-            // data = {
-            //   prev: "navXP",
-            //   curr: "navAbout",
-            //   dest: "ABOUT section"
-            // }
             console.log("Calling the wpDance ...");
             wpDance("OE", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
@@ -467,6 +512,12 @@ function App() { // original - functional component
               // next: "navContact",
               dest: "CONTACT section"
             }
+            // data = {
+            //   prev: "navXP",
+            //   curr: "navTestimonials",
+            //   // next: "navContact",
+            //   dest: "TESTIMONIALS section"
+            // }
             // console.log("Calling the wpDance ...");
             // wpDance("OL", 3, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
             //   waypointTop, viewportTop, viewportBottom, data);
@@ -557,6 +608,18 @@ function App() { // original - functional component
       />
       {/* <Divider variant="middle" /> */}
       <Footer />
+      {/* <ScrollUpButton //https://www.skypack.dev/view/react-scroll-up-button
+        AnimationDuration={400}
+        ShowAtPosition={aboutY}
+        StopPosition={0}
+        ContainerClassName='to-top'
+        TransitionClassName='to-top'
+        style={{
+          backgroundColor: 'FF69B4; /* dark pink *'
+        }}
+        // onClick={(evt) => goToTop(evt)}
+      /> */}
+      <ScrollBtn showUnder={aboutY} />
     </div>
   );
 
