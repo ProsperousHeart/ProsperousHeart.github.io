@@ -141,10 +141,10 @@
 
 .flex-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: column wrap;
     align-content: center;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: left; /* was at center and liked the look but difficult to currently get scorll section to match */
 }
 .two-col {
   flex: 50%;
@@ -158,6 +158,5 @@
     instead of next to each other */
     .flex-row {
         flex-direction: column;
-
     }
 }
