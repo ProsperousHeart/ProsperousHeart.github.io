@@ -218,7 +218,7 @@
 
     /* grid needs */
     .row {
-        width: auto;
+        /* width: auto; */
         /* padding-left: 25px; */
         /* padding-left: 4%; */
         padding-left: 2%;
