@@ -217,13 +217,17 @@
     margin-right: 2rem;
 }
 
+#navHome {
+    line-height: 72px;
+    color: #FFFFFF;
+}
 .header-nav li a {
     display: block;
     line-height: 72px;
     color: #FFFFFF;
 }
 
-.header-nav li.current a {
+.header-nav li.current a, .header-nav li.current, #navHome.current {
     /*color: #af2b2b;*/
     /*color: #22dd26;  /* GREEN */
     color: #FF69B4; /* PINK - FF69B4 */
@@ -269,7 +273,7 @@
         padding: 0;
         border-bottom: 1px dotted rgba(255, 255, 255, 0.07);
     }
-    .header-nav-wrap .header-nav li a {
+    .header-nav-wrap .header-nav li a, .header-nav li {
         padding: 18px 0;
         line-height: 18px;
     }
