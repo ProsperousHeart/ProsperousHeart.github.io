@@ -123,8 +123,7 @@
 
 .s-home {
     width: 100%;
-    height: 100%;
-    min-height: 786px;
+    height: 101vh;
     background-color: transparent;
     position: relative;
     display: table;
@@ -168,7 +167,8 @@
     height: 100%;
     vertical-align: bottom;
     /*padding-bottom: 19.2rem;*/
-    padding-bottom: 15rem;
+    /* padding-bottom: 7rem; */
+    padding-bottom: 3%;
     position: relative;
 }
 
@@ -216,6 +216,7 @@
     
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .home-content__main {
@@ -251,10 +252,10 @@
 }
 
 .home-scroll {
-    position: absolute;
+    /* position: absolute; */
     left: .6rem;
     /*bottom: -13.2rem;*/
-    bottom: -3.8rem;
+    /* bottom: -3.8rem; */
 }
 
 .home-scroll a {
@@ -309,7 +310,8 @@
     font-weight: 700; /* bold */
     list-style: none;
     margin: 0;
-    padding-bottom: 14.5rem;
+    /* padding-bottom: 14.5rem; */
+    padding-bottom: 5%;
     position: absolute;
     right: 40px;
 }
@@ -317,9 +319,12 @@
 .home-social::after {
     display: block;
     content: "";
-    height: 17.4rem;
+    /* height: 12rem; */
+    height: 21%;
     width: 1px;
-    background-color: rgba(255, 255, 255, 0.08);
+    /* background-color: rgba(255, 255, 255, 0.08); */
+    /* background-color: #22dd26; */
+    background-color: #ffffff97;
     position: absolute;
     bottom: 0;
     right: .75rem;
@@ -520,12 +525,36 @@ html.no-csstransitions .home-content__main {
     .home-buttons {
         right: 30px;
     }
+    .home-content {
+        padding-bottom: 5%;
+    }
+    .home-name {
+        width: 100%;
+    }
+    .home-content__main {
+        padding-left: 5%;
+    }
+    .home-buttons {
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-height: 900px) {
+    .home-social {
+        padding-bottom: 7.7%;
+    }
+    .home-social::after {
+        height: 30%;
+    }
+    .home-content__main .two-col {
+        flex-flow: row nowrap;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     .home-name {
         font-size: 4.8rem;
-        width: 100%;
+        /* width: 100%; */
     }
     .home-desc {
         font-size: 2.5em;
@@ -536,11 +565,17 @@ html.no-csstransitions .home-content__main {
     } */
     .home-buttons {
         position: static;
-        text-align: left;
+        text-align: left; /* needs to stay this way */
     }
     .home-buttons .btn {
         display: inline-block;
         margin-right: .9rem;
+    }
+    .home-content__main {
+        padding-left: 5%;
+    }
+    .home-content__main .flex-row {
+        flex-flow: column wrap;
     }
 }
 
@@ -548,8 +583,9 @@ html.no-csstransitions .home-content__main {
     /* .home-content h3 { */
     .hdr-HL-gp {
         font-size: 1.6rem;
-        padding-left: 50px;
-        margin-left: -10px;
+        /* padding-left: 50px;
+        margin-left: -10px; */
+        padding-left: 40px;
     }
     /* .home-content h3::before { */
     .hdr-HL-gp::before {
@@ -557,7 +593,7 @@ html.no-csstransitions .home-content__main {
     }
     .home-name {
         font-size: 4.6rem;
-        width: 100%;
+        /* width: 100%; */
     }
     .home-desc {
         font-size: 2em;
@@ -573,7 +609,6 @@ html.no-csstransitions .home-content__main {
     }
     .home-name {
         font-size: 4.5rem;
-        width: 95%;
     }
     .home-desc {
         font-size: 1.63em;
@@ -602,66 +637,149 @@ html.no-csstransitions .home-content__main {
     }
 }
 
+@media only screen and (max-width: 600px) and (min-height: 700px) {
+    /* .home-name {
+        font-size: 4rem;
+    }
+    .home-desc {
+        font-size: 2.5rem;
+    } */
+    .home-buttons {
+        display: flex; /* required for Surface Duo @ 540x720 */
+    }
+    .home-social {
+        right: 4%;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-height: 750px) {
+    .home-buttons {
+        flex-flow: row wrap; /* required for Samsung Galaxy S22 Ultra @ 412x750 */
+    }
+    .home-social {
+        right: 9%;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-height: 800px) and (max-height: 900px) {
+    .home-buttons {
+        display: flex;
+    }
+    .home-social {
+        right: 4%;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-height: 700px){
+    .home-content {
+        padding-bottom: 5%;
+    }
+    .home-social {
+        padding-bottom: 10%;
+    }
+    .home-social::after {
+        height: 20%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home-content {
+        /* padding-bottom: 7rem; */
+        padding-bottom: 10%;
+    }
+    .home-social {
+        /* padding-bottom: 9.7rem; */
+        padding-bottom: 15%;
+    }
+    .home-social::after {
+        height: 5rem;
+    }
+    .home-desc {
+        font-size: 1.6em;
+    }
+}
+
+@media only screen and (max-width: 500px) and (min-height: 800px) {
+    /* .home-name {
+        font-size: 4rem;
+    }
+    .home-desc {
+        font-size: 2.5rem;
+    } */
+    .home-buttons {
+        display: block;
+    }
+    .home-social {
+        right: 9%;
+    }
+}
+
 @media only screen and (max-width: 400px) {
-    #home .home-content .row .h02 { /* succinct .home-desc - top description */
+    /* #home .home-content .row .h02 { /* succinct .home-desc - top description */
         /*font-size: 2.4rem; /* previously 2.2rem */
         /* font-size: 1.35em; */
-        /* width: 95%; */
-    }
+        /* width: 95%; *
+    } */
+    /* .home-content {
+        /* padding-bottom: 18rem; *
+        padding-bottom: 10%;
+    } */
     .home-name {
         font-size: 3.5rem;
-        /* width: 90%; */
     }
     .home-desc {
         font-size: 1.36em;
     }
     .h-intro { /* text of HOME */
-        padding-top: 40%;
+        /* padding-top: 40%; */
+        padding-top: 30rem;
     }
     .desc {
         margin-top: 1.3rem;
         margin-bottom: 1.5rem;
     }
+    .home-social {
+        right: 5%;
+    }
+    .home-social::after {
+        height: 17.1%;
+    }
 }
 
+@media only screen and (max-width: 400px) and (min-height: 700px) {
+    .home-buttons {
+        display: block;
+    }
+}
+
+
 @media only screen and (max-width: 300px) {
+    /* .home-content {
+        /* padding-bottom: 20rem; *
+        padding-bottom: 10%;
+    } */
+    /* .hdr-HL-gp {
+        margin-top: 0rem;
+    } */
+    /* .h-intro { /* text of HOME *
+        padding-top: 0%;
+    } */
     .home-name {
         font-size: 2.8rem;
+        /* width: 90%; */
     }
     .home-desc {
         font-size: 1em;
     }
-}
-
-/* @media only screen and (max-width: 400px) and (min-height: 700px) {
-    /* #home .home-content .row .h02 { /* succinct - top description 
-        font-size: 1.35em;
-        width: 100%;
-    } 
-    /* .h-intro {   /* sets where welcome starts 
-        padding-top: 17.5em;
-    } 
-} */
-
-/* @media only screen and (max-width: 400px) and (min-height: 840px) {
-    /* #home .home-content .row .h02 { /* succinct - top description
-        font-size: 1.45em;
-        width: 100%;
+    .home-social {
+        /* padding-bottom: 19.8rem; */
+        padding-bottom: 20%;
     }
-    .h-intro { /* sets where welcome starts 
-        padding-top: 21em;
+    .home-social::after {
+        /* height: 18rem; */
+        height: 20%;
     }
-} */
-
-@media only screen and (min-height: 850px) {
-    #home .home-content .row .h02 { /* succinct */
-        font-size: 1.5em;
-        width: 100%;
-        padding-top: 0px;
-        margin-top: 0px;
-    }
-    /* .h-intro { /* sets where welcome starts 
-        /* padding-top: 23.9em; 
-        /* padding-top: 90%; 
-    }*/
+    /* .home-content__main {
+        width: 30%;
+    } */
 }
