@@ -1,0 +1,265 @@
+/* ===================================================================
+ *
+ *  Kassandra Resume v1.0 XP (Experiences) Section Stylesheet
+    20221222
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  # XP section needs
+    # timeline + responsive needs
+  ===================================================================*/
+
+#XP {
+    /*padding-top: 10rem;*/
+    padding-bottom: 4rem;
+    background-color: #FFFFFF;
+    position: relative;
+    /*max-height:  content;*/
+}
+
+#XP .has-bottom-sep {
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+
+#XP .has-bottom-sep::after {
+    display: inline-block;
+    height: 1px;
+    width: 240px;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+}
+
+/* -------------------------------------------------------------------
+ * ## timeline - (_site-layout.scss)
+ * ------------------------------------------------------------------- */
+
+.timeline {
+    position: relative;
+    text-align: left;
+    margin-top: 3.6rem;
+}
+
+.timeline::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 2rem;
+    top: 0;
+}
+
+.timeline__block {
+    position: relative;
+    padding-left: 8rem;
+    min-height: 28.8rem;
+}
+
+.timeline__bullet {
+    background: #0D0A0B;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin-left: -0.75rem;
+    box-shadow: 0 0 0 9px #E9E9E9;
+    position: absolute;
+    left: 2rem;
+    top: .3rem;
+}
+
+/* .timeline__header .timeline__timeframe { */
+.timeline__timeframe {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700; /* bold */
+    letter-spacing: .15rem;
+    line-height: 1.5rem;
+    margin-bottom: .5rem;
+    /* padding-bottom: .1rem; */
+    text-transform: uppercase;
+}
+
+.timeline__header h3 {
+    line-height: 1.25;
+    margin: 0 0 .3rem 0;
+}
+
+.timeline__header h5 { /* XP position title & company | .xp-titleco */
+    margin-top: 0;
+}
+
+.xp-titleco { /* replacing h5 in XP */
+    /* color: #15AD30; */
+    color: #0D0A0B;
+    display: block;
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 1.6rem;
+    font-variant-ligatures: common-ligatures;
+    font-weight: 500; /* medium */
+    line-height: 1.3125;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    /* margin-top: 4.2rem; */
+    margin-top: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-variant-ligatures: common-ligatures;
+    -moz-font-variant-ligatures: common-ligatures;
+}
+
+.timeline__desc p {
+    margin: 0;
+    padding-bottom: 3rem;
+}
+
+#XP ul.lead {
+    font-size: 1.5rem;
+}
+
+/* #XP li.lead {
+    padding-bottom: 2rem;
+} */
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * timeline
+ * ------------------------------------------------------------------- */
+
+ @media only screen and (max-width: 1000px) {    
+    #XP h3 { /* titles + sec-light-hdr-top */
+        font-size: 2.3rem;
+    }
+    .xp-titleco { /* replacing h5 in XP */
+        font-size: 1.6rem;
+    }
+    .timeline__desc {
+        padding-right: 1%;
+    }
+    .timeline__block {
+        /* padding-left: 5.5rem; */
+        padding-left: 6rem;
+    }
+    .timeline__timeframe {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {    
+    #XP h3 { /* titles + sec-light-hdr-top */
+        font-size: 3rem;
+    }
+    .xp-titleco { /* replacing h5 in XP */
+        font-size: 2.3rem;
+    }
+    .timeline__desc {
+        padding-right: 1%;
+    }
+    .timeline__block {
+        /* padding-left: 5.5rem; */
+        padding-left: 6rem;
+    }
+    .timeline__timeframe {
+        font-size: 1.7rem;
+    }
+    #XP ul.lead {
+        font-size: 1.7rem;
+        width: 97%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .xp-titleco { /* replacing h5 in XP */
+        font-size: 2rem;
+    }
+    p.lead { /* .lead is in bootstrap */
+        padding: 0px;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    ul li.lead {
+        font-size: 1.6rem;
+    }
+    .timeline__block {
+        padding-left: 6rem;
+    }
+    .timeline__desc {
+        padding-right: 3%;
+    }
+    #XP ul.lead {
+        font-size: 1.65rem;
+        width: 92%;
+    }
+}
+
+/*@media only screen and (max-width: 412px) { -- could also use in*/
+@media only screen and (max-width: 500px) {
+    #XP .section-intro,
+    #XP .col-six {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .timeline__block {
+        /* padding-left: 5.5rem; */
+        padding-left: 4.7rem;
+    }
+    .timeline__desc {
+        padding-right: 7%;
+    }
+    .timeline__timeframe {
+        font-size: 1.4rem;
+    }
+    /* #XP h1 { /* replaced by sec-light-hdr-title 
+        font-size: 3.1rem;
+    } */
+    #XP h3 { /* titles + sec-light-hdr-top */
+        font-size: 2.55rem;
+    }
+    /* #XP h5 {
+        font-size: 1.45rem;
+    } */
+    .xp-titleco { /* replacing h5 in XP */
+        font-size: 1.8rem;
+    }
+    #XP p.lead {
+        font-size: 1.815rem;
+    }
+    #XP ul.lead {
+        font-size: 1.65rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    /* .timeline__block {
+        padding-left: 4.7rem;
+    } */
+    .timeline__desc {
+        padding-right: 4%;
+    }
+    #XP h3 { /* titles + sec-light-hdr-top */
+        font-size: 2.35rem;
+    }
+    .xp-titleco { /* replacing h5 in XP */
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .timeline__timeframe {
+        font-size: 1.2rem;
+    }
+    #XP h3 { /* titles + sec-light-hdr-top */
+        width: 90%;
+    }
+    .xp-titleco { /* replacing h5 in XP */
+        width: 75.5%;
+    }
+    #XP ul.lead {
+        font-size: 1.5rem;
+    }
+}

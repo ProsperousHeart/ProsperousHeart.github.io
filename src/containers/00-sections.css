@@ -1,0 +1,205 @@
+/* -------------------------------------------------------------------
+ * ## section intro - (_common-styles.scss)
+ * ------------------------------------------------------------------- */
+
+.section-intro {
+    text-align: center;
+    position: relative;
+    padding-top: 10rem;
+}
+
+.section-intro h1 { /* replaced by sec-light-hdr-title ? */
+    /* font-family: "Libre Baskerville", serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    line-height: 6rem; /*why is 1.375 not a size? without it, it looks funny*/
+    font-size: 4.8rem;
+    font-weight: 700; /* bold */
+    margin-top: 0;
+}
+
+.section-intro h3 { /* replaced by sec-light-hdr-top ? */
+    color: #862121; /* MAROON */
+    font-size: 2rem;
+    /* font-family: "Montserrat", sans-serif; 
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-weight: 600; /* semibold */
+    letter-spacing: .15rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.section-intro.has-bottom-sep {
+    padding-bottom: 1.5rem;
+    position: relative;
+    justify-content: center;
+}
+
+.section-intro.has-bottom-sep::after {
+    display: inline-block;
+    height: 1px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.sec-light-hdr-top { /* About's h3 */
+    color: #862121; /* MAROON */
+    display: block;
+    /*font-weight: 500; /* medium */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 2rem;
+    /* font-size: 2.4rem; */
+    font-variant-ligatures: common-ligatures;
+    /*font-weight: 600; /* semibold */
+    font-weight: 500; /* ? */
+    letter-spacing: .15rem;
+    line-height: 1.25;
+    margin: 0;
+    /* margin-top: 1.5rem; */
+    /* margin-bottom: 1rem; */
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    /* -webkit-font-variant-ligatures: common-ligatures;
+    -moz-font-variant-ligatures: common-ligatures; */
+}
+.sec-light-hdr-title { /* h1 */
+    color: #0D0A0B;
+    display: block;
+    /* font-family: "Libre Baskerville", serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 4.8rem;
+    /* font-size: 3.6rem; */
+    font-weight: 700; /* bold */
+    font-variant-ligatures: common-ligatures;
+    letter-spacing: -.1rem;
+    /* line-height: 1.25rem; */
+    line-height: 6rem; /*why is 1.375 not a size? without it, it looks funny*/
+    margin: 0;
+    margin-top: 0;
+    /* margin-top: 1.5rem; */
+    margin-bottom: 1rem;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    /* -webkit-font-variant-ligatures: common-ligatures;
+    -moz-font-variant-ligatures: common-ligatures; */
+}
+
+.sec-dark-hdr-top { /* testimonials-header h1 && .h02 && section-intro h1 for Testimonials? */
+    /* section-intro h1 --- didn't look at sectiknos or media for mobile yet*
+    /* font-family: "Libre Baskerville", serif; */
+    display: block;
+    color: #FFFFFF;
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 4.2rem;
+    /*font-weight: 500; /* medium */
+    font-weight: 700; /* bold */
+    letter-spacing: -.1rem;
+    line-height: 1.3;
+    /* margin-top: 0; */
+    margin: 0;
+    /* margin-top: 1.5rem; */
+    margin-bottom: 1rem;
+    padding: 0;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-variant-ligatures: common-ligatures;
+    -moz-font-variant-ligatures: common-ligatures;
+}
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * section-intro
+ * ------------------------------------------------------------------- */
+
+ @media only screen and (max-width: 1200px) {
+    .sec-dark-hdr-top { /* max-width: 1200px */
+        font-size: 3.8rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .section-intro h1 { /* soon to be replaced by sec-light-hdr-title */
+        font-size: 4.2rem;
+    }
+    .sec-dark-hdr-top { /* max-width: 800px */
+        font-size: 3rem;
+    }
+    .sec-light-hdr-top {
+        font-size: 1.8rem;
+    }
+    .sec-light-hdr-title {
+        font-size: 4.2rem;
+    }
+    .section-intro h3 { /* soon to be replaced by sec-light-hdr-top */
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section-intro h1 { /* soon to be replaced by sec-light-hdr-title */
+        font-size: 3.6rem;
+    }
+    .sec-light-hdr-title {
+        font-size: 3.6rem;
+    }
+    .section-intro h3 { /* soon to be replaced by sec-light-hdr-top */
+        font-size: 1.7rem;
+    }
+    .sec-dark-hdr-top { /* max-width: 600px */
+        /* replacing h1 in testimonials */
+        font-size: 2.7rem;
+        margin-top: 0; /* this is not in original base */
+        letter-spacing: -.07rem;
+        /* margin-top: 5.1rem; */
+        /* font-size: 3.3rem; */
+    }
+    .sec-light-hdr-top {
+        font-size: 1.7rem;
+    }
+    .s-contact {
+        background-size: auto auto;
+    }
+}
+
+/*@media only screen and (max-width: 412px) { -- could also use in*/
+@media only screen and (max-width: 500px) {
+    .section-intro h1 { /* soon to be replaced by sec-light-hdr-title */
+        font-size: 3.3rem;
+    }
+    .section-intro h3 { /* soon to be replaced by sec-light-hdr-top */
+        font-size: 1.6rem;
+    }
+    .sec-dark-hdr-top { /* max-width: 500px */
+        font-size: 2.1rem;
+    }
+    .sec-light-hdr-top { /* soon to be replaced by sec-light-hdr-top */
+        font-size: 1.6rem;
+    }
+    .sec-light-hdr-title {
+        /* font-size: 3.3rem; */
+        font-size: 3.1rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .sec-dark-hdr-top { /* max-width: 300px */
+        font-size: 2.7rem;
+        margin-top: 0; /* this is not in original base */
+        letter-spacing: -.07rem;
+    }
+}

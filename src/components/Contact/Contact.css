@@ -1,0 +1,555 @@
+/* ===================================================================
+ *
+ *  Kassandra Resume v1.0 CONTACT Section Stylesheet
+ *  20221221
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+    # contact section
+ *      ## structure / setup
+        ## loader animation
+        ## responsive layout
+ *      ## forms
+ *      ## style placeholder text
+ *      ## Change Autocomplete styles in Chrome
+ * ==================================================================== */
+
+ #contact h3 { /* to be replaced by .contact-top */
+    color: #FF69B4;
+ }
+
+ #contact p {
+    color: #ffffffcb;
+    text-shadow: #000 1px 0 10px;
+    /* text-shadow: #0b3cef 1px 0 10px; */
+ }
+
+ .contact-top {
+    display: block;
+    color: #FF69B4;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 2rem;
+    /*font-weight: 600; /* semibold */
+    font-weight: 500; /* medium */
+    letter-spacing: .15rem; /* replacing .section-intro h3 */
+    line-height: 1.25; /* replacing h3 */
+    /* line-height: 6rem; */
+    text-transform: uppercase;
+
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-variant-ligatures: common-ligatures;
+    -moz-font-variant-ligatures: common-ligatures;
+ }
+
+ .contact-qlooking {
+    color: #FFFFFF; /* .s-contact .section-intro h */
+    display: block; /* h1 */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 4.8rem;
+    font-weight: 700;
+    letter-spacing: -.1rem;
+    line-height: 6rem; /* .section-intro h1 */
+    margin: 0; /* h1 */
+    margin-bottom: 1rem; /* h1 */
+    padding: 0; /* h1 */
+
+    /* h1 */
+    font-feature-settings: "liga", "clig";
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+ }
+
+ /* ===================================================================
+ * # contact - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+.s-contact {
+    background-color: #151515;
+    background-image: url("/public/IMGs/2018-Dec.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 9rem;
+    padding-bottom: 6rem;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.s-contact .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-color: #070606;
+}
+
+.s-contact .section-intro h1 {
+    color: #FFFFFF;
+}
+
+.s-contact .section-intro p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.s-contact .section-intro.has-bottom-sep::after {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.s-contact .form-field {
+    position: relative;
+}
+
+.s-contact .form-field:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.s-contact .form-field label {
+    color: #FFFFFF;
+    background: #862121; /* MAROON */
+    bottom: -0.3rem;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600; /* semibold */
+    letter-spacing: .1rem;
+    line-height: 2.4rem;
+    margin: 0;
+    padding: 0 2rem;
+    position: absolute;
+    right: .6rem;
+    text-transform: uppercase;
+}
+
+.s-contact .form-field label::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    margin-top: -6px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #862121; /* MAROON */
+}
+
+.contact__main {
+    max-width: 900px;
+    position: relative;
+}
+
+.contact__main h4 {
+    color: #FFFFFF;
+}
+
+.contact__infos {
+    font-size: 1.5rem;
+}
+
+.contact__form {
+    padding-right: 40px;
+}
+
+.contact__form input[type="email"],
+.contact__form input[type="number"],
+.contact__form input[type="text"],
+.contact__form input[type="tel"],
+.contact__form input[type="url"],
+.contact__form textarea {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: .9rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.contact__form input[type="email"]:focus,
+.contact__form input[type="number"]:focus,
+.contact__form input[type="text"]:focus,
+.contact__form input[type="tel"]:focus,
+.contact__form input[type="url"]:focus,
+.contact__form textarea:focus {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.contact__form button {
+    margin-top: 4.2rem;
+    background-color: #862121; /* MAROON */
+    border-color: #862121; /* MAROON */
+}
+
+.message-warning, .message-success {
+    display: none;
+    background: #0D0A0B;
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 3rem;
+    margin-bottom: 3.6rem;
+    width: 100%;
+}
+
+.message-warning {
+    color: #ff6163;
+}
+
+.message-success {
+    color: #008C2C;
+}
+
+.message-warning i, .message-success i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+
+/* form loader */
+
+.submit-loader {
+    display: none;
+    position: relative;
+    left: 0;
+    top: 1.8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4.2rem;
+}
+
+.submit-loader .text-loader {
+    color: #FFFFFF;
+    display: none;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700; /* bold */
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.oldie .submit-loader .s-loader {
+    display: none;
+}
+
+.oldie .submit-loader .text-loader {
+    display: block;
+}
+
+
+/* ---------------------------------------------------------------
+ * loader animation - (_site-layout.scss)
+ * --------------------------------------------------------------- */
+
+/* .s-loader {
+    margin: 1.2rem auto 3rem;
+    width: 70px;
+    text-align: center;
+    -webkit-transform: translateX(0.45rem);
+    -ms-transform: translateX(0.45rem);
+    transform: translateX(0.45rem);
+}
+
+.s-loader > div {
+    width: 9px;
+    height: 9px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: .9rem;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
+    animation: bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.s-loader .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.s-loader .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+} */
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * contact
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+    .contact__form {
+        padding-right: 15px;
+    }
+    .contact__infos {
+        padding-top: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contact__form {
+        padding-right: 10px;
+    }
+
+    .contact-qlooking {
+        letter-spacing: -.07rem; /* h1 */
+    }
+
+    .s-contact {
+        /* parallax without JS - Create the scrolling effect */
+        background-attachment: fixed;
+        background-size: auto 100%;
+        background-position: 12.5%, 30%;
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+        /*background-repeat: no-repeat;
+        background-size: cover;*/
+    }
+    /*.s-contact .section-intro {
+        padding-top: 3rem;
+    }*/
+}
+
+/*@media only screen and (max-width: 412px) { -- could also use in*/
+@media only screen and (max-width: 500px) {
+    .contact-qlooking {
+        font-size: 3rem; /* .section-intro h1 */
+        padding: 0px;
+    }
+    #contact h3 { /* to be replaced by .contact-top */
+        padding-top: 2rem;
+    }
+    .contact-top {
+        padding-top: 2rem;/* replacing #contact h3 */
+        font-size: 1.6rem; /* replacing .section-intro h3 */
+    }
+    #contact .section-intro {
+        padding: 1.5rem;
+        /*padding: 0px;*/
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 98%;
+    }
+    #contact .section-intro .col-full {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #contact p {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .contact__form {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+}
+
+ /* ===================================================================
+ * # forms - (_forms.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+fieldset {
+    border: none;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea, select {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    color: #333333;
+    display: block;
+    height: 6rem;
+    outline: none;
+    padding: 1.5rem 0;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400; /* regular */
+    line-height: 3rem;
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.ss-custom-select {
+    position: relative;
+    padding: 0;
+}
+
+.ss-custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    margin: 0;
+    line-height: 3rem;
+    vertical-align: middle;
+}
+
+.ss-custom-select select option {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.ss-custom-select select::-ms-expand {
+    display: none;
+}
+
+.ss-custom-select::after {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    margin-top: -7px;
+    pointer-events: none;
+    position: absolute;
+    right: 2.4rem;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+    -ms-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+
+/* IE9 and below */
+
+.oldie .ss-custom-select::after {
+    display: none;
+}
+
+textarea {
+    min-height: 25rem;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus, select:focus {
+    color: #000000;
+    border-bottom: 2px solid black;
+}
+
+label, legend {
+    color: #0D0A0B;
+    display: block;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700; /* bold */
+    line-height: 1.714rem; /* TODO:  need to check this - might have added remaccidentally */
+    margin-bottom: .9rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: inline;
+}
+
+label > .label-text {
+    display: inline-block;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-weight: 400; /* regular */
+    line-height: inherit;
+    margin-left: 1rem;
+}
+
+label > input[type="checkbox"], label > input[type="radio"] {
+    margin: 0;
+    position: relative;
+    top: .15rem;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## style placeholder text - (_forms.scss)
+ * ------------------------------------------------------------------- */
+
+::-webkit-input-placeholder {
+    color: #6c6c6c;
+}
+
+:-moz-placeholder {
+    color: #6c6c6c;
+    /* Firefox 18- */
+}
+
+::-moz-placeholder {
+    color: #6c6c6c;
+    /* Firefox 19+ */
+}
+
+:-ms-input-placeholder {
+    color: #6c6c6c;
+}
+
+.placeholder {
+    color: #6c6c6c !important;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## Change Autocomplete styles in Chrome - (_forms.scss)
+ * ------------------------------------------------------------------- */
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #cf3e3e;
+    transition: background-color 5000s ease-in-out 0s;
+}
