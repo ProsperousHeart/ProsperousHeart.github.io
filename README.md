@@ -42,9 +42,9 @@ npm install react-slick --save
 npm install slick-carousel --save
 ```
 
-<!-- 2. react-scroll-up-button using `npm install react-scroll-up-button --legacy-peer-deps` (as per [here](https://www.npmjs.com/package/react-scroll-up-button) and [here](https://github.com/dirtyredz/react-scroll-up-button/issues/23)) -->
+2. react-scroll-up-button using `npm install react-scroll-up-button --legacy-peer-deps` (as per [here](https://www.npmjs.com/package/react-scroll-up-button) and [here](https://github.com/dirtyredz/react-scroll-up-button/issues/23)) --- but because it is broken made my own component with their code as base
 
-<!-- 3. `npm install react-scroll-up --legacy-peer-deps` -->
+<!-- 3. `npm install react-scroll-up` -->
 
 # Migrating From Vanilla to React
 
