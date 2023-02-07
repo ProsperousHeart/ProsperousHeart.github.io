@@ -1,7 +1,6 @@
 import React from 'react';
 // import { useEffect } from 'react';
 // import { useState } from 'react';
-// import './ScrollBtn.css';
 // import $ from 'jquery';
 // import ScrollToTop from 'react-scroll-up';
 import { CircleArrow } from './CircleArrow';
