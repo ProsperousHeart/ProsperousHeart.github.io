@@ -229,6 +229,7 @@
 
 .home-buttons {
     /*position: absolute;*/
+    margin-left: auto;
     right: 0;
     bottom: 2.1rem;
     text-align: center;
@@ -564,6 +565,8 @@ html.no-csstransitions .home-content__main {
         /* max-width: 680px; 
     } */
     .home-buttons {
+        margin-right: auto;
+        margin-left: 0;
         position: static;
         text-align: left; /* needs to stay this way */
     }
