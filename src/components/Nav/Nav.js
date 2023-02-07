@@ -4,7 +4,7 @@ import React from 'react';
 // import { useEffect } from 'react';
 import './Nav.css';
 import $ from 'jquery';
-import clearNav from './clearNavFunc';
+// import clearNav from './clearNavFunc';
 
 // function ssMobileMenu(element) {
 //     // console.log("Clicked on element:", element);
@@ -84,7 +84,18 @@ export default function Nav({setActiveNavStr}) {
         });
     }
 
-    const timeoutMS = 1000;
+    function scrollToPos(idStr) {
+        // https://plainjs.com/javascript/styles/get-the-position-of-an-element-relative-to-the-document-24/
+        const elemTop = document.querySelector(idStr).getBoundingClientRect().top;
+        console.log(`elemTop:  ${elemTop}`);
+        console.log(elemTop);
+        window.scrollTo({
+            top: elemTop + window.pageYOffset,
+            behavior: 'smooth'
+        });
+    }
+
+    // const timeoutMS = 1000;
     return (
         <header className="nav-header">
             <div className="header-logo">
@@ -97,54 +108,55 @@ export default function Nav({setActiveNavStr}) {
             </div>
             <nav className="header-nav-wrap"> {/*<!-- see ssMobileMenu in main.js -->*/}
                 <ul id="headerNav" className="header-nav">
-                    {/* <li id="navHome" className="current"> */}
-                    <li id="navHome" 
-                        className="current smoothscroll"
-                        title='Home'
-                        onClick={scrollToTop}
-                    >
-                        {/* <a className="smoothscroll"  
+                    {/* <li id="navHome" className="current">
+                        <a className="smoothscroll"  
                             href="#home" 
                             title="Home"
                             // onClick={() => setTimeout(clearNav, timeoutMS, "navHome")}
                             onClick={(event) => toggleOpen(event, "navHome")}
-                        >Home</a> */}
-                        Home
-                    </li>
-                    <li id="navAbout">
-                        <a className="smoothscroll"  
-                            href="#about" 
-                            title="About"
-                            // onClick={() => setTimeout(clearNav, timeoutMS, "navAbout")}
-                            onClick={(event) => toggleOpen(event, "navAbout")}
-                        >About</a>
-                    </li>
-                    <li id="navXP"><a 
+                        >Home</a>
+                    </li> */}                    
+                    <li id="navHome" 
+                        className="current smoothscroll"
+                        title='Home'
+                        onClick={scrollToTop}
+                    >Home</li>
+                    <li id="navAbout"
                         className="smoothscroll"  
-                        href="#XP" 
-                        title="Experience"
-                        // onClick={() => setTimeout(clearNav, timeoutMS, "navXP")}
-                        // onClick={(event) => toggleOpen(event, "navXP")}
+                        title="About"
+                        // onClick={() => setTimeout(clearNav, timeoutMS, "navAbout")}
                         onClick={(event) => {
-                            toggleOpen(event, "navXP");
-                            setTimeout(clearNav, timeoutMS, "navXP"); /* could be removed if the spacing was right, maybe? */
+                            scrollToPos('#about');
+                            toggleOpen(event, "navAbout");
                         }}
-                    >Experience</a></li>
-                    <li id="navTestimonials"><a 
-                        className="smoothscroll"  
-                        href="#Testimonials2" 
+                    >About</li>                    
+                    <li id="navXP"
+                        className="smoothscroll"
+                        title="Experience"
+                        onClick={(event) => {
+                            scrollToPos('#XP');
+                            toggleOpen(event, "navXP");
+                            // setTimeout(clearNav, timeoutMS, "navXP"); /* could be removed if the spacing was right, maybe? */
+                        }}
+                    >Experience</li>
+                    <li id="navTestimonials"
+                        className="smoothscroll"
                         title="Testimonials"
                         // onClick={() => setTimeout(clearNav, timeoutMS, "navTestimonials")}
-                        onClick={(event) => toggleOpen(event, "navTestimonials")}
-                    >Testimonials</a></li>
-                    {/* <!--<li><a className="smoothscroll"  href="#Projects" title="Projects">Projects</a></li>--> */}
-                    <li id="navContact"><a 
+                        onClick={(event) => {
+                            scrollToPos('#Testimonials2');
+                            toggleOpen(event, "navTestimonials")
+                        }}
+                    >Testimonials</li>
+                    <li id="navContact"
                         className="smoothscroll"
-                        href="#contact"
                         title="Contact"
                         // onClick={() => setTimeout(clearNav, timeoutMS, "navContact")}
-                        onClick={(event) => toggleOpen(event, "navContact")}
-                    >Contact</a></li>
+                        onClick={(event) => {
+                            scrollToPos('#contact');
+                            toggleOpen(event, "navContact")
+                        }}
+                    >Contact</li>
                 </ul>
             </nav>
             <a 
