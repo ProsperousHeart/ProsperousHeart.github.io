@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import TCard from './TCard';
 import Slider from 'react-slick'; // https://react-slick.neostack.com/docs/api/ | https://github.com/kenwheeler/slick
+import './slick.css';
 
 // https://react-slick.neostack.com/docs/get-started/
 // import "~slick-carousel/slick/slick.css"; 
