@@ -120,6 +120,7 @@ footer a:hover, footer a:focus {
 
 .footer-bottom .copyright span {
     display: inline-block;
+    /* line-height: 1.2rem; */
 }
 
 .footer-bottom .copyright span::after {
