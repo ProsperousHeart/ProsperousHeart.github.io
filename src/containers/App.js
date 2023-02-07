@@ -423,10 +423,15 @@ function App() { // original - functional component
             }
           }
           else { // SCROLLING UP - timeline at top
+            // data = {
+            //   prev: "navXP",
+            //   curr: "navAbout",
+            //   dest: "ABOUT section"
+            // }
             data = {
-              prev: "navXP",
-              curr: "navAbout",
-              dest: "ABOUT section"
+              prev: "navTestimonials",
+              curr: "navXP",
+              dest: "XP (timeline) section"
             }
             console.log("Calling the wpDance ...");
             wpDance("OE", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
