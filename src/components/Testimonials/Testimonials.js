@@ -10,16 +10,14 @@ export default class Testimonials extends Component {
                 id="Testimonials2"
                 className="s-testimonials target-section"
             >
-                <div>
-                    <div className="overlay"></div>
-                    <div className="row testimonials-header">
-                        <div className="col-full">
-                            <h1 className="h02">Testimonials</h1>
-                            {/* <span className="sec-dark-hdr-top">Testimonials</span> */}
-                        </div>
+                <div className="overlay"></div>
+                <div className="row testimonials-header">
+                    <div className="col-full">
+                        <h1 className="h02">Testimonials</h1>
+                        {/* <span className="sec-dark-hdr-top">Testimonials</span> */}
                     </div>
-                    <TCardList data={data} />
                 </div>
+                <TCardList data={data} />
             </section>
         );
     }

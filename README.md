@@ -8,7 +8,11 @@ While I originally based the the flow with [this template](https://www.styleshou
 
 Eventually, I went through [ZTM's Complete Web Developer Mastery (2023)](https://prosperousheart.com/ztm-web-dev-bc) where I eventually learned a bit of React, Node & Express, as well as postgres as outlined [here](https://github.com/ProsperousHeart/FaceRecognitionApp-ZTM).
 
-So in this next phase of my digital resume, I will be migrating the HTML/CSS/Javascript to a React site.
+So in this next phase of my digital resume, I will have migrated [the original (vanilla) HTML/CSS/Javascript](https://github.com/ProsperousHeart/ProsperousHeart.github.io/tree/vanilla-HTMLJS) to a React site.
+
+# Special Shoutouts
+
+I found [Stroybook](https://storybook.js.org/) and have introduced this into my process flow!
 
 # NPM Installs
 
@@ -43,6 +47,8 @@ npm install slick-carousel --save
 ```
 
 2. react-scroll-up-button using `npm install react-scroll-up-button --legacy-peer-deps` (as per [here](https://www.npmjs.com/package/react-scroll-up-button) and [here](https://github.com/dirtyredz/react-scroll-up-button/issues/23)) --- but because it is broken made my own component with their code as base
+
+3. `npm install --save react-modal --legacy-peer-deps` for [react-modal](https://github.com/reactjs/react-modal)
 
 <!-- 3. `npm install react-scroll-up` -->
 
