@@ -1,7 +1,7 @@
 /* ===================================================================
  *
- *  Kassandra Resume v1.0 Testimonials Stylesheet
- *  20221222
+ *  Kassandra Resume v2.0 Testimonials Stylesheet
+ *  20230206
  *  ------------------------------------------------------------------
  *
  *  TOC:
@@ -227,11 +227,11 @@
         width: 6rem;
         height: 6rem;
     }
-    .testimonials__slider .slick-prev {
+    .testimonials__slider .slick-prev, .testimonials__slider .slick-prev::before {
         top: 202px;
         /* left: 5%; */
     }
-    .testimonials__slider .slick-next {
+    .testimonials__slider .slick-next, .testimonials__slider .slick-next::before {
         top: 202px;
         /* right: 5%; */
     }
@@ -239,12 +239,12 @@
 
 @media only screen and (max-width: 900px) {
     /* .testimonials__slider .slick-prev { */
-    .testimonials .slick-prev {
+    .testimonials .slick-prev, .testimonials .slick-prev::before {
         /* top: 222px; */
         top: 18px;
     }
     /* .testimonials__slider .slick-next { */
-    .testimonials .slick-next {
+    .testimonials .slick-next, .testimonials .slick-next::before {
         /* top: 222px; */
         top: 18px;
     }
@@ -267,7 +267,7 @@
         top: 5.1rem;
     } */
     /* .testimonials__slider .slick-prev { */
-    .testimonials .slick-prev {
+    .testimonials .slick-prev, .testimonials .slick-prev::before {
         /* left: 1rem; */
         /* top: 75px; */
         /* top: 15%; */
@@ -276,7 +276,7 @@
         top: 75px;
     }
     /* .testimonials__slider .slick-next { */
-    .testimonials .slick-next {
+    .testimonials .slick-next, .testimonials .slick-next::before {
         /* right: 1rem; */
         /* top: 75px; */
         /* top: 15%; */
@@ -310,10 +310,10 @@
     .testimonials__slider .slick-next, #Testimonials2 .im {
         top: 15%;
     } */
-    .testimonials .slick-prev {
+    .testimonials .slick-prev, .testimonials .slick-prev::before {
         top: 75px;
     }
-    .testimonials .slick-next {
+    .testimonials .slick-next, .testimonials .slick-next::before {
         top: 75px;
     }
 }
@@ -322,10 +322,11 @@
     Testimonials 2 - made by me
    ==============================================*/
 
-.swiper {
+/* originally considered for .slider or .slick- items */
+/* .swiper {
   width: 600px;
   height: 300px;
-}
+} */
 
 #Testimonials {
     background-color: #FFFFFF;
