@@ -1,11 +1,45 @@
+/* 20230206 */
+
 .slick-prev {
-    left: 3%;
+    /* left: 3%; */
     /* top: 18px; */
     /* top: 50%; */
+    z-index: 1; /* required to ensure the left arrow works - not currently certain where overlap is happening as of 20230213 */
 }
 
-.slick-next {
+/* .slick-next {
     right: 3%;
-    /* top: 18px; */
+    /* top: 18px; *
+    /* top: 50%; *
+} */
+
+/* .slick-list {
+    left: 3%;
+    padding-right: 3%;
+} */
+
+/* .im-arrow-right:before, .im-arrow-left:before {*/
+/* .slick-prev i, .slick-next i {
+    position: relative;
     top: 50%;
-}
+} */
+
+/* .t-slider {
+    /* width: 95%; *
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+} */
+
+/* #T-List {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-shrink: 1;
+} */
+/* #Testimonials2 > .row { */
+/* .t-slider {
+    display: flex;
+    flex-shrink: 1;
+} */
