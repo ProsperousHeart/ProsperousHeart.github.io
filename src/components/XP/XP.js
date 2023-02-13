@@ -177,9 +177,9 @@ const Exp = () => {
                                         YoY</span>, and had <span className="str-BG-green-lt">highest attendee approval ratings
                                         of all prior events</span>. Found and negotiated pricing & expectations of external
                                         speakers (<a href="https://www.andrewng.org/" target="_blank"
-                                                    rel="noreferrer noopener">Andrew Ng</a> and
-                                        <a href="https://ranaelkaliouby.com/" target="_blank" rel="noreferrer noopener">Rana
-                                            el Kaliouby</a>) - including bonuses for the event's award winners.
+                                                    rel="noreferrer noopener">Andrew Ng</a> and <a href="https://ranaelkaliouby.com/"
+                                                    target="_blank" rel="noreferrer noopener">Rana el Kaliouby</a>)
+                                         - including bonuses for the event's award winners.
                                     </li>
                                     <li>
                                         Led the <b><a className="str-HL-darkred"
