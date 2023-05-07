@@ -21,13 +21,17 @@
   "scripts": {
     "start": "react-scripts start",
     "start:dev": "nodemon index.js",
-    "build": "react-scripts build",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.16",
-    "nodemon": "^2.0.20"
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "nodemon": "^2.0.20",
+    "prop-types": "^15.8.1",
+    "webpack": "^5.75.0"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -36,9 +40,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^5.0.0",
     "jquery": "^3.6.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "react-scripts": "5.0.1",
     "react-scroll-up-button": "^1.6.4",
     "react-slick": "^0.29.0",
