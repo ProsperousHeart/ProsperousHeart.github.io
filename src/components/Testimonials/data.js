@@ -1,5 +1,12 @@
 export const data = [
     {
+        name: 'Jonathan Martell',
+        img: 'IMGs/avatars/Jonathan_Martell.jpg',
+        content: 'Kassandra was instrumental in skilling up newly acquired employees post acquisition of BroadSoft. She knew the ins and outs of the global tooling environment and was quick to lend a hand answering questions regardless of how ambiguous or mundane they have seemed in hindsight. She had produced reference materials with practical examples that anyone in Cisco could and did use. She lead discussions, arranged for guest speakers, and always kept topics fresh and relevant. Her efforts have had a tremendous impact on my growth as well as colleagues who I work with directly on a day to day basis.',
+        url: 'https://www.linkedin.com/in/jonathan-martell-8bb980/',
+        title: 'Technical Leader (Services) at Cisco Systems'
+    },
+    {
         name: 'Suresh Venna',
         img: 'IMGs/avatars/Suresh_Venna.jpg',
         content: "It's not often that one comes across standout talent like Kassandra. I had the opportunity of working with her at Cisco Systems, collaborating on a couple of small projects. I was particularly impressed by Kassandra's ability to handle some critical situations effortlessly. That skill often takes quite some time to develop, but it seemed to come perfectly naturally to her. Irrespective of the project status, Kassandra looks at it with a different lens, and provides recommendations that can help the team in the long run. Thank you, Kassandra, for your detail-oriented skill management. I know you will be an asset for any team.",
