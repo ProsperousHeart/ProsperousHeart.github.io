@@ -10,9 +10,19 @@ Eventually, I went through [ZTM's Complete Web Developer Mastery (2023)](https:/
 
 So in this next phase of my digital resume, I will have migrated [the original (vanilla) HTML/CSS/Javascript](https://github.com/ProsperousHeart/ProsperousHeart.github.io/tree/vanilla-HTMLJS) to a React site.
 
+# How To Integrate New Code Into Live
+
+`npm run` will allow you to test the site locally.
+
+`npm run build` creates a build directory with production build of your app. But this is not needed, since we are integrating with GitHub Pages.
+
+`npm run deploy` will run `predeploy` then `react-scripts build` to optimize your code into a production build.
+
 # Special Shoutouts
 
-I found [Stroybook](https://storybook.js.org/) and have introduced this into my process flow!
+I found [Stroybook](https://storybook.js.org/) and have introduced this into my process flow! (And realized it had a dependency for lower React version so had to stop for now)
+
+I was introduced to [this YouTube](https://www.youtube.com/watch?v=5DEq5cWNYt8) for creating my project cards. Additional animation stuff [here](https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108) from the creator.
 
 # NPM Installs
 
