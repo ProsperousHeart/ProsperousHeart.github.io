@@ -1,7 +1,9 @@
 import React from 'react';
-import "./Projects.css";
 import ProjectList from './ProjectList';
 import { proj_data } from "./data";
+import './CSS/Projects.css';
+import './CSS/slick-proj.css';
+// import './proj-swiper.css'
 
 function ProjectSec({ data }) {
     return (

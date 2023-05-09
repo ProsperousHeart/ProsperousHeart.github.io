@@ -186,11 +186,11 @@ body {
     color: rgb(255 255 255 / 0.9);
 } */
 
-#Projects .card-btns {
-    /* position: absolute; */
-    /* padding-top: auto; */
-    /* bottom: 0; */
-}
+/* #Projects .card-btns {
+    /* position: absolute; *
+    /* padding-top: auto; *
+    /* bottom: 0; *
+} */
 
 #Projects .btn {
     text-transform: none;
@@ -267,7 +267,7 @@ body {
 }
 
 #Projects .fa-github {
-    font-size: 18px;
+    font-size: 17px;
     /* display: inline-block;
     width: 100%; */
 }

@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import ProjCard from './Project';
 import Slider from 'react-slick'; // https://react-slick.neostack.com/docs/api/ | https://github.com/kenwheeler/slick
-import './slick-proj.css';
-// import './proj-swiper.css'
 
 // https://react-slick.neostack.com/docs/get-started/
 // import "~slick-carousel/slick/slick.css"; 

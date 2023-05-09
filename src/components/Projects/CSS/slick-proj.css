@@ -11,9 +11,21 @@
     /* margin-right: 5%; *
 } */
 
-.slick-dots li button:before {
+#Projects .slick-dots li button:before {
     color: white;
     z-index: 0;
+}
+
+#Projects .slick-dots li.slick-active button:before {
+    color: #22dd26 !important;
+}
+
+#Projects .slick-dots {
+    margin-bottom: 2rem;
+}
+
+#Projects .slick-list {
+    padding-bottom: 2rem;
 }
 
 /* .slick-next {
