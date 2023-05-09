@@ -12,9 +12,11 @@ So in this next phase of my digital resume, I will have migrated [the original (
 
 # How To Integrate New Code Into Live
 
-`npm run` will allow you to test the site locally.
+`npm start` will allow you to test the site locally.
 
-`npm run build` creates a build directory with production build of your app. But this is not needed, since we are integrating with GitHub Pages.
+`npm start dev` will allow you to test the site locally AND have it automatically update with changes.
+
+`npm run predeploy` creates a build directory with production build of your app. But this is not needed, since we are integrating with GitHub Pages.
 
 `npm run deploy` will run `predeploy` then `react-scripts build` to optimize your code into a production build.
 
