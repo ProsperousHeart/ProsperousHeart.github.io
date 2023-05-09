@@ -61,8 +61,9 @@ export default class ProjectList extends Component {
                 // },
                 {
                     breakpoint: 800,
+                    autoplaySpeed: 4000,
                     settings: {
-                        autoplay: false,
+                        // autoplay: false,
                         /* adaptiveHeight: true, /* https://www.freakyjolly.com/react-slick-carousel-with-custom-navigation-and-lazy-loaded-images-in-slider/ */
                         slidesToShow: 1,
                         slidesToScroll: 1
