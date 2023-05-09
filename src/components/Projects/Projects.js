@@ -7,10 +7,10 @@ import './CSS/slick-proj.css';
 
 function ProjectSec({ data }) {
     return (
-        <section id="Projects" className='s-projects'>
+        <section id="Projects" className='s-projects pb-3'>
             <div className='row projects-header'>
                 <div className="col-full">
-                    <h1 className="h02">Projects</h1>                    
+                    <h1 className="h02 pt-2">Projects</h1>                    
                 </div>
                 <ProjectList data={data} />
             </div>
