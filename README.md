@@ -2,6 +2,17 @@
 
 As a developer, my focus has mostly been on backend work. I have branched out into front end, and this will be my playground. More so - my online resume. It will bring together all of what I want to be seen when speaking with a potential new employer or client.
 
+## Disctinguishing Branches
+
+- [vanilla-HTMLJS](https://github.com/ProsperousHeart/ProsperousHeart.github.io/tree/vanilla-HTMLJS):  original resume site without projects section.
+
+- [react-migration](https://github.com/ProsperousHeart/ProsperousHeart.github.io/tree/react-migration):  migrating original resume site from vanilla HTML/CSS/JS to React. (Projects not in this one.)
+
+- [updates-react](https://github.com/ProsperousHeart/ProsperousHeart.github.io/tree/updates-react):  branch where updates are done after migration to react.
+
+- [gh-pages](https://github.com/ProsperousHeart/ProsperousHeart.github.io/tree/gh-pages):  GitHub hosting published code.
+ 
+## Site Creation History
 If you would like to see what free templates inspired my decisions, check out [the original README](README-OLD.md).
 
 While I originally based the the flow with [this template](https://www.styleshout.com/free-templates/hola/), I quickly realized there was a LOT that could be optimized, some things were broken or missing, and I didn't like the style for the projects. But since I (at the time) had very few reasons to do front end web development, I just needed a starting piece. And from the template, I began updatin gcolors, fonts, flow of things, and so much more.
