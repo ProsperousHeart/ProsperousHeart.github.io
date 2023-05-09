@@ -7,6 +7,7 @@ export default function clearNav(clickedNavStr) {
     const navMenuIDs = {
       home: "navHome",
       about: "navAbout",
+      projects: "navProjects",
       xp: "navXP",
       testimopnials: "navTestimonials",
       contact: "navContact"

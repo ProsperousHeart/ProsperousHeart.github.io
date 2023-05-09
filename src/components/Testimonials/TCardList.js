@@ -58,7 +58,7 @@ export default class TCardList extends Component {
                 {
                     breakpoint: 900,
                     settings: {
-                        adaptiveHeight: true, /* https://www.freakyjolly.com/react-slick-carousel-with-custom-navigation-and-lazy-loaded-images-in-slider/ */
+                        /* adaptiveHeight: true, /* https://www.freakyjolly.com/react-slick-carousel-with-custom-navigation-and-lazy-loaded-images-in-slider/ */
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }

@@ -749,7 +749,8 @@ a.pswp__share--download:hover {
 /* root element of UI */
 
 .pswp {
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
     font-weight: 400; /* regular */
 }
 

@@ -1,0 +1,326 @@
+/* https://www.youtube.com/watch?v=5DEq5cWNYt8 */
+
+:root {
+    /* --clr-neutral-900: hsl(207, 19%, 9%); */
+    /* --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-accent-400: hsl(142, 90%, 61%); */
+    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+}
+
+/* div {
+    display: block;
+} */
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#Projects p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+#Projects img {
+    min-width: 100%;
+}
+
+/* html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+} */
+
+/* done on every single prject for Kevin Powell */
+#Projects *,
+#Projects *::before,
+#Projects *::after {
+    box-sizing: border-box;
+}
+
+/* body { */
+#Projects {
+    /*display: grid;
+    min-height: 42vh;
+    place-items: center;
+    line-height: 1.6;
+    /* background: var(--clr-neutral-900); */
+    background: #111 !important;
+    /* font-family: sans-serif; */
+}
+
+#Projects h2 {
+    font-size: 2rem;
+}
+
+#Projects h5 {
+    display: block;
+    /* font-size: 1.25rem; */
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+    /* margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+}
+
+#Projects h6 {
+    color: rgba(250, 250, 250, 0.8);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+#Projects .h02 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* padding-top: .6em; */
+    margin-bottom: .2em;
+}
+
+/* #Projects .projects { */
+#Projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* margin-left: -15px;
+    margin-right: -15px; */
+    /* width: 100%; */
+}
+
+/* #Projects .slick-slide {
+    min-height: 100%;
+    height: 100%;
+} */
+/* swiper-container swiper-slide {
+    height: 100%;
+} */
+
+/* #Projects .proj-card { */
+#Projects .card {
+    /* border-radius: .5rem; */
+    /*overflow: hidden; /* solves other DIVs from not having the rounded corner */
+    /* color: var(--clr-neutral-100); */
+    /* background-size: cover; */
+    /*max-width: 35ch;  /* adjusts to font size - "35 characters" */
+
+    transition: transform 500ms ease;
+
+
+    background: #222;
+    border: 1px solid #dd2476;
+    color: rgba(250, 250, 250, 0.8);
+    /* margin-bottom: 2rem; */
+    width: 22rem;
+    padding: 0;
+}
+
+/* #Projects .proj-card:hover,
+#Projects .proj-card:focus-within {
+    transform: scale(1.05);
+} */
+
+#Projects .card:hover,
+#Projects .card:focus-within {
+    transform: scale(1.05);
+}
+
+/*#Projects .proj-content {
+    /* --padding: 1.5rem; /* locally scoped - only need to update this for everything else to update 
+    padding: var(--padding);
+    /* background: black; 
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        /* hsl(255 50% 50% / 1) 10%, 
+        hsl(20 0% 0% / .3) 20%, /* figure out how to make it a different color 
+        hsl(0 0% 0% / 1)
+    );
+    /* transform: translateY(65%);
+    transition: transform 500ms ease; *
+}*/
+
+#Projects .card-body {
+    min-height: 1px;
+    padding: 1.25rem;
+    /* padding: 20; */
+}
+
+/* .proj-title { */
+#Projects .card-title {
+    color: #FFFFFF;
+    /*width: max-content; /* works only with single line of text; width 100% would prevent any overflow */
+    /* width: 100%; */
+    /* width: calc(100% + var(--padding)); */
+    margin-bottom: 0.75rem;
+}
+
+/* .proj-title::after {
+    bottom: 0;
+    content: "";
+    position: absolute;
+    height: 1.2px;
+    left: calc(var(--padding) * -1);
+    width: 100%;
+    background: var(--clr-accent-400);
+    transform-origin: left;
+    transition: transform 500ms ease;
+} */
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.card-subtitle {
+    margin-top: -0.375rem;
+}
+
+/* #Projects .proj-card:hover .proj-title::after,
+#Projects .proj-card:focus-within .proj-title::after {
+    transform: scaleX(1);
+} */
+
+/* .proj-desc {
+    color: rgb(255 255 255 / 0.9);
+} */
+
+/* #Projects .card-btns {
+    /* position: absolute; *
+    /* padding-top: auto; *
+    /* bottom: 0; *
+} */
+
+#Projects .btn {
+    text-transform: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    text-decoration: none;
+    border: 2px solid;
+    border-image-slice: 1;
+    background: var(--gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    border-image-source: var(--gradient) !important;
+    text-decoration: none;
+    transition: all .4s ease;
+
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    /* padding: 0.375rem 0.75rem; */
+    padding: 6px 8px;
+    /* font-size: 16px; */
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    letter-spacing: normal;
+
+    /* margin-bottom: 0; */
+    margin: 0px 3px 0px 0px;
+    height: 3.5rem;
+}
+
+#Projects .btn:hover,
+#Projects .btn:focus {
+    background: var(--gradient) !important;
+    -webkit-background-clip: none !important;
+    -webkit-text-fill-color: #fff !important;
+    border: 3px solid #fff !important;
+    box-shadow: #222 1px 0 10px;
+    /* text-decoration: underline; */
+}
+
+/* may not be needed with new card usage */
+/* #Projects button {
+    background-color: var(--clr-accent-400);
+    border: black;
+    border-radius: 1em;
+    color: var(--clr-neutral-900);
+    padding: 0.5em 1.25em;
+    margin: 0;
+    height: 3rem;
+    line-height: 1.25rem;
+}
+
+/* may not be needed with new card usage *
+#Projects button:hover,
+#Projects button:focus {
+    background-color: #FF69B4;
+} */
+
+#Projects .fa-link:before {
+    content: "\f0c1";
+}
+
+#Projects .fa, #Projects .fas {
+    font-weight: 900;
+}
+
+#Projects .fas {    
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+#Projects .fa-github {
+    font-size: 17px;
+    /* display: inline-block;
+    width: 100%; */
+}
+
+/* #Projects i {
+    text-align: center
+} */
+
+@media (hover) {
+    /** if done liek this, using primary pointing device */
+    /* #Projects .proj-content {
+        transform: translateY(65%);
+        transition: transform 500ms ease;
+    }
+    #Projects .proj-card:hover .proj-content,
+    #Projects .proj-card:focus-within .proj-content {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    #Projects .proj-card:focus-within .proj-content {
+        transition-duration: 0ms;
+    }
+
+    #Projects .proj-content > *:not(.proj-title) {
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+    #Projects .proj-card:hover .proj-content > *:not(.proj-title) {
+        opacity: 1;
+        transition-delay: 1000ms;
+    }
+    #Projects .proj-card:focus-within .proj-content > *:not(.proj-title) { /* required for tabbing *
+        opacity: 1;
+        transition-delay: 500ms;
+    }
+    .proj-title::after {
+        transform: scaleX(0);
+    } */
+}
+
+/* @media (prefers-reduced-motion: no-preference) { */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+
+        /* for this example */
+        transition-delay: 0ms !important;
+    }
+}

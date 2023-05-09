@@ -111,7 +111,7 @@ pre.prettyprint > code {
 }
 
 
-/* Specify class=linenums on a pre to get line numbering */
+/* Specify className=linenums on a pre to get line numbering */
 
 ol.linenums {
     margin-top: 0;

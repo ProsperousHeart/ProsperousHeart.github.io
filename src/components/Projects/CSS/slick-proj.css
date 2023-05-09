@@ -1,0 +1,79 @@
+/* 20230508 */
+
+/* .projects__slider button.slick-prev {
+    margin-left: 5%;
+    /* top: 18px; *
+    /* top: 50%; *
+    z-index: 1; /* required to ensure the left arrow works - not currently certain where overlap is happening as of 20230213 *
+}
+
+.projects__slider button.slick-next {
+    /* margin-right: 5%; *
+} */
+
+#Projects .slick-dots li button:before {
+    color: white;
+    z-index: 0;
+}
+
+#Projects .slick-dots li.slick-active button:before {
+    /* color: #22dd26 !important; */
+    color: #FF69B4 !important;
+}
+
+#Projects .slick-dots {
+    margin-bottom: 2rem;
+    margin-top: 3rem;;
+}
+
+#Projects .slick-list {
+    padding-bottom: 2rem;
+}
+
+#Projects .slick-current {    
+    height: 100%
+}
+
+/* .slick-next {
+    right: 3%;
+    /* top: 18px; *
+    /* top: 50%; *
+} */
+
+/* .slick-list {
+    left: 3%;
+    padding-right: 3%;
+} */
+
+/* .im-arrow-right:before, .im-arrow-left:before {*/
+/* .slick-prev i, .slick-next i {
+    position: relative;
+    top: 50%;
+} */
+
+@media only screen and (max-width: 1000px) {
+    /* .testimonials__slide {
+        padding-left: 11rem;
+    }
+    .testimonials__avatar {
+        width: 6rem;
+        height: 6rem;
+    } */
+    
+    .projects .slick-arrow .slick-prev, #Projects .slick-prev::before {
+        /* top: 202px; */
+        left: 20%;
+    }
+    .projects .slick-arrow .slick-next, #Projects .slick-next::before {
+        /* top: 202px; */
+        right: 20%;
+    }
+    /* #Projects .projects__slider .slick-prev, #Projects .projects__slider .slick-prev::before {
+        /* top: 202px; *
+        left: 20%;
+    }
+    #Projects .projects__slider .slick-next, #Projects .projects__slider .slick-next::before {
+        /* top: 202px; *
+        right: 20%;
+    } */
+}
