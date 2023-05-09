@@ -21,6 +21,7 @@ import clearNav from '../components/Nav/clearNavFunc';
 // import ScrollUpButton from "react-scroll-up-button";
 // import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 import ScrollBtn from '../components/ScrollBtn/ScrollBtn';
+import Projects from '../components/Projects/Projects';
 
 import './00-base.css';
 import './00-sections.css';
@@ -28,7 +29,6 @@ import './01-main.css';
 import './helpers.css';
 import './media.css';
 import './iconic/css/iconmonstr-iconic-font.css';
-import Projects from '../components/Projects/Projects';
 
 // var modernizr = require("modernizr");  // https://www.npmjs.com/package/modernizr
 
