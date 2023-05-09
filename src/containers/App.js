@@ -351,6 +351,7 @@ function App() { // original - functional component
       <Waypoint // WP1
         onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
+          console.log("WAVEPOINT ENTER:  home <> About");
           console.log(`Menu ${navClickedStr} clicked - can we stop the scroll?`);
           console.log(`Current Active: ${activeNavStr} -- should be able to get rid of the previous with the other function created`);
 
@@ -359,7 +360,7 @@ function App() { // original - functional component
               data = {
                 prev: "navHome",
                 curr: "navAbout",
-                // next: "navXP",
+                next: "navXP",
                 dest: "about section"
               }
             }
@@ -385,12 +386,13 @@ function App() { // original - functional component
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
+          console.log("WAVEPOINT LEAVE:  home <> About");
           if (scrollDir === "down"){  // ABOUT @ top
             data = {
               prev: "navAbout",
-              curr: "navXP",
-              // next: "navXP",
-              dest: "XP timeline section"
+              curr: "navProjects",
+              next: "navXP",
+              dest: "Projects section"
             }
           }
           else { // SCROLLING UP - ABOUT @ bottom            
@@ -412,30 +414,27 @@ function App() { // original - functional component
         // visSelection={`${visibleSection === "About" ? ".target-section" : ""}`}
         // onClick={() => window.location.replace("/#about")}
       />
-      <Waypoint // WP2
+      <Waypoint // WP2- after About before Projects
         onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
+          // console.log(scrollDir)
+          console.log("WAVEPOINT ENTER:  About <> Projects");
           if (scrollDir === "down"){
-            data = {
-              prev: "navAbout",
-              curr: "navXP",
-              next: "navTestimonials",
-              dest: "XP (timeline)"
+            data = { // good as of 20230509
+              prev: "navHome",
+              curr: "navAbout",
+              next: "navProjects",
+              dest: "About Section"
             }
           }
-          else { // SCROLLING UP - timeline at top
-            // data = {
-            //   prev: "navXP",
-            //   curr: "navAbout",
-            //   dest: "ABOUT section"
-            // }
+          else { // SCROLLING UP - WP is movnig down
             data = {
-              prev: "navTestimonials",
-              curr: "navXP",
-              dest: "XP (timeline) section"
+              prev: "navXP",
+              curr: "navProjects",
+              dest: "Projects section"
             }
             console.log("Calling the wpDance ...");
-            wpDance("OE", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
+            wpDance("OE", 2, "after about/before Projects", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
           }
           // console.log("Calling the wpDance ...");
@@ -444,43 +443,90 @@ function App() { // original - functional component
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
           let data = null;
+          console.log("WAVEPOINT LEAVE:  About <> Projects");
           if (scrollDir === "down"){
             data = {
-              prev: "navAbout",
+              prev: "navProjects",
               curr: "navXP",
-              // next: "navTestimonials",
+              next: "navTestimonials",
+              dest: "XP section"
+            }
+          }
+          else { // SCROLLING UP
+            data = {
+              prev: "navProjects",
+              curr: "navAbout",
+              next: "navHome",
+              dest: "ABOUT section"
+            }
+          }
+          console.log("Calling the wpDance ...");
+          wpDance("OL", 2, "after about/before Projects", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
+        }}
+      />
+      {/* <Divider variant="middle" /> */}
+      <Projects />
+      <Waypoint // WP3 - project <> XP
+        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+          let data = null;
+          console.log("WAVEPOINT ENTER:  Projects <> XP");
+          if (scrollDir === "down"){
+            data = {
+              prev: "navProjects",
+              curr: "navXP",
+              next: "navTestimonials",
+              dest: "XP (timeline) section"
+            }
+          }
+          else { // SCROLLING UP
+            data = {
+              prev: "navXP",
+              curr: "navProjects",
+              next: "navAbout",
+              dest: "Projects section"
+            }
+            console.log("Calling the wpDance ...");
+            wpDance("OE", 3, "after Projects/before XP timeline", previousPosition, currentPosition, event, 
+            waypointTop, viewportTop, viewportBottom, data);
+          }
+          // console.log("Calling the wpDance ...");
+          // wpDance("OE", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
+          //   waypointTop, viewportTop, viewportBottom, data);
+        }}
+        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
+          let data = null;
+          console.log("WAVEPOINT LEAVE:  Projects <> XP");
+          if (scrollDir === "down"){
+            data = {
+              prev: "navProjects",
+              curr: "navXP",
+              next: "navTestimonials",
               dest: "XP (timeline)"
             }
           }
           else { // SCROLLING UP
             data = {
               prev: "navXP",
-              curr: "navAbout",
-              // next: "navHome",
-              dest: "ABOUT section"
+              curr: "navProjects",
+              // next: "navAbout",
+              dest: "Projects section"
             }
-            // data = {
-            //   prev: "navXP",
-            //   curr: "navTestimonials",
-            //   // next: "navHome",
-            //   dest: "TESTIMONIALS section"
-            // }
           }
           console.log("Calling the wpDance ...");
-          wpDance("OL", 2, "after about/before XP timeline", previousPosition, currentPosition, event, 
+          wpDance("OL", 3, "after Projects/before XP timeline", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
         }}
       />
-      {/* <Divider variant="middle" /> */}
-      <Projects />
       <Exp 
         // ref={xpRef} 
         // visSelection={`${visibleSection === "Exp" ? ".target-section" : ""}`}
         // onClick={() => window.location.replace("/#XP")}
       />
-      <Waypoint // WP3
+      <Waypoint // WP4
         onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
+          console.log("WAVEPOINT ENTER:  XP <> Testimonials");
           if (scrollDir === "down"){
             data = {
               prev: "navXP",
@@ -507,11 +553,12 @@ function App() { // original - functional component
             //   waypointTop, viewportTop, viewportBottom, data);
           }
           console.log("Calling the wpDance ...");
-          wpDance("OE", 3, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
+          wpDance("OE", 4, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
           let data = null;
+          console.log("WAVEPOINT LEAVE:  XP <> Testimonials");
           if (scrollDir === "down"){ // CONTACT coming into view from bottom
             data = {
               prev: "navTestimonials",
@@ -544,7 +591,7 @@ function App() { // original - functional component
             // }
           }
           console.log("Calling the wpDance ...");
-          wpDance("OL", 3, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
+          wpDance("OL", 4, "after XP timeline/before Testimonials", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
         }}
       />
@@ -555,9 +602,10 @@ function App() { // original - functional component
           // onClick={() => window.location.replace("/#Testimonials2")}
         />
       </ErrorBoundary>
-      <Waypoint // WP4
+      <Waypoint // WP5
         onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
+          console.log("WAVEPOINT ENTER:  Testimonials <> Contact");
           if (scrollDir === "down"){
             data = {
               prev: "navTestimonials",
@@ -574,12 +622,13 @@ function App() { // original - functional component
               dest: "TESTIMONIALS section"
             }
             console.log("Calling the wpDance ...");
-            wpDance("OE", 4, "after Testimonials/before contact", previousPosition, currentPosition, event, 
+            wpDance("OE", 5, "after Testimonials/before contact", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
           }
         }}
         onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom  }) => {
           let data = null;
+          console.log("WAVEPOINT LEAVE:  Testimonials <> Contact");
           if (scrollDir === "down"){
             data = {
               prev: "navTestimonials",
@@ -603,7 +652,7 @@ function App() { // original - functional component
             // }
           }
           console.log("Calling the wpDance ...");
-          wpDance("OL", 4, "after Testimonials/before contact", previousPosition, currentPosition, event, 
+          wpDance("OL", 5, "after Testimonials/before contact", previousPosition, currentPosition, event, 
             waypointTop, viewportTop, viewportBottom, data);
         }}
       />
