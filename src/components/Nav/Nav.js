@@ -129,7 +129,16 @@ export default function Nav({setActiveNavStr}) {
                             scrollToPos('#about');
                             toggleOpen(event, "navAbout");
                         }}
-                    >About</li>                    
+                    >About</li>
+                    <li id="navProjects"
+                        className="smoothscroll"
+                        title="Projects"
+                        onClick={(event) => {
+                            scrollToPos('#Projects');
+                            toggleOpen(event, "navProjects");
+                            // setTimeout(clearNav, timeoutMS, "navXP"); /* could be removed if the spacing was right, maybe? */
+                        }}
+                    >Projects</li>
                     <li id="navXP"
                         className="smoothscroll"
                         title="Experience"
