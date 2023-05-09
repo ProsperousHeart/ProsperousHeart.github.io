@@ -28,6 +28,7 @@ import './01-main.css';
 import './helpers.css';
 import './media.css';
 import './iconic/css/iconmonstr-iconic-font.css';
+import Projects from '../components/Projects/Projects';
 
 // var modernizr = require("modernizr");  // https://www.npmjs.com/package/modernizr
 
@@ -471,6 +472,7 @@ function App() { // original - functional component
         }}
       />
       {/* <Divider variant="middle" /> */}
+      <Projects />
       <Exp 
         // ref={xpRef} 
         // visSelection={`${visibleSection === "Exp" ? ".target-section" : ""}`}
