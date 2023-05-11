@@ -22,23 +22,30 @@
 }
 
 #Projects .slick-dots {
-    margin-bottom: 2rem;
-    margin-top: 3rem;;
+    /* bottom: 0px; */ /* for whatever reason, this is -25px from creators */
+    /* padding-top: 7rem; */
+    /* margin-bottom: 2rem; */
+    /* margin-top: 3rem; */
 }
 
 #Projects .slick-list {
-    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
 }
 
 #Projects .slick-current {    
     height: 100%
 }
 
-/* .slick-next {
-    right: 3%;
+#Projects .slick-prev {
+    left: 2%;
+}
+
+#Projects .slick-next {
+    right: 2%;
     /* top: 18px; *
-    /* top: 50%; *
-} */
+    /* top: 50%; */
+}
 
 /* .slick-list {
     left: 3%;
@@ -76,4 +83,14 @@
         /* top: 202px; *
         right: 20%;
     } */
+}
+
+@media only screen and (max-width: 800px) {
+    #Projects {
+        padding-bottom: 2.5rem;
+    }
+    #Projects .slick-dots {
+        /* top: 5%; */
+        bottom: -15px; /* originally -25px */
+    }
 }
