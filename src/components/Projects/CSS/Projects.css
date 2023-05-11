@@ -49,6 +49,8 @@ body {
     /* background: var(--clr-neutral-900); */
     background: #111 !important;
     /* font-family: sans-serif; */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 #Projects h2 {
@@ -115,6 +117,8 @@ body {
     color: rgba(250, 250, 250, 0.8);
     /* margin-bottom: 2rem; */
     width: 22rem;
+    height: 100%;
+    min-height: 341px;
     padding: 0;
 }
 
@@ -322,5 +326,23 @@ body {
 
         /* for this example */
         transition-delay: 0ms !important;
+    }
+}
+
+/* responsive screens */
+@media only screen and (max-width: 1200px) {
+    #Projects {
+        padding-top: 3.5rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #Projects .sec-dark-hdr-top {
+        font-size: 3.3rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #Projects {
+        padding-top: 2rem;
+        margin-bottom: .5rem;
     }
 }
