@@ -10,7 +10,7 @@ function ProjectSec({ data }) {
         <section id="Projects" className='s-projects pb-3'>
             <div className='row projects-header'>
                 <div className="col-full">
-                    <h1 className="h02 pt-2">Projects</h1>                    
+                    <h1 className="h02 pt-2 sec-dark-hdr-top">Projects</h1>                    
                 </div>
                 <ProjectList data={data} />
             </div>
