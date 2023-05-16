@@ -188,6 +188,7 @@
     outline: none;
 }
 
+/* https://gist.github.com/davidwalter0/401a6ed144a7cb8c04aac716c9454c9c */
 .testimonials__avatar:hover {
     box-shadow: 0 0 0 0.9rem rgba(0, 140, 44, 0.3);
     animation: pulsate 1.6s ease-out infinite;
