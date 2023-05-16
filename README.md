@@ -2,7 +2,7 @@
 
 As a developer, my focus has mostly been on backend work. I have branched out into front end, and this will be my playground. More so - my online resume. It will bring together all of what I want to be seen when speaking with a potential new employer or client.
 
-## Disctinguishing Branches
+## Distinguishing Branches
 
 - [vanilla-HTMLJS](https://github.com/ProsperousHeart/ProsperousHeart.github.io/tree/vanilla-HTMLJS):  original resume site without projects section.
 

@@ -188,6 +188,73 @@
     outline: none;
 }
 
+/* https://gist.github.com/davidwalter0/401a6ed144a7cb8c04aac716c9454c9c */
+.testimonials__avatar:hover {
+    box-shadow: 0 0 0 0.9rem rgba(0, 140, 44, 0.3);
+    animation: pulsate 1.6s ease-out infinite;
+    /* animation-name: stretch;
+      animation-duration: 4.0s;
+      animation-timing-function: ease-in-out;
+      animation-direction: reverse;
+      animation-iteration-count: infinite;
+      animation-play-state: running; */
+    /* border: 15px solid rgba(55,140,63,.6);
+      border-radius: 50%;
+      animation: pulsate 1.6s ease-out;
+      animation-duration: 1.6s;
+      animation-timing-function: ease-out;
+      animation-delay: 0s;
+      /* animation-iteration-count: 1; *
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-play-state: running;
+      animation-name: pulsate;
+      animation-iteration-count: infinite;
+      opacity: 0;
+      z-index: 99; */
+  }
+  /* @keyframes stretch {
+      0% {
+        transform: scale(.5);
+        background-color: blue;
+        border-radius: 100%;
+      }
+  
+      50% {
+        background-color: orange;
+      }
+  
+      100% {
+        transform: scale(1.0);
+        background-color: green;
+      }
+  } */
+  @-webkit-keyframes pulsate {
+    0% {
+      box-shadow: 0 0 0 #008c2c4d;
+    }
+    50% {
+      box-shadow: 0 0 17px #008c2c4d;
+    }
+    100% {
+      box-shadow: 0 0 0 #008c2c4d;
+    }
+  }
+  @keyframes pulsate {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(0, 140, 44, 0.2);
+      box-shadow: 0 0 0 0 rgba(0, 140, 44, 0.2);
+    }
+    70% {
+      -moz-box-shadow: 0 0 0 10px rgba(0, 140, 44, 0.4);
+      box-shadow: 0 0 0 10px rgba(0, 140, 44, 0.4);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(0, 140, 44, 0.6);
+      box-shadow: 0 0 0 0 rgba(0, 140, 44, 0.6);
+    }
+  }
+
 .testimonials__author {
     margin-top: 0rem;
     color: #FFFFFF;
