@@ -1,4 +1,7 @@
+# Related GitHub Issues
 
+1. Original ask (with several options) was created [here](https://github.com/ProsperousHeart/ProsperousHeart.github.io/issues/12).
+2. Creation of original projects section was done under [this PR](https://github.com/ProsperousHeart/ProsperousHeart.github.io/pull/53).
 # Resources
 
 In this section I will provide links to resources being considered in preparation for Projects.
