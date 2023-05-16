@@ -257,6 +257,10 @@ body {
     content: "\f0c1";
 }
 
+#Projects .fa {
+    margin-right: .5rem;
+}
+
 #Projects .fa, #Projects .fas {
     font-weight: 900;
 }

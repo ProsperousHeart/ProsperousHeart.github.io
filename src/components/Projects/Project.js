@@ -86,17 +86,17 @@ const ProjCard = ({
             href={site}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn mr-2"
+            className="btn mr-2 d-flex align-items-center"
           >
-            <i className="fa fa-link"></i> Visit Site
+            <i className="fa fa-link"></i>Visit Site
           </a>
           <a
             href={code}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn "
+            className="btn d-flex align-items-center"
           >
-            <i className="fa fa-github"></i> Github
+            <i className="fa fa-github"></i>Github
           </a>
         </div>
       </div>
