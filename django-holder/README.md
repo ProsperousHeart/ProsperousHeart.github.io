@@ -9,3 +9,7 @@ Below are the current and planned sections that need to be pruned apart from the
 ## Related Issues
 
 All issues should be found in the milestone.
+
+# Bonus Stuff
+
+[Color](https://docs.djangoproject.com/en/5.1/howto/windows/#colored-terminal-output) in your terminal!
