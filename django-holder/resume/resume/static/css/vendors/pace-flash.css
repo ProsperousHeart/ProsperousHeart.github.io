@@ -1,0 +1,44 @@
+/* ===================================================================
+ *
+ *  Kassandra Keeton Resume v1.1 pace Stylesheet (also in main)
+ *  20230206
+    pace:  https://codebyzach.github.io/pace/
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  # Basic css setup -- https://github.com/CodeByZach/pace/blob/v1.2.4/pace-theme-default.css
+ *
+ * =================================================================== */
+
+/* -------------------------------------------------------------------
+ * ## pace.js styles - minimal  - (_document-setup.scss)
+ * ------------------------------------------------------------------- */
+
+.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.pace-inactive {
+	display: none;
+}
+
+.pace .pace-progress { /* color changes seems to have no effect */
+    /*background: #FF69B4; /* dark pink */
+	background: #22dd26; /* GREEN */
+    /*background: #862121;*/ /* MAROON */
+	position: fixed;
+	z-index: 2000;
+	/*z-index: 900;*/
+	top: 0;
+	right: 100%;
+	width: 100%;
+	height: 2px;
+}
+
+.oldie .pace {
+    display: none;
+}
