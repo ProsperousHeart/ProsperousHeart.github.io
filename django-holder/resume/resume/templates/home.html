@@ -1,0 +1,61 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+{% comment %} {% block title %}Home - Resume of {{ name }}{% endblock %} {% endcomment %}
+
+<!-- home
+// ================================================== -->
+<!--<section id="home" className="s-home page-hero target-section reposition-home-img" data-parallax="scroll" data-image-src="IMGs/20180108.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>-->
+<section id="home" className="s-home page-hero target-section parallax2">
+
+    <div className="overlay"></div>
+    <div className="shadow-overlay"></div>
+
+    <div className="home-content">
+        <h1 className="hidden-txt">Digital Resume for {{ first_name }}{% if last_name %} {{ last_name }}{% endif %}</h1>
+        <div className="row home-content__main flex-row">
+
+            <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items -->
+            <div className="flex-row two-col">
+                <div className="h-intro">
+                    <!--<h3><span className="hdr-HL-gp">Welcome</span></h3> -->
+                    <span className="hdr-HL-gp">Welcome</span>
+
+                    <p className="home-name">I am {{ first_name }}{% if last_name %} {{ last_name }}{% endif %}.</p>
+                    <div className="desc">
+                        <p className="home-desc">Software Engineer.</p>
+                        <p className="home-desc">Digital Marketer.</p>
+                        <p className="home-desc">Compassionate Teacher.</p>
+                    </div>
+                </div>
+
+                <!-- <div className="home-buttons push-rt"> -->
+                <div className="home-buttons">
+                    <a href="#XP" className="smoothscroll btn btn--stroke">
+                        Latest Projects
+                    </a>
+                    <a href="#about" className="smoothscroll btn btn--stroke">
+                        More About Me
+                    </a>
+                </div>
+            </div>
+
+            <div className="home-scroll">
+                <a href="#about" className="smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    {% include 'intro-socials.html' %}   <!-- Load socials from intro template -->
+
+</section>
+
+{% block content %}
+---
+<p>This is the home page content. Maybe this is the parallax?</p>
+For {{ first_name }}
+<br>/section
+{% endblock %}
