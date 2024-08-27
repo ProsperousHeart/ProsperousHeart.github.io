@@ -8,7 +8,6 @@ def home(request):
     # return HttpResponse("View is working for main site base!")
 
     context = {
-        'text': "Hello, this is a simple text rendered using a template!",
         "first_name": "Kassandra",
         "last_name": "Keeton",
     }
