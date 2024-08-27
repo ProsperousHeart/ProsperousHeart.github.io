@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 # STATIC_URL = '/django-holder/resume/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "resume/static"),
+    os.path.join(BASE_DIR, "/static"),
 ]
 
 
