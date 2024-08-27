@@ -1,5 +1,6 @@
 <!-- templates/home.html -->
 {% extends "base.html" %}
+{% block content %}
 {% comment %} {% block title %}Home - Resume of {{ name }}{% endblock %} {% endcomment %}
 
 <!-- home
@@ -52,10 +53,4 @@
     {% include 'intro-socials.html' %}   <!-- Load socials from intro template -->
 
 </section>
-
-{% block content %}
----
-<p>This is the home page content. Maybe this is the parallax?</p>
-For {{ first_name }}
-<br>/section
 {% endblock %}
