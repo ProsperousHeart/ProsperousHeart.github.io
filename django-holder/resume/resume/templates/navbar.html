@@ -1,0 +1,20 @@
+<!-- templates/header.html -->
+{% comment %} {% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to My Resume</h1>
+<p>This is the header portion.</p>
+<p>{{ text }}</p>
+{% endblock %} {% endcomment %}
+
+<nav>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        {% comment %} <li><a href="{% url 'header' %}">Tagline</a></li> {% endcomment %}
+        {% comment %} <li><a href="{% url 'about' %}">About Me</a></li>
+        <li><a href="{% url 'experience' %}">Experience</a></li>
+        <li><a href="{% url 'skills' %}">Skills</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li> {% endcomment %}
+    </ul>
+</nav>
+
