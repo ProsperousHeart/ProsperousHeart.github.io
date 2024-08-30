@@ -108,7 +108,9 @@
 /* https://www.w3schools.com/howto/howto_css_parallax.asp */
 .parallax2 { /* parallax without JS */
     /* The image used - 20180108.jpg */
-    background-image: url("../IMGs/20180108.jpg");
+    background-image: url("{% static 'IMGs/20180108.jpg' %}");
+    /* background-image: url("../IMGs/20180108.jpg'"); */
+    /* background-image: url("https://github.com/ProsperousHeart/ProsperousHeart.github.io/blob/master/public/IMGs/20180108.jpg?raw=true"); */
 
     /* Set a specific height */
     /*min-height: 500px;*/
