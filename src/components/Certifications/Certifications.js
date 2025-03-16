@@ -10,7 +10,8 @@ function CertSec({ data }) {
         <section id="Certs" className='s-certs pb-3'>
             <div className='row certs-header'>
                 <div className="col-full">
-                    <h1 className="h02 pt-2 sec-dark-hdr-top">Certifications</h1>                    
+                    <h1 className="h02 pt-2 sec-dark-hdr-top">Certifications</h1>
+                    You can view more achievements <a href='https://www.linkedin.com/in/kkeeton/details/certifications/' target="_blank" rel="noreferrer noopener">here</a>.
                 </div>
                 <CertList data={data} />
             </div>
