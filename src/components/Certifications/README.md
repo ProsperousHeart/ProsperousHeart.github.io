@@ -1,7 +1,10 @@
+The certifications section is basically a duplicate of the Project section. Everything below is from there. I simply duplicated and tweaked so that the section could be updated separately.
+
 # Related GitHub Issues
 
 1. Original ask (with several options) was created [here](https://github.com/ProsperousHeart/ProsperousHeart.github.io/issues/12).
 2. Creation of original projects section was done under [this PR](https://github.com/ProsperousHeart/ProsperousHeart.github.io/pull/53).
+
 # Resources
 
 In this section I will provide links to resources being considered in preparation for Projects.
