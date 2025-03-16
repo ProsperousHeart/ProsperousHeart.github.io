@@ -21,12 +21,14 @@ import React from "react";
 // }
 
 const CertCard = ({
+  // active,
   cert_name,
   subtitle,
+  sub_url,
   img,
   img_alt,
+  company,
   desc,
-  code,
   site,
   // youtube,
   // skills,
@@ -87,15 +89,23 @@ const CertCard = ({
             rel="noopener noreferrer"
             className="btn mr-2 d-flex align-items-center"
           >
-            <i className="fa fa-link"></i>Visit Site
+            <i className="fa fa-link"></i>Cert
           </a>
-          <a
+          {/* <a
             href={code}
             target="_blank"
             rel="noopener noreferrer"
             className="btn d-flex align-items-center"
           >
             <i className="fa fa-github"></i>Github
+          </a> */}
+          <a
+            href={sub_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn d-flex align-items-center"
+          >
+            Learn More
           </a>
         </div>
       </div>
