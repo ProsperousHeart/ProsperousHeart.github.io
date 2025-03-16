@@ -91,6 +91,12 @@ body {
     /* margin-left: -15px;
     margin-right: -15px; */
     /* width: 100%; */
+    color: rgba(250, 250, 250, 0.8);
+    text-align: center;
+}
+
+#Certs a:hover {
+    color: #dd2476;
 }
 
 /* #Projects .slick-slide {
