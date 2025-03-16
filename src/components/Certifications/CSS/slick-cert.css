@@ -1,0 +1,96 @@
+/* 20230508 */
+
+/* .projects__slider button.slick-prev {
+    margin-left: 5%;
+    /* top: 18px; *
+    /* top: 50%; *
+    z-index: 1; /* required to ensure the left arrow works - not currently certain where overlap is happening as of 20230213 *
+}
+
+.projects__slider button.slick-next {
+    /* margin-right: 5%; *
+} */
+
+#Certs .slick-dots li button:before {
+    color: white;
+    z-index: 0;
+}
+
+#Certs .slick-dots li.slick-active button:before {
+    /* color: #22dd26 !important; */
+    color: #FF69B4 !important;
+}
+
+#Certs .slick-dots {
+    /* bottom: 0px; */ /* for whatever reason, this is -25px from creators */
+    /* padding-top: 7rem; */
+    /* margin-bottom: 2rem; */
+    /* margin-top: 3rem; */
+}
+
+#Certs .slick-list {
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+}
+
+#Certs .slick-current {    
+    height: 100%
+}
+
+#Certs .slick-prev {
+    left: 2%;
+}
+
+#Certs .slick-next {
+    right: 2%;
+    /* top: 18px; *
+    /* top: 50%; */
+}
+
+/* .slick-list {
+    left: 3%;
+    padding-right: 3%;
+} */
+
+/* .im-arrow-right:before, .im-arrow-left:before {*/
+/* .slick-prev i, .slick-next i {
+    position: relative;
+    top: 50%;
+} */
+
+@media only screen and (max-width: 1000px) {
+    /* .testimonials__slide {
+        padding-left: 11rem;
+    }
+    .testimonials__avatar {
+        width: 6rem;
+        height: 6rem;
+    } */
+    
+    .certs .slick-arrow .slick-prev, #Certs .slick-prev::before {
+        /* top: 202px; */
+        left: 20%;
+    }
+    .certs .slick-arrow .slick-next, #Certs .slick-next::before {
+        /* top: 202px; */
+        right: 20%;
+    }
+    /* #Projects .projects__slider .slick-prev, #Projects .projects__slider .slick-prev::before {
+        /* top: 202px; *
+        left: 20%;
+    }
+    #Projects .projects__slider .slick-next, #Projects .projects__slider .slick-next::before {
+        /* top: 202px; *
+        right: 20%;
+    } */
+}
+
+@media only screen and (max-width: 800px) {
+    #Certs {
+        padding-bottom: 2.5rem;
+    }
+    #Certs .slick-dots {
+        /* top: 5%; */
+        bottom: -15px; /* originally -25px */
+    }
+}
