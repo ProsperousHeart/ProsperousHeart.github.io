@@ -1,7 +1,16 @@
+.venv
+*.code-workspace
+.pyc
+
 # To Be Added Back When Ready
 Blog/
 Projects/OLD
 Nav-OLD.*
+stories
+
+# hidden files from migration to React
+package-OLD.json
+public/manifest-OLD.json
 
 # Hide files not intended for publication
 Old Testing
