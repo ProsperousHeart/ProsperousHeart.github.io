@@ -22,6 +22,7 @@ import clearNav from '../components/Nav/clearNavFunc';
 // import {CircleArrow as ScrollUpButton} from "react-scroll-up-button";
 import ScrollBtn from '../components/ScrollBtn/ScrollBtn';
 import Projects from '../components/Projects/Projects';
+import Certifications from '../components/Certifications/Certifications';
 
 import './00-base.css';
 import './00-sections.css';
@@ -523,6 +524,7 @@ function App() { // original - functional component
         // visSelection={`${visibleSection === "Exp" ? ".target-section" : ""}`}
         // onClick={() => window.location.replace("/#XP")}
       />
+      <Certifications />
       <Waypoint // WP4
         onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
           let data = null;
