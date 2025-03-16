@@ -46,7 +46,7 @@ export default class CertList extends Component {
             lazyLoad: true,
             pauseOnHover: true,
             speed: 500,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             swipeToSlide: true,
             responsive: [
@@ -108,14 +108,14 @@ export default class CertList extends Component {
                     key={idx}
                     cert_name={data[idx].cert_name}
                     subtitle={data[idx].subtitle}
+                    sub_url={data[idx].sub_url}
                     img={data[idx].img}
                     img_alt={data[idx].img_alt}
                     company={data[idx].company}
                     desc={data[idx].desc}
-                    code={data[idx].code}
                     site={data[idx].site}
                     youtube={data[idx].youtube}
-                    skills={data[idx].skills}
+                    // skills={data[idx].skills}
                     // sliderSettings={settings}
                 />
             );
