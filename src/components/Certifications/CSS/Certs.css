@@ -93,6 +93,7 @@ body {
     /* width: 100%; */
     color: rgba(250, 250, 250, 0.8);
     text-align: center;
+    /*align-items: stretch; /* 20250316 - Ensures all cards align properly */
 }
 
 #Certs a:hover {
@@ -116,16 +117,33 @@ body {
     /*max-width: 35ch;  /* adjusts to font size - "35 characters" */
 
     transition: transform 500ms ease;
+    display: flex;
+    flex: 0 0 300px; /* Fixed width for each item */
+    height: 420px; /* Fixed height for each item */
+    scroll-snap-align: center;
 
 
     background: #222;
     border: 1px solid #dd2476;
     color: rgba(250, 250, 250, 0.8);
     /* margin-bottom: 2rem; */
-    width: 22rem;
+    /* width: 22rem; */
+    max-width: 430px; /* Set a fixed width for the cards 
     height: 100%;
     min-height: 341px;
+    max-height: 80%;
     padding: 0;
+    /*
+    justify-content: space-between; /* Distributes content evenly 
+    align-items: center; /* Centers content horizontally
+    text-overflow: ellipsis; /* Handles text overflow gracefully 
+    padding: 1rem; /* Adds padding to ensure content stays within boundaries 
+    box-sizing: border-box; /* Ensures padding is included in the card dimensions */
+
+    /* height: 50%; /* Limit the card height to half the height of the section */
+    /* max-height: 300px; /* Limit the card height to half the height of the section */
+    /*height: auto; /* Allow the card to scale proportionally */
+    overflow: hidden; /* Prevent content from crossing card boundaries */
 }
 
 /* #Projects .proj-card:hover,
@@ -136,6 +154,14 @@ body {
 #Certs .card:hover,
 #Certs .card:focus-within {
     transform: scale(1.05);
+}
+
+#Certs .card img {
+    max-width: 100%; /* Ensures the image does not exceed the card's width */
+    max-height: 50%; /* Ensures the image does not exceed the card's height */
+    object-fit: cover; /* Ensures the image scales proportionally and fills the card */
+    display: block; /* Removes any inline spacing issues */
+    border-radius: 2px;
 }
 
 /*#Projects .proj-content {
@@ -156,6 +182,8 @@ body {
     min-height: 1px;
     padding: 1.25rem;
     /* padding: 20; */
+    font-size: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* .proj-title { */
