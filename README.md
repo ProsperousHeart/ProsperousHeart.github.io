@@ -23,6 +23,8 @@ So in this next phase of my digital resume, I will have migrated [the original (
 
 # How To Integrate New Code Into Live
 
+## Commands To Run
+
 `npm start` will allow you to test the site locally.
 
 `npm start dev` will allow you to test the site locally AND have it automatically update with changes.
@@ -30,6 +32,10 @@ So in this next phase of my digital resume, I will have migrated [the original (
 `npm run predeploy` creates a build directory with production build of your app. But this is not needed, since we are integrating with GitHub Pages.
 
 `npm run deploy` will run `predeploy` then `react-scripts build` to optimize your code into a production build.
+
+## Locations Of Where To Find What To Update
+
+Main page is in the [App.js](./src/containers/App.js) file. All components are pulled into this single page app.
 
 # Special Shoutouts
 

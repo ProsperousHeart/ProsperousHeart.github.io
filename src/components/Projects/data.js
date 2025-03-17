@@ -7,7 +7,8 @@ export const skills = [
     "Bootstrap",
     "Jupyter Notebooks",
     "Node.JS",
-    "postgreSQL"
+    "postgreSQL",
+    "Workshop Facilitation",
 ]
 
 export const proj_data = [
