@@ -33,6 +33,8 @@ So in this next phase of my digital resume, I will have migrated [the original (
 
 `npm run deploy` will run `predeploy` then `react-scripts build` to optimize your code into a production build.
 
+**NOTE:** If you are using GitHub pages for publishing AND you ahve set up DNS, you will need to re-add your domain in the _settings > pages_ section of your repo.
+
 ## Locations Of Where To Find What To Update
 
 Main page is in the [App.js](./src/containers/App.js) file. All components are pulled into this single page app.
