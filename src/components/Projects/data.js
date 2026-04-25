@@ -33,17 +33,17 @@ export const proj_data = [
         sub_url: "",
         img: "https://github.com/ProsperousHeart/ProsperousHeart.github.io/blob/master/public/IMGs/projs/IMG-Basics-BC-optimized.png?raw=true",
         img_alt: "screenshot of GitHub repo with training materials",
-        company: "Prosperous Heart, LLS",
+        company: "Prosperous Heart, LLC",
         desc: 'Jupyter notebooks teach python basics & provide opportunities to immediately implement learning.',
         code: "https://github.com/ProsperousHeart/Basics-Boot-Camp/",
-        site: "https://github.com/ProsperousHeart/Basics-Boot-Camp/",
+        site: "https://resume.prosperousheart.com/Basics-Boot-Camp/",
         youtube: "",
         skills: [0, 6]
     },
     {
         active: false,
         project_name: "Facial Recognition App",
-        subtitle: "Bootcamp Project",
+        subtitle: "ZTM Bootcamp Project",
         sub_url: "https://prosperousheart.com/ztm-web-dev-bc",
         img: "https://github.com/ProsperousHeart/ProsperousHeart.github.io/blob/master/public/IMGs/projs/GIF-Backend-Server-optimized.gif?raw=true",
         img_alt: "GIF explaining project is a backend server",
@@ -57,7 +57,7 @@ export const proj_data = [
     {
         active: false,
         project_name: "Facial Recognition App",
-        subtitle: "Bootcamp Project",
+        subtitle: "ZTM Bootcamp Project",
         sub_url: "https://prosperousheart.com/ztm-web-dev-bc",
         img: "https://github.com/ProsperousHeart/ProsperousHeart.github.io/blob/master/public/IMGs/projs/GIF-Face-Recognition.gif?raw=true",
         img_alt: "GIF demo of facial recognition app with Clarifai",
@@ -81,5 +81,19 @@ export const proj_data = [
         site: "https://resume.prosperousheart.com/robofriends/",
         youtube: "",
         skills: [1, 2, 3, 4, 5]
+    },
+    {
+        active: false,
+        project_name: "PyTexas 2026 Talk",
+        subtitle: "Talk & Template Repo",
+        sub_url: "",
+        img: "https://github.com/ProsperousHeart/ProsperousHeart.github.io/blob/master/public/IMGs/projs/PyTexas_2026.png?raw=true",
+        img_alt: "screenshot of GitHub repo with training materials",
+        company: "Prosperous Heart, LLC",
+        desc: 'Talk and template repo for PyTexas 2026 on interactive python in teh web browser.',
+        code: "https://github.com/ProsperousHeart/Basics-Boot-Camp/",
+        site: "https://resume.prosperousheart.com/Basics-Boot-Camp/",
+        youtube: "",
+        skills: [0, 6]
     }
 ]
