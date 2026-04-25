@@ -91,8 +91,8 @@ export const proj_data = [
         img_alt: "screenshot of GitHub repo with training materials",
         company: "Prosperous Heart, LLC",
         desc: 'Talk and template repo for PyTexas 2026 on interactive python in teh web browser.',
-        code: "https://github.com/ProsperousHeart/Basics-Boot-Camp/",
-        site: "https://resume.prosperousheart.com/Basics-Boot-Camp/",
+        code: "https://github.com/ProsperousHeart/mkdocs-jupyterlite-template-repo",
+        site: "http://resume.prosperousheart.com/mkdocs-jupyterlite-template-repo/",
         youtube: "",
         skills: [0, 6]
     }
