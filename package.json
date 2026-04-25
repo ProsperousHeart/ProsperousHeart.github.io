@@ -16,7 +16,7 @@
     "Software Engineering",
     "Digital Marketing"
   ],
-  "homepage": "https://resume.properousheart.com",
+  "homepage": "https://resume.prosperousheart.com",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
