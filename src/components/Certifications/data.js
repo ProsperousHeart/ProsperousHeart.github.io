@@ -44,7 +44,7 @@ export const cert_data = [
         cert_name: "Design Sprint Facilitation",
         subtitle: "Workshopping & Software Design",
         sub_url: "https://www.thesprintbook.com/the-design-sprint",
-        img: "https://media.licdn.com/dms/image/v2/D5622AQFjrK5HBYx5Dg/feedshare-shrink_800/feedshare-shrink_800/0/1707963070568?e=1744848000&v=beta&t=KUQd7OXRsXJH9bege6_EqLnqBWiRrElMzAnB7Yztb-0",
+        img: "https://imgs.search.brave.com/-0tbWQYbfuGSRY_f4Gk_cggIA5qWBhuxiLn7kdw07dA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmFt/ZXJ1c2VyY29udGVu/dC5jb20vaW1hZ2Vz/L0w4NXpSS0FpZ05k/ZWNpcFBzMGptYWYw/ZXRBTS5wbmc",
         img_alt: "facilitation certification from AJ&Smart",
         company: "AJ&Smart",
         desc: "How to Run In-Person & Remote Design Sprints Like a Pro",
@@ -78,45 +78,17 @@ export const cert_data = [
         youtube: "",
         // skills: [0, 6]
     },
-    // {
-    //     active: false,
-    //     cert_name: "Facial Recognition App",
-    //     subtitle: "Bootcamp Project",
-    //     sub_url: "https://prosperousheart.com/ztm-web-dev-bc",
-    //     img: "https://github.com/ProsperousHeart/ProsperousHeart.github.io/blob/master/public/IMGs/projs/GIF-Backend-Server-optimized.gif?raw=true",
-    //     img_alt: "GIF explaining project is a backend server",
-    //     company: "Prosperous Heart, LLC",
-    //     desc: "Next.JS server detects faces using Clarifai API. Has login to store usage count. Connects to postgreSQL Render server.",
-    //     site: "https://smart-brain-ztm.onrender.com/",
-    //     youtube: "",
-    //     // skills: [3, 7, 8]
-    // },
-    // {
-    //     active: false,
-    //     cert_name: "Facial Recognition App",
-    //     subtitle: "Bootcamp Project",
-    //     sub_url: "https://prosperousheart.com/ztm-web-dev-bc",
-    //     img: "https://github.com/ProsperousHeart/ProsperousHeart.github.io/blob/master/public/IMGs/projs/GIF-Face-Recognition.gif?raw=true",
-    //     img_alt: "GIF demo of facial recognition app with Clarifai",
-    //     company: "",
-    //     desc: "Leveraging Clarifai API, accurately detects faces in images. Has login to store count of times used per user.",
-    //     code: "https://github.com/ProsperousHeart/FaceRecognitionApp-ZTM",
-    //     site: "https://resume.prosperousheart.com/FaceRecognitionApp-ZTM/",
-    //     youtube: "",
-    //     skills: [1, 2, 3, 4, 5]
-    // },
-    // {
-    //     active: false,
-    //     cert_name: "Robofriends",
-    //     subtitle: "Bootcamp Project",
-    //     sub_url: "https://prosperousheart.com/ztm-web-dev-bc",
-    //     img: "https://github.com/ProsperousHeart/ProsperousHeart.github.io/blob/master/public/IMGs/projs/GIF-Robofriends-optimized.gif?raw=true",
-    //     img_alt: "GIF demo for Robofriends",
-    //     company: "Prosperous Heart, LLC",
-    //     desc: "React app integrating 2 APIs to create Robot cards. Search box quickly filters cards matching text input.",
-    //     code: "https://github.com/ProsperousHeart/robofriends",
-    //     site: "https://resume.prosperousheart.com/robofriends/",
-    //     youtube: "",
-    //     skills: [1, 2, 3, 4, 5]
-    // }
+    {
+        active: false,
+        cert_name: "Systems Design",
+        subtitle: "Cornell Certification",
+        sub_url: "https://ecornell.cornell.edu/certificates/project-leadership-and-systems-design/systems-design/",
+        img: "https://mycredentials.ecornell.cornell.edu/credential/image/ZCCzdfFluF",
+        img_alt: "screenshot of certificate",
+        company: "Cornell University",
+        desc: "This program taught how to define the challenges to resolve, create functional requirements, and objectively measuring the value of any potential solution.",
+        site: "https://mycredentials.ecornell.cornell.edu/credential/ZCCzdfFluF",
+        youtube: "",
+        // skills: [0, 6]
+    },
 ]
