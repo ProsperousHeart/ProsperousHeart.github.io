@@ -1,0 +1,8 @@
+/* swiper-container {
+    width: 100%;
+    height: 100%;
+} */
+
+.swiper-button-prev, .swiper-button-next {
+    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+}
