@@ -24,7 +24,9 @@ jobs:
         - name: Install dependencies
           run: npm ci
         - name: Deploy
-          run: npm run deploy
+          run: |
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+            npm run deploy
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             GIT_USER: github-actions[bot]
