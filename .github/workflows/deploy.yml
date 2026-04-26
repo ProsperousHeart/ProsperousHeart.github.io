@@ -5,6 +5,9 @@ on:
         branches:
         - master
 
+permissions:
+    contents: write
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
@@ -21,10 +24,9 @@ jobs:
         - name: Install dependencies
           run: npm ci
         - name: Configure git ID
-          run: |
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "github-actions[bot]@users.noreply.github.com"
         - name: Deploy
           run: npm run deploy
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GIT_USER: github-actions[bot]
+            GIT_EMAIL: github-actions[bot]@users.noreply.github.com
