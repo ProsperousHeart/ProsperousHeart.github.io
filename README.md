@@ -35,9 +35,34 @@ So in this next phase of my digital resume, I will have migrated [the original (
 
 **NOTE:** If you are using GitHub pages for publishing AND you ahve set up DNS, you will need to re-add your domain in the _settings > pages_ section of your repo.
 
+> Be sure to check out the [Updating Needs](#updating-needs) section when upgrading packages.
+
 ## Locations Of Where To Find What To Update
 
 Main page is in the [App.js](./src/containers/App.js) file. All components are pulled into this single page app.
+
+# Updating Needs
+
+## Updating Node
+
+Originally, node version was on 11.6.1 version as of January 2023. To upgrade to ###
+
+- did not use a package manager
+- ???
+
+## Updating NPM And Packages
+
+In the project folder, run `npm install --legacy-peer-deps`.
+
+This output will then tell you any directions, such as "this is deprecated - use _ instead". Some additional work may be needed to clear these up, but it doesn't mean you can't still use what you initially had.
+
+You may then need to run the following to resolve vulnerabilities to compatible versions:   `npm audit fix`
+
+If you run into other issues, you may need to consider going back or having to spend more time fixing what's broken - including changing your script.
+
+Test the build: `npm run build`
+
+Refer to the rest of [commands to run](#commands-to-run) for testing.
 
 # Special Shoutouts
 

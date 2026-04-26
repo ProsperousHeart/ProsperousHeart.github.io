@@ -3,7 +3,7 @@
 */
 
 import React from 'react';
-import TweenFunctions from 'tween-functions';
+// import TweenFunctions from 'tween-functions';
 import PropTypes from 'prop-types';
 // import detectPassiveEvents from 'detect-passive-events';
 
@@ -55,37 +55,37 @@ class ScrollUpButton extends React.Component {
     });
   }
 
-  ScrollingFrame() {
-    const { StopPosition, EasingType, AnimationDuration } = this.props
-    const timestamp = Math.floor(Date.now());
-    // If StartTime has not been assigned a value, assign it the start timestamp.
-    if (!this.Animation.StartTime) {
-      this.Animation.StartTime = timestamp;
-    }
+  // ScrollingFrame() {
+  //   const { StopPosition, EasingType, AnimationDuration } = this.props
+  //   const timestamp = Math.floor(Date.now());
+  //   // If StartTime has not been assigned a value, assign it the start timestamp.
+  //   if (!this.Animation.StartTime) {
+  //     this.Animation.StartTime = timestamp;
+  //   }
 
-    // set CurrentAnimationTime every iteration of ScrollingFrame()
-    this.Animation.CurrentAnimationTime = timestamp - this.Animation.StartTime;
-    // if we hit the StopPosition, StopScrollingFrame()
-    if (window.pageYOffset <= StopPosition) {
-      this.StopScrollingFrame();
-    } else {
-      // Otherwise continue ScrollingFrame to the StopPosition.
-      // Does not support horizontal ScrollingFrame.
-      // Let TweenFunctions handle the math to give us a new position based on AnimationDuration and EasingType type
-      let YPos = TweenFunctions[EasingType](
-        this.Animation.CurrentAnimationTime,
-        this.Animation.StartPosition,
-        StopPosition,
-        AnimationDuration
-      );
-      if (YPos <= StopPosition) {
-        YPos = StopPosition
-      }
-      window.scrollTo(0, YPos);
-      // Request another frame to be painted
-      this.Animation.AnimationFrame = window.requestAnimationFrame(this.ScrollingFrame);
-    }
-  }
+  //   // set CurrentAnimationTime every iteration of ScrollingFrame()
+  //   this.Animation.CurrentAnimationTime = timestamp - this.Animation.StartTime;
+  //   // if we hit the StopPosition, StopScrollingFrame()
+  //   if (window.pageYOffset <= StopPosition) {
+  //     this.StopScrollingFrame();
+  //   } else {
+  //     // Otherwise continue ScrollingFrame to the StopPosition.
+  //     // Does not support horizontal ScrollingFrame.
+  //     // Let TweenFunctions handle the math to give us a new position based on AnimationDuration and EasingType type
+  //     let YPos = TweenFunctions[EasingType](
+  //       this.Animation.CurrentAnimationTime,
+  //       this.Animation.StartPosition,
+  //       StopPosition,
+  //       AnimationDuration
+  //     );
+  //     if (YPos <= StopPosition) {
+  //       YPos = StopPosition
+  //     }
+  //     window.scrollTo(0, YPos);
+  //     // Request another frame to be painted
+  //     this.Animation.AnimationFrame = window.requestAnimationFrame(this.ScrollingFrame);
+  //   }
+  // }
 
   StopScrollingFrame() {
     // Stop the Animation Frames.
