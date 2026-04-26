@@ -45,10 +45,11 @@ Main page is in the [App.js](./src/containers/App.js) file. All components are p
 
 ## Updating Node
 
-Originally, node version was on 11.6.1 version as of January 2023. To upgrade to ###
+Originally, node version was on 11.6.1 version as of January 2023. To upgrade to the currenty version (24.15.0):
 
 - did not use a package manager
-- ???
+
+- downloaded latest version and installed locally
 
 ## Updating NPM And Packages
 
